@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DV61CF3S8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9DV61CF3S8');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+
+    <title>Category — VIYO | VividVista International</title>
+    <meta name="description" content="VIYO hotel amenities, browsed by category." />
+
+    <!-- SEO: static fallbacks — js/app.js (categoryPage.syncTitle) overwrites
+         title/description/canonical/og:* once the real category loads. -->
+    <link rel="canonical" href="https://www.viyoindia.com/category.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VIYO — VividVista International" />
+    <meta property="og:title" content="Category — VIYO | VividVista International" />
+    <meta property="og:description" content="VIYO hotel amenities, browsed by category." />
+    <meta property="og:url" content="https://www.viyoindia.com/category.html" />
+    <meta property="og:image" content="https://www.viyoindia.com/favicon.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Category — VIYO | VividVista International" />
+    <meta name="twitter:description" content="VIYO hotel amenities, browsed by category." />
+    <meta name="twitter:image" content="https://www.viyoindia.com/favicon.png" />
+
+    <link rel="stylesheet" href="/styles.min.css?v=114" />
+    <link rel="stylesheet" href="/css/tailwind.min.css?v=114" />
+
+    <script src="/js/min/config.min.js?v=114"></script>
+    <script src="/js/min/theme-init.min.js?v=114"></script>
+
+    <!-- Deferred non-critical head scripts -->
+    <script src="/js/min/analytics.min.js?v=114" defer></script>
+    <script src="/js/min/color-utils.min.js?v=114" defer></script>
+    <script src="/js/min/image-protect.min.js?v=114" defer></script>
+
+    <!-- The shared header (js/header.js) uses .viyo-header/.viyo-subnav/
+         .btn-viyo styling, so every page that includes it needs this too. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/css/viyo-theme.min.css?v=114" />
+  </head>
+
+  <body x-data="{}" class="font-body text-ink bg-gradient-to-b from-[#f4faf0] via-[#d5ecc4] to-[#eaf6e1] dark:from-[#0e1611] dark:via-[#16251b] dark:to-[#0d1510] min-h-screen antialiased transition-colors duration-500 relative" style="font-family: 'Inter', sans-serif;">
+    <div class="fixed top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#93C572]/25 dark:bg-[#93C572]/20 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-1/4 right-1/4 translate-y-1/2 w-[550px] h-[350px] bg-[#6fa847]/20 dark:bg-[#6fa847]/15 rounded-full blur-[110px] pointer-events-none -z-10"></div>
+<!-- ============ HEADER ============ -->
+    <div id="site-header"></div>
+    <script src="/js/min/header.min.js?v=114"></script>
+
+    <main x-data="categoryPage" class="pt-2 sm:pt-4 px-3 sm:px-6 max-w-7xl mx-auto w-full">
+      <!-- Loading state -->
+      <div x-show="loading" class="max-w-6xl mx-auto px-6 pt-16 pb-24 animate-pulse">
+        <div class="h-4 w-40 bg-accent/10 rounded mb-8"></div>
+        <div class="glass-panel rounded-3xl aspect-[21/9] mb-14"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[26px]">
+          <template x-for="i in 6" :key="i">
+            <div class="glass-panel rounded-2xl aspect-[4/5]"></div>
+          </template>
+        </div>
+      </div>
+
+      <!-- Not found state -->
+      <div x-show="!loading && notFound" x-cloak class="max-w-2xl mx-auto text-center py-16 px-6">
+        <h1 class="font-display text-3xl font-medium mb-4">Category not found.</h1>
+        <p class="text-muted mb-8">That collection isn't in the catalogue, or the link may be out of date.</p>
+        <a :href="catalogueHref" class="inline-flex px-6 py-3 rounded-full bg-accent text-on-accent font-label text-sm uppercase tracking-wide hover:bg-accent-deep transition-colors">
+          Back to catalogue
+        </a>
+      </div>
+
+      <!-- Category content -->
+      <div x-show="!loading && !notFound && category" x-cloak>
+        <!-- ============ CATEGORY BANNER ============ -->
+        <section
+          x-data="{ timer: null, restartTimer() { clearInterval(this.timer); this.timer = setInterval(() => bannerNext(), 6000); } }"
+          x-init="restartTimer()"
+          class="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden bg-bg-elevated shadow-xl"
+          style="aspect-ratio: 1672 / 650; min-height: 280px;"
+        >
+          <template x-for="(img, index) in bannerImages" :key="img">
+            <div class="absolute inset-0 overflow-hidden transition-opacity duration-[400ms]" :class="index === bannerIndex ? 'opacity-100' : 'opacity-0'">
+              <img
+                :src="img" alt="" aria-hidden="true"
+                loading="eager" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover scale-110"
+                :class="index === bannerIndex ? 'animate-kenburns' : ''"
+                style="filter: blur(28px) brightness(0.65) saturate(1.15);"
+              />
+              <img
+                :src="img" :alt="category ? category.name : ''"
+                loading="eager" :fetchpriority="index === 0 ? 'high' : 'auto'" decoding="async"
+                class="absolute inset-0 w-full h-full object-contain"
+              />
+            </div>
+          </template>
+
+          <template x-if="bannerImages.length === 0 && category && category.image && category.image !== 'placeholder'">
+            <div class="absolute inset-0">
+              <img
+                :src="category.image" alt="" aria-hidden="true"
+                loading="eager" decoding="async"
+                class="absolute inset-0 w-full h-full object-cover scale-110"
+                style="filter: blur(28px) brightness(0.65) saturate(1.15);"
+              />
+              <img
+                :src="category.image" :alt="category.name"
+                loading="eager" fetchpriority="high" decoding="async"
+                class="absolute inset-0 w-full h-full object-contain"
+              />
+            </div>
+          </template>
+
+          <!-- No image yet at all (category.image is also "placeholder") — a plain
+               accent gradient with a monogram initial, no broken-image icon. -->
+          <template x-if="bannerImages.length === 0 && (!category || !category.image || category.image === 'placeholder')">
+            <div
+              class="absolute inset-0 flex items-center justify-center"
+              style="background: linear-gradient(135deg, rgb(var(--accent-r) var(--accent-g) var(--accent-b) / 0.35), var(--bg-elevated));"
+            >
+              <span class="font-display text-8xl italic" style="color: rgb(var(--accent-r) var(--accent-g) var(--accent-b) / 0.4);" x-text="category ? category.name.charAt(0) : ''"></span>
+            </div>
+          </template>
+
+          <div
+            class="absolute inset-0 pointer-events-none"
+            style="background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.2) 30%, transparent 60%), linear-gradient(to top, rgba(10,10,12,.85) 0%, rgba(10,10,12,.4) 40%, transparent 100%);"
+          ></div>
+
+          <template x-if="bannerImages.length > 1">
+            <div>
+              <div class="absolute top-[22px] left-[22px] right-[22px] flex justify-between z-10 pointer-events-none">
+                <button
+                  type="button" aria-label="Previous image"
+                  @click="bannerPrev(); restartTimer()"
+                  class="pointer-events-auto w-[42px] h-[42px] rounded-full flex items-center justify-center text-white text-xl transition-transform duration-200 hover:scale-110"
+                  style="background: rgba(20,20,24,.35); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.4);"
+                >‹</button>
+                <button
+                  type="button" aria-label="Next image"
+                  @click="bannerNext(); restartTimer()"
+                  class="pointer-events-auto w-[42px] h-[42px] rounded-full flex items-center justify-center text-white text-xl transition-transform duration-200 hover:scale-110"
+                  style="background: rgba(20,20,24,.35); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.4);"
+                >›</button>
+              </div>
+              <div class="absolute z-10 flex gap-2" style="bottom: 22px; right: clamp(24px, 6vw, 64px);">
+                <template x-for="(img, index) in bannerImages" :key="`dot-${img}`">
+                  <button
+                    type="button" aria-label="Go to image"
+                    @click="bannerIndex = index; restartTimer()"
+                    class="rounded-full transition-all duration-300"
+                    style="height: 8px; border: none; padding: 0;"
+                    :style="`width: ${index === bannerIndex ? '24px' : '8px'}; background: ${index === bannerIndex ? 'rgb(var(--accent-r) var(--accent-g) var(--accent-b))' : 'rgba(255,255,255,.55)'};`"
+                  ></button>
+                </template>
+              </div>
+            </div>
+          </template>
+
+          <div class="absolute inset-x-0 bottom-0 max-w-6xl mx-auto px-6 sm:px-10 pb-8 sm:pb-12 z-10" data-reveal>
+            <p class="font-label text-[11.5px] tracking-wide mb-3.5" style="color: rgba(255,255,255,.75);">
+              <a :href="catalogueHref" class="hover:text-white transition-colors">Catalogue</a>
+              <span class="mx-1.5">/</span>
+              <span style="color: #f5f1e8;" x-text="category ? category.name : ''"></span>
+            </p>
+            <h1
+              class="font-display font-medium mb-3.5"
+              style="font-size: clamp(32px, 4.6vw, 54px); line-height: 1.06; letter-spacing: -0.01em; color: #f5f1e8; text-wrap: balance;"
+              x-text="category ? category.name : ''"
+            ></h1>
+            <p class="max-w-[560px]" style="font-size: clamp(15px, 1.3vw, 17px); line-height: 1.6; color: rgba(255,255,255,.88);" x-text="category ? category.description : ''"></p>
+          </div>
+        </section>
+
+        <!-- ============ PRODUCT GRID ============ -->
+        <section class="max-w-6xl mx-auto px-6 pt-16 pb-[88px]">
+          <div
+            x-show="visibleProducts.length === 0"
+            class="text-center text-muted py-16"
+          >
+            No products in this collection yet — check back soon.
+          </div>
+
+          <div x-show="visibleProducts.length">
+            <template x-for="group in groupedProducts" :key="group.section || '__default'">
+              <div class="mb-14 last:mb-0">
+                <h2
+                  class="font-display text-[26px] md:text-[28px] font-medium mb-6 px-6 py-4 rounded-2xl bg-black text-white tracking-tight"
+                  x-text="group.section"
+                  data-reveal
+                ></h2>
+                <div class="grid gap-7" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+                  <template x-for="product in group.products" :key="product.slug">
+                    <a
+                      :href="productHref(product.slug)"
+                      class="group relative rounded-3xl bg-white/70 dark:bg-neutral-900/70 backdrop-blur-xl border border-white/60 dark:border-neutral-800 overflow-hidden flex flex-col transition-all duration-500 transform-gpu hover:-translate-y-2 hover:rotate-x-2 hover:rotate-y-1 hover:shadow-[0_20px_40px_rgba(147,197,114,0.22)] hover:border-[#93C572]/50"
+                      data-reveal
+                    >
+                      <div class="relative overflow-hidden bg-white dark:bg-neutral-800/40 aspect-[4/5] p-6 flex items-center justify-center">
+                        <template x-if="hasRealImage(product.image)">
+                          <img :src="firstImage(product.image)" :alt="product.name" loading="lazy" decoding="async" width="1122" height="1402" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-md" />
+                        </template>
+                        <template x-if="!hasRealImage(product.image)">
+                          <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="font-display text-5xl text-[#93C572]/40 italic" x-text="product.name.charAt(0)"></span>
+                          </div>
+                        </template>
+                      </div>
+                      <div class="p-6 flex-1 flex flex-col bg-white/40 dark:bg-neutral-900/40 backdrop-blur-md">
+                        <p class="font-label text-xs uppercase tracking-wider font-bold text-[#93C572] mb-2" x-text="category ? category.name : ''"></p>
+                        <h3 class="font-display text-lg font-semibold text-neutral-900 dark:text-white mb-2 leading-snug group-hover:text-[#93C572] transition-colors" x-text="product.name"></h3>
+                        <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-5 flex-1 line-clamp-2" x-text="product.shortDescription"></p>
+                        <span class="font-label text-xs uppercase tracking-wider font-bold text-[#93C572] inline-flex items-center gap-1.5 transition-transform duration-300 group-hover:translate-x-1">View details &rarr;</span>
+                      </div>
+                    </a>
+                  </template>
+                </div>
+              </div>
+            </template>
+          </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="px-6 pb-24">
+          <div class="max-w-4xl mx-auto rounded-3xl bg-white/80 dark:bg-neutral-900/80 backdrop-blur-2xl border border-white/60 dark:border-neutral-800 px-8 py-14 md:px-12 text-center shadow-[0_20px_50px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform-gpu hover:shadow-[0_25px_60px_rgba(147,197,114,0.18)] transition-all duration-500" data-reveal>
+            <h2 class="font-display text-2xl md:text-4xl font-semibold tracking-tight text-neutral-900 dark:text-white mb-4">
+              Specifying <span class="text-[#93C572]" x-text="category ? category.name.toLowerCase() : ''"></span> for a property?
+            </h2>
+            <p class="text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-xl mx-auto mb-8 text-base">
+              Tell us your room count and timeline — we'll put together pricing and lead times for this collection.
+            </p>
+            <a
+              :href="inquireHref"
+              class="inline-flex items-center px-8 py-4 rounded-full bg-[#93C572] text-neutral-950 font-label text-xs uppercase tracking-wider font-bold hover:bg-[#82B860] transition-all hover:scale-105 shadow-xl shadow-[#93C572]/20"
+            >
+              Request a Quote
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ============ FOOTER (shared component — see js/footer.js) ============ -->
+    <div id="site-footer"></div>
+    <script src="/js/min/footer.min.js?v=114"></script>
+
+    <script src="/js/min/app.min.js?v=114"></script>
+    <script src="/js/min/alpine.min.js?v=114" defer></script>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DV61CF3S8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9DV61CF3S8');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+
+    <title>All Categories — VIYO | VividVista International</title>
+    <meta name="description" content="Browse VIYO's full catalogue of hotel amenity categories — in-room, bathroom, washroom automation, lobby fixtures and banquet accessories." />
+    <meta name="keywords" content="VIYO categories, VIYO hotel amenities catalogue, VIYO India, VividVista catalogue" />
+
+    <link rel="canonical" href="https://www.viyoindia.com/categories.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VIYO — VividVista International" />
+    <meta property="og:title" content="All Categories — VIYO | VividVista International" />
+    <meta property="og:description" content="Browse VIYO's full catalogue of hotel amenity categories — in-room, bathroom, washroom automation, lobby fixtures and banquet accessories." />
+    <meta property="og:url" content="https://www.viyoindia.com/categories.html" />
+    <meta property="og:image" content="https://www.viyoindia.com/favicon.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="All Categories — VIYO | VividVista International" />
+    <meta name="twitter:description" content="Browse VIYO's full catalogue of hotel amenity categories — in-room, bathroom, washroom automation, lobby fixtures and banquet accessories." />
+    <meta name="twitter:image" content="https://www.viyoindia.com/favicon.png" />
+
+    <link rel="stylesheet" href="/styles.min.css?v=114" />
+    <link rel="stylesheet" href="/css/tailwind.min.css?v=114" />
+
+    <script src="/js/min/config.min.js?v=114"></script>
+    <script src="/js/min/theme-init.min.js?v=114"></script>
+
+    <!-- Deferred non-critical head scripts -->
+    <script src="/js/min/analytics.min.js?v=114" defer></script>
+    <script src="/js/min/color-utils.min.js?v=114" defer></script>
+    <script src="/js/min/image-protect.min.js?v=114" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/css/viyo-theme.min.css?v=114" />
+  </head>
+
+  <body x-data="{}" class="font-body text-ink bg-gradient-to-b from-[#f4faf0] via-[#d5ecc4] to-[#eaf6e1] dark:from-[#0e1611] dark:via-[#16251b] dark:to-[#0d1510] min-h-screen antialiased transition-colors duration-500 relative" style="font-family: 'Inter', sans-serif;">
+    <div class="fixed top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#93C572]/25 dark:bg-[#93C572]/20 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-1/4 right-1/4 translate-y-1/2 w-[550px] h-[350px] bg-[#6fa847]/20 dark:bg-[#6fa847]/15 rounded-full blur-[110px] pointer-events-none -z-10"></div>
+<!-- ============ HEADER ============ -->
+    <div id="site-header"></div>
+    <script src="/js/min/header.min.js?v=114"></script>
+
+    <main x-data="catalog" class="pt-2 sm:pt-4 px-3 sm:px-6 max-w-7xl mx-auto w-full">
+      <!-- ============ PAGE HEADER (banner) ============ -->
+      <section
+        x-data="{ timer: null, restartTimer() { clearInterval(this.timer); this.timer = setInterval(() => bannerNext(), 5000); } }"
+        x-init="restartTimer(); $watch('categoriesPageBanners', () => { bannerIndex = 0; restartTimer(); })"
+        class="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden bg-bg-elevated shadow-xl"
+        style="aspect-ratio: 1672 / 650; min-height: 280px;"
+      >
+        <template x-for="(img, index) in categoriesPageBanners" :key="img">
+          <div class="absolute inset-0 overflow-hidden transition-opacity duration-[500ms]" :class="index === bannerIndex ? 'opacity-100' : 'opacity-0'">
+            <img
+              :src="img" alt="" aria-hidden="true"
+              loading="eager" decoding="async"
+              class="absolute inset-0 w-full h-full object-cover scale-110"
+              :class="index === bannerIndex ? 'animate-kenburns' : ''"
+              style="filter: blur(28px) brightness(0.65) saturate(1.15);"
+            />
+            <img
+              :src="img" alt=""
+              loading="eager" :fetchpriority="index === 0 ? 'high' : 'auto'" decoding="async"
+              class="absolute inset-0 w-full h-full object-contain"
+            />
+          </div>
+        </template>
+
+        <div
+          class="absolute inset-0 pointer-events-none"
+          style="background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.2) 30%, transparent 60%), linear-gradient(to top, rgba(10,10,12,.85) 0%, rgba(10,10,12,.4) 40%, transparent 100%);"
+        ></div>
+
+        <div class="absolute inset-x-0 bottom-0 max-w-6xl mx-auto px-6 sm:px-10 pb-8 sm:pb-12 z-10" data-reveal>
+          <p class="hidden sm:block font-label text-[11.5px] tracking-wide mb-3.5" style="color: rgba(255,255,255,.75);">
+            <a href="/" class="hover:text-white transition-colors">Home</a>
+            <span class="mx-1.5">/</span>
+            <span style="color: #f5f1e8;" x-text="selectedMainCategorySlug ? (visibleMainCategories[0] ? visibleMainCategories[0].name : 'Category') : 'All Categories'"></span>
+          </p>
+          <h1
+            class="font-display font-medium mb-3.5"
+            style="font-size: clamp(32px, 4.6vw, 54px); line-height: 1.06; letter-spacing: -0.01em; color: #f5f1e8; text-wrap: balance;"
+            x-text="selectedMainCategorySlug ? (visibleMainCategories[0] ? visibleMainCategories[0].name : 'Shop by Category') : 'Shop by Category'"
+          >
+          </h1>
+          <p class="max-w-[560px]" style="font-size: clamp(15px, 1.3vw, 17px); line-height: 1.6; color: rgba(255,255,255,.88);"
+             x-text="selectedMainCategorySlug ? (visibleMainCategories[0] ? visibleMainCategories[0].description : 'Every collection we manufacture, grouped the way a hotel actually buys — pick a category to see the full range.') : 'Every collection we manufacture, grouped the way a hotel actually buys — pick a category to see the full range.'">
+          </p>
+        </div>
+
+        <template x-if="categoriesPageBanners.length > 1">
+          <div class="absolute bottom-4 right-6 z-20 flex items-center gap-2">
+            <template x-for="(bImg, bIdx) in categoriesPageBanners" :key="bIdx">
+              <button
+                type="button"
+                @click="bannerIndex = bIdx; restartTimer();"
+                :aria-label="`Go to slide ${bIdx + 1}`"
+                class="w-2.5 h-2.5 rounded-full transition-all duration-300"
+                :class="bIdx === bannerIndex ? 'bg-white scale-125' : 'bg-white/40 hover:bg-white/70'"
+              ></button>
+            </template>
+          </div>
+        </template>
+      </section>
+
+      <!-- Loading state -->
+      <div x-show="loading" class="max-w-6xl mx-auto px-6 pt-16 pb-24 animate-pulse">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[26px]">
+          <template x-for="i in 9" :key="i">
+            <div class="glass-panel rounded-2xl aspect-[4/5]"></div>
+          </template>
+        </div>
+      </div>
+
+      <!-- ============ CATEGORY GROUPS — filtered to a single main category
+           via ?mainCategory=<slug> when arriving from a source (e.g. the
+           homepage Best Sellers modal) that only cares about one group;
+           shows all of them otherwise. See visibleMainCategories in the
+           "catalog" Alpine component (js/app.js). ============ -->
+      <div x-show="!loading" x-cloak class="max-w-6xl mx-auto px-6 pt-16 pb-24">
+        <!-- Active Search Banner -->
+        <div
+          x-show="searchQuery.trim()"
+          x-cloak
+          class="mb-10 p-5 sm:p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-accent/25 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all duration-300"
+        >
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-accent shrink-0 shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                <span class="font-label text-[11px] uppercase tracking-wider font-bold text-accent">Search Filter Active</span>
+              </div>
+              <h2 class="font-display text-lg sm:text-xl font-medium text-ink mt-0.5">
+                Showing results for <span class="text-accent font-semibold italic">“<span x-text="searchQuery"></span>”</span>
+              </h2>
+            </div>
+          </div>
+          <button
+            type="button"
+            @click="searchQuery = ''; history.replaceState(null, '', '/categories.html');"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-accent/10 hover:bg-accent/20 border border-accent/30 text-accent font-label text-[12px] uppercase tracking-wide font-bold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-sm self-start sm:self-auto"
+          >
+            <span>Clear Search Filter</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Matching Products Grid (if any) -->
+        <div x-show="searchQuery.trim() && searchedProducts.length" x-cloak class="mb-16">
+          <div class="mb-6 flex items-center justify-between">
+            <h2 class="font-display text-[22px] md:text-[25px] font-medium tracking-tight">
+              Matching Products (<span x-text="searchedProducts.length"></span>)
+            </h2>
+          </div>
+          <div class="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+            <template x-for="product in searchedProducts" :key="product.slug">
+              <a
+                :href="`/product.html?slug=${product.slug}`"
+                class="product-card glass-panel grain rounded-[18px] overflow-hidden flex flex-col transition-transform duration-300 group hover:-translate-y-1"
+              >
+                <div class="relative overflow-hidden bg-white aspect-[4/5] p-3 flex items-center justify-center">
+                  <template x-if="firstImage(product.image)">
+                    <img :src="firstImage(product.image)" :alt="product.name" loading="lazy" decoding="async" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                  </template>
+                  <template x-if="!firstImage(product.image)">
+                    <div class="flex items-center justify-center text-accent/40 font-display text-3xl italic">
+                      <span x-text="product.name.charAt(0)"></span>
+                    </div>
+                  </template>
+                </div>
+                <div class="p-4 flex-1 flex flex-col">
+                  <span class="font-label text-[10px] uppercase tracking-wide text-accent mb-1" x-text="categoryName(product.category)"></span>
+                  <h3 class="font-display text-[15px] font-medium mb-1.5 leading-snug text-foreground line-clamp-2" x-text="product.name"></h3>
+                  <p class="text-[12px] text-muted leading-relaxed line-clamp-2 mb-3 flex-1" x-text="product.shortDescription || product.description"></p>
+                  <span class="font-label text-[11px] uppercase tracking-wide text-accent inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">View Details →</span>
+                </div>
+              </a>
+            </template>
+          </div>
+        </div>
+
+        <!-- No Results Empty State -->
+        <div x-show="searchQuery.trim() && !searchedProducts.length && !visibleMainCategories.length" x-cloak class="text-center py-16 px-4 bg-white/90 backdrop-blur-md rounded-2xl border border-accent/20 shadow-md">
+          <div class="w-14 h-14 rounded-full bg-accent/10 text-accent flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-7 h-7"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+          <h3 class="font-display text-2xl font-medium mb-2">No results found for "<span x-text="searchQuery"></span>"</h3>
+          <p class="text-muted text-sm max-w-md mx-auto mb-6">
+            We couldn't find any items matching your exact search. Try selecting a popular category below:
+          </p>
+          <div class="flex flex-wrap justify-center gap-2 max-w-lg mx-auto">
+            <button type="button" @click="searchQuery = 'kettle'" class="px-3.5 py-1.5 rounded-full bg-accent/10 hover:bg-accent/20 text-accent text-xs font-label font-semibold">Kettles</button>
+            <button type="button" @click="searchQuery = 'lock'" class="px-3.5 py-1.5 rounded-full bg-accent/10 hover:bg-accent/20 text-accent text-xs font-label font-semibold">RFID Door Locks</button>
+            <button type="button" @click="searchQuery = 'minibar'" class="px-3.5 py-1.5 rounded-full bg-accent/10 hover:bg-accent/20 text-accent text-xs font-label font-semibold">Minibars</button>
+            <button type="button" @click="searchQuery = 'safe'" class="px-3.5 py-1.5 rounded-full bg-accent/10 hover:bg-accent/20 text-accent text-xs font-label font-semibold">Digital Safes</button>
+            <button type="button" @click="searchQuery = 'hair dryer'" class="px-3.5 py-1.5 rounded-full bg-accent/10 hover:bg-accent/20 text-accent text-xs font-label font-semibold">Hair Dryers</button>
+          </div>
+        </div>
+
+        <div x-show="selectedMainCategorySlug" x-cloak class="mb-8 -mt-4" data-reveal>
+          <a href="/categories.html" class="font-label text-[11px] uppercase tracking-wide text-accent hover:underline inline-flex items-center gap-1.5">← View all categories</a>
+        </div>
+        <div x-show="selectedMainCategorySlug && !visibleMainCategories.length" x-cloak class="text-center text-muted py-16">
+          That category group isn't in the catalogue.
+          <a href="/categories.html" class="text-accent hover:underline">Browse all categories</a> instead.
+        </div>
+        <template x-for="mainCat in visibleMainCategories" :key="mainCat.slug">
+          <div class="mb-16 last:mb-0">
+            <div class="mb-6">
+              <h2 class="font-display text-[24px] md:text-[27px] font-medium tracking-tight mb-2" x-text="mainCat.name"></h2>
+              <p class="text-muted text-[14px] max-w-[640px] leading-relaxed" x-text="mainCat.description"></p>
+            </div>
+            <div class="grid gap-7" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+              <template x-for="cat in categoriesFor(mainCat.slug)" :key="cat.slug">
+                <a
+                  :href="`/category.html?slug=${cat.slug}`"
+                  class="group relative rounded-3xl bg-white/70 dark:bg-neutral-900/70 backdrop-blur-xl border border-white/60 dark:border-neutral-800 overflow-hidden flex flex-col transition-all duration-500 transform-gpu hover:-translate-y-2 hover:rotate-x-2 hover:rotate-y-1 hover:shadow-[0_20px_40px_rgba(147,197,114,0.22)] hover:border-[#93C572]/50"
+                >
+                  <div class="relative overflow-hidden bg-white dark:bg-neutral-800/40 aspect-[4/5] p-6 flex items-center justify-center">
+                    <template x-if="categoryImage(cat.slug)">
+                      <img :src="categoryImage(cat.slug)" :alt="cat.name" loading="lazy" decoding="async" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-md" />
+                    </template>
+                    <template x-if="!categoryImage(cat.slug)">
+                      <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="font-display text-5xl text-[#93C572]/40 italic" x-text="cat.name.charAt(0)"></span>
+                      </div>
+                    </template>
+                  </div>
+                  <div class="p-6 flex-1 flex flex-col bg-white/40 dark:bg-neutral-900/40 backdrop-blur-md">
+                    <h3 class="font-display text-lg font-semibold text-neutral-900 dark:text-white mb-2 leading-snug group-hover:text-[#93C572] transition-colors" x-text="cat.name"></h3>
+                    <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-5 flex-1 line-clamp-2" x-text="cat.description"></p>
+                    <span class="font-label text-xs uppercase tracking-wider font-bold text-[#93C572] inline-flex items-center gap-1.5 transition-transform duration-300 group-hover:translate-x-1">
+                      Browse category &rarr;
+                    </span>
+                  </div>
+                </a>
+              </template>
+            </div>
+          </div>
+        </template>
+      </div>
+    </main>
+
+    <!-- ============ FOOTER (shared component — see js/footer.js) ============ -->
+    <div id="site-footer"></div>
+    <script src="/js/min/footer.min.js?v=114"></script>
+
+    <script src="/js/min/app.min.js?v=114"></script>
+    <script src="/js/min/alpine.min.js?v=114" defer></script>
+  </body>
+</html>

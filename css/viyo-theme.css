@@ -1,0 +1,949 @@
+/* Shared theme for the "Dolphy-style" family of pages (index.html, about.html,
+   and any future page built the same way): the layout/motion language
+   (section bands, pill CTAs with a leading white arrow-badge, sub-nav, stat
+   tiles with an icon medallion, a rounded geometric sans (Poppins) instead of
+   the site's usual Space Grotesk) was sampled from dolphy.in screenshots; the
+   actual colours were then swapped to VividVista's real brand palette
+   (sampled from the VIYO brochure) — ivory cream / near-black / green section
+   bands instead of Dolphy's tan/olive/taupe/caramel originals.
+   Link this file (plus the Poppins <link> tags) on any page that should share
+   this look — don't inline a copy of it into the page's <head> again. */
+
+.font-label,
+.font-body,
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.viyo-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--divider);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+.viyo-card:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+  border-color: rgb(var(--accent-r) var(--accent-g) var(--accent-b) / 0.4);
+}
+[data-theme="dark"] .viyo-card {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+[data-theme="dark"] .viyo-card:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* "The VIYO Collection" bento mosaic — 6 product photos, image-only, no
+   search/filtering. One large featured tile ("a", the minibar) spans 2x2;
+   two stacked tiles ("b"/"c") fill the space beside it; three equal tiles
+   ("d"/"e"/"f") run along the bottom. object-contain (not cover) since
+   these photos span very different native aspect ratios and cover crops
+   the mismatched ones down to an unrecognizable strip. Below the
+   breakpoint it's designed for, the bento areas are dropped in favor of a
+   plain 2-column grid — a 2x2 featured tile doesn't have room to read as
+   "featured" on a narrow phone screen. */
+.viyo-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 170px);
+  grid-template-areas:
+    "a a b"
+    "a a c"
+    "d e f";
+  gap: 14px;
+}
+@media (max-width: 640px) {
+  .viyo-bento {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: none;
+  }
+  .viyo-bento .viyo-mosaic-item {
+    grid-area: auto !important;
+    aspect-ratio: 1 / 1;
+  }
+}
+.viyo-mosaic-item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  /* Deeper olive-khaki (hardcoded, not --bg-elevated) — coordinates with
+     the surrounding #C9C487 .band-taupe background instead of clashing
+     against it, without pulling the whole --bg-elevated token this bright
+     everywhere else it's used. */
+  background: #f9ffeb;
+}
+.viyo-mosaic-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  box-sizing: border-box;
+  padding: 14px;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.viyo-mosaic-item:hover img {
+  transform: scale(1.06);
+}
+
+/* Best Sellers accordion — approved reference (product-mosaic-images "New
+   Arrivals" panels), ported: 4 tall panels side by side. Idle state shows
+   just a number + the product name in vertical type over a solid dark
+   panel; hovering expands that panel (flex-grow) to reveal its photo,
+   category and name, while the other panels compress. Each panel is a
+   full-bleed link straight to its product page — no cart/quick-add here,
+   this is a catalogue, not checkout, unlike the reference. Dark panel
+   background is a deliberate contrast against the section's cream band,
+   matching how .band-black is already used elsewhere on the site (e.g. the
+   footer) for the same kind of dramatic break. Entrance uses the site's
+   ordinary [data-reveal] fade-up (js/app.js) rather than a bespoke
+   animation, since the reference itself has none for this section. */
+.best-sellers-accordion {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  gap: 15px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.best-sellers-accordion-panel {
+  flex: 1;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #161616;
+  border-radius: 14px;
+  transition: flex 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.best-sellers-accordion-panel:hover {
+  flex: 4.5;
+}
+.best-sellers-accordion-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.best-sellers-accordion-idle {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 3rem 1.25rem;
+  z-index: 3;
+  opacity: 1;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.best-sellers-accordion-panel:hover .best-sellers-accordion-idle {
+  opacity: 0;
+  transform: translateY(15px);
+}
+.best-sellers-accordion-name {
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  color: #f5f1e8;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+.best-sellers-accordion-active {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.25rem;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.best-sellers-accordion-panel:hover .best-sellers-accordion-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.15s;
+}
+.best-sellers-accordion-category {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgb(var(--accent-r) var(--accent-g) var(--accent-b));
+  display: block;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+.best-sellers-accordion-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #f5f1e8;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 900px) {
+  .best-sellers-accordion {
+    flex-direction: column;
+    height: 640px;
+    gap: 12px;
+  }
+  .best-sellers-accordion-panel:hover {
+    flex: 4;
+  }
+  .best-sellers-accordion-idle {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.75rem;
+  }
+  .best-sellers-accordion-num {
+    margin-bottom: 0;
+  }
+  .best-sellers-accordion-name {
+    writing-mode: horizontal-tb;
+    font-size: 1rem;
+  }
+  .best-sellers-accordion-active {
+    padding: 1.75rem;
+  }
+  .best-sellers-accordion-title {
+    font-size: 1.25rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .best-sellers-accordion-panel,
+  .best-sellers-accordion-img,
+  .best-sellers-accordion-idle,
+  .best-sellers-accordion-active {
+    transition: none !important;
+  }
+}
+
+.viyo-header {
+  /* Literal #FFFDE9 per the handoff's "solid #FFFDE9" scrolled-header spec
+     — distinct from the general --bg-elevated card-white token. */
+  background: #fffde9;
+  border-bottom: 1px solid var(--divider);
+}
+[data-theme="dark"] .viyo-header {
+  background: var(--bg-elevated);
+}
+
+/* Mobile menu drawer: with "Our Products" expanded (every main category and
+   its sub-categories at once) the drawer can easily run to 3-4x the height
+   of a phone screen. The header is `position: fixed` with no height cap, so
+   that overflow just extended past the bottom of the screen with nothing to
+   scroll — Home/About/Contact/Enquire Now all landed off-screen and
+   unreachable. Capping the header to the viewport and letting only the
+   drawer scroll (not the logo/hamburger row above it) keeps the toggle
+   button reachable to close the menu again. */
+@media (max-width: 767px) {
+  .site-header-root {
+    max-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-menu-panel {
+    overflow-y: auto;
+    min-height: 0;
+    background-color: #ffffff !important;
+    color: #1e2a22 !important;
+    --text-primary: #1e2a22;
+    --text-secondary: #5c655d;
+    --muted: #5c655d;
+    --divider: rgba(30, 42, 34, 0.15);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  }
+  .mobile-menu-panel a,
+  .mobile-menu-panel button,
+  .mobile-menu-panel p,
+  .mobile-menu-panel span,
+  .mobile-menu-panel input {
+    color: #1e2a22;
+  }
+  .mobile-menu-panel a:hover {
+    color: #93C572;
+  }
+}
+
+/* Overlay state: the header floats transparently over the hero/banner photo
+   at the top of the page (the photo runs full-height behind it, header
+   included) instead of pushing the photo down below a solid bar. A dark
+   scrim keeps the logo/nav legible against whatever the photo underneath
+   happens to be. Swaps to .viyo-header (solid, opaque) once scrolled —
+   toggled by the same `scrolled` Alpine state that already drives the
+   shrink-on-scroll behaviour. Also redeclares the same custom properties
+   .band-black uses, so every child utility class (.text-muted,
+   .border-glass-border, etc.) picks up light-on-dark colours automatically,
+   same mechanism as the section bands. */
+.header-overlay {
+  --text-primary: #f5f1e8;
+  --text-secondary: rgba(245, 241, 232, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --divider: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(to bottom, rgba(8, 7, 6, 0.55) 0%, rgba(8, 7, 6, 0.15) 70%, transparent 100%);
+  border-bottom: none;
+  color: var(--text-primary);
+}
+
+/* Header search input box & autocomplete dropdown text contrast fix —
+   overrides --text-primary and --text-secondary so text inside the search bar
+   and its autocomplete panel is crisp, dark, and perfectly legible even when
+   the header is in .header-overlay (light cream text) mode on hero pages. */
+.header-search-box,
+.header-search-dropdown {
+  --text-primary: #1e2a22;
+  --text-secondary: #5c655d;
+}
+.header-search-box input,
+.header-search-box input:focus,
+.header-search-box input:active {
+  color: #1e2a22 !important;
+  caret-color: #1e2a22 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.header-search-box input::placeholder {
+  color: #6b7268 !important;
+}
+
+/* Hide Chrome / WebKit / Edge native search input cancel (cross) icons */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  display: none !important;
+  margin: 0 !important;
+}
+input[type="search"]::-ms-clear,
+input[type="search"]::-ms-reveal {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Fixed cream / near-black / olive / taupe section bands, independent of
+   the site's light/dark toggle — dolphy.in alternates these bands
+   rather than keeping every section the same background. Redeclaring
+   these custom properties on the section overrides the inherited
+   light/dark values for everything inside it (text-ink, text-muted,
+   .viyo-card, borders, etc. all read from the same variables, so
+   nothing else needs to change), plus a --heading-color used by
+   .viyo-heading so section titles flip caramel-on-light / cream-on-dark
+   the same way dolphy.in's do. */
+.band-cream,
+.band-black,
+.band-olive,
+.band-taupe {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+/* Band colours below are re-mapped to the VIYO Premium Hospitality Color
+   System (design_handoff_viyo_homepage/README.md): cream -> Differentiators
+   bg, black -> footer/dark-band, olive -> brand primary green, taupe ->
+   About Us khaki. Cream/taupe headings use the handoff's literal About
+   Us / Differentiators heading colour (#3A3822) instead of the brand
+   accent, since that section explicitly specifies it. */
+/* .band-cream carries the Differentiators section's own literal heading/body
+   colour (#3A3822) — reserved for that section alone, not a generic "light
+   surface" class. Every other homepage section that just needs a plain
+   light surface (no distinct heading treatment) uses .band-surface2/3/4
+   below instead, which only override --bg and let text inherit the page's
+   normal ink/muted tokens, matching the handoff's default themeText/themeMuted. */
+.band-cream {
+  --bg: #fffde9;
+  --bg-elevated: #ffffff;
+  --text-primary: #3a3822;
+  --text-secondary: #5c5a3e;
+  --divider: rgba(58, 56, 34, 0.12);
+  --heading-color: #3a3822;
+  background: var(--bg);
+  color: var(--text-primary);
+}
+/* Plain light surfaces — the handoff's themeSurface2/3/4 tokens (Testimonials
+   & Inquiry / Applications / Best Sellers respectively). themeSurface1
+   (#FFFDE9) needs no class at all since it's already the page's default --bg. */
+.band-surface2 {
+  background: #f5f1e8;
+}
+.band-surface3 {
+  background: #f0ebde;
+}
+.band-surface4 {
+  background: #fffde9;
+}
+/* Dark-mode counterparts — the handoff's own dark-theme surface tokens
+   (themeSurface2/3/4), so these stay distinguishable from the page's plain
+   dark --bg in dark mode too, not just in light mode. */
+[data-theme="dark"] .band-surface2 {
+  background: #39473d;
+}
+[data-theme="dark"] .band-surface3 {
+  background: #3b493e;
+}
+[data-theme="dark"] .band-surface4 {
+  background: #3d4c41;
+  /* Without this, cards inside (.viyo-stat-card, .viyo-card) fall back
+     to the global --bg-elevated (#3d4c42) — a single unit off this band's
+     own --bg, so the cards were vanishing into the section instead of
+     reading as elevated tiles the way they clearly do in light mode. */
+  --bg-elevated: #4d6053;
+  /* Same "gold instead of brand green on a dark surface" fix .band-black
+     already applies (see below) — the plain --accent-r/g/b green is nearly
+     unreadable against this band's own dark-green background, same problem,
+     same fix, just triggered here by the surface going dark instead of the
+     whole band being --bg: black. */
+  --accent-text-r: 201;
+  --accent-text-g: 166;
+  --accent-text-b: 96;
+}
+/* Labels/eyebrows sitting on a near-black band read as gold, not brand
+   green, per the handoff's footer spec ("footer accent labels: #C9A660") —
+   applied here to every dark band, not just the footer, so "Who We Are" /
+   "Get In Touch" style eyebrows on about.html/contact.html match too. */
+.band-black {
+  --bg: #232b26;
+  --bg-elevated: #2a332d;
+  --text-primary: #f5f1e8;
+  --text-secondary: #8f998f;
+  --divider: rgba(245, 241, 232, 0.14);
+  --heading-color: #f5f1e8;
+  --accent-text-r: 201;
+  --accent-text-g: 166;
+  --accent-text-b: 96;
+  background: var(--bg);
+  color: var(--text-primary);
+}
+.band-olive {
+  /* --bg: #c9c487; */
+  --bg: #C9C588;
+  --bg-elevated: #dfdcb8;
+  --text-primary: #3a3822;
+  --text-secondary: #5c5a3e;
+  --divider: rgba(58, 56, 34, 0.18);
+  --heading-color: #3a3822;
+  background: var(--bg);
+  color: var(--text-primary);
+}
+.band-taupe {
+  --bg: #C9C487;
+  --bg-elevated: #dfdcb8;
+  --text-primary: #3a3822;
+  --text-secondary: #5c5a3e;
+  --divider: rgba(58, 56, 34, 0.18);
+  --heading-color: #3a3822;
+  background: var(--bg);
+  color: var(--text-primary);
+}
+
+/* Dark-mode variants of the same bands — the toggle in the header
+   should visibly do something on these pages instead of only affecting
+   the header chrome. Black/olive stay close to their light-mode values
+   (they're already dark); cream and sage deepen into dark charcoal-green
+   tones instead of switching to Vividvista's usual near-black. */
+[data-theme="dark"] .band-cream {
+  --bg: #38463e;
+  --bg-elevated: #3d4c42;
+  --text-primary: #f5f1e8;
+  --text-secondary: #8f998f;
+  --divider: rgba(245, 241, 232, 0.12);
+  --heading-color: #f5f1e8;
+}
+[data-theme="dark"] .band-taupe {
+  --bg: #445449;
+  --bg-elevated: #4e6157;
+  --text-primary: #f5f1e8;
+  --text-secondary: #8f998f;
+  --divider: rgba(245, 241, 232, 0.14);
+  --heading-color: #f5f1e8;
+}
+[data-theme="dark"] .band-olive {
+  --bg: #374c3e;
+  --bg-elevated: #3b5d4d;
+}
+[data-theme="dark"] .band-black {
+  --bg: #000000;
+  --bg-elevated: #161616;
+}
+/* Placeholder tile for products/new-arrivals items with no real photo yet
+   (was an inline light-cream gradient — invisible-until-you-see-it in light
+   mode, but a jarring bright rectangle sitting on a near-black card in dark
+   mode, since inline styles can't respond to [data-theme]). */
+.placeholder-tile {
+  background: linear-gradient(135deg, #fffde9, #c9c487);
+}
+[data-theme="dark"] .placeholder-tile {
+  background: linear-gradient(135deg, #445449, #38463e);
+}
+
+/* New Arrivals list row — a text-only editorial list (name + link, no
+   product photo), deliberately on its own fixed cream/ink/gold palette
+   rather than the site's configurable accent, same as the spotlight this
+   replaced. On hover: the row nudges right, a gold rule sweeps in under
+   the name, and a "View" cue fades into place. Rows with no product page
+   yet (--pending) render the same layout but inert, with a static
+   "Coming Soon" cue instead. */
+.new-arrival-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 26px 6px;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.12);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: padding-left 0.4s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.4s ease;
+}
+.new-arrival-row:hover {
+  padding-left: 14px;
+  background: rgba(176, 141, 87, 0.07);
+}
+.new-arrival-name {
+  flex: 1 1 auto;
+  position: relative;
+  min-width: 0;
+}
+.new-arrival-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 1px;
+  background: #93C572;
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.new-arrival-row:hover .new-arrival-name::after {
+  width: 100%;
+}
+.new-arrival-cue {
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.new-arrival-row:hover .new-arrival-cue {
+  opacity: 1;
+  transform: translateX(0);
+}
+.new-arrival-row--pending {
+  cursor: default;
+}
+.new-arrival-row--pending:hover {
+  padding-left: 6px;
+  background: transparent;
+}
+.new-arrival-row--pending:hover .new-arrival-name::after {
+  width: 0%;
+}
+.new-arrival-row--pending .new-arrival-cue {
+  opacity: 0.6;
+  transform: none;
+}
+@media (hover: none) {
+  .new-arrival-row:hover {
+    padding-left: 6px;
+    background: transparent;
+  }
+  .new-arrival-row:hover .new-arrival-name::after {
+    width: 0%;
+  }
+  .new-arrival-row .new-arrival-cue {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.viyo-heading {
+  color: var(--heading-color, inherit);
+}
+
+/* Pill CTA with a leading white circular arrow badge — dolphy.in uses
+   this exact button on every single CTA (Read More, See Full Range,
+   Enquire Now, Submit, Join our WhatsApp channel). */
+.btn-viyo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: rgb(var(--accent-r) var(--accent-g) var(--accent-b));
+  color: var(--on-accent);
+  padding: 0.4rem 1.6rem 0.4rem 0.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.btn-viyo:hover {
+  background: rgb(var(--accent-deep-r) var(--accent-deep-g) var(--accent-deep-b));
+  transform: scale(1.02);
+}
+.btn-viyo-icon {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 999px;
+  background: #fff;
+  color: rgb(var(--accent-r) var(--accent-g) var(--accent-b));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+/* Header icon buttons (search / theme-toggle / mobile menu) — was a bare
+   outline circle with no fill and only a border-color change on hover, which
+   read as flat/unfinished. A tinted rest state plus a lift+glow+scale on
+   hover gives them the same "pop" as .viyo-subnav-segment's hover. */
+.viyo-icon-btn {
+  background: rgb(var(--accent-r) var(--accent-g) var(--accent-b) / 0.12);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.header-overlay .viyo-icon-btn {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+.viyo-icon-btn:hover {
+  background: rgb(var(--accent-r) var(--accent-g) var(--accent-b) / 0.2);
+  border-color: rgb(var(--accent-r) var(--accent-g) var(--accent-b) / 0.5);
+  color: rgb(var(--accent-text-r) var(--accent-text-g) var(--accent-text-b));
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 6px 16px rgb(var(--accent-r) var(--accent-g) var(--accent-b) / 0.25);
+}
+.viyo-icon-btn:active {
+  transform: translateY(0) scale(0.94);
+  box-shadow: none;
+}
+
+/* Gold variant — used for "Enquire Now" specifically (header, desktop +
+   mobile) so it stands apart from the brand-green pills used everywhere
+   else (Read More, WhatsApp, form submits). */
+.btn-viyo-gold {
+  background: rgb(var(--gold-r) var(--gold-g) var(--gold-b));
+  color: #171d1a;
+}
+.btn-viyo-gold:hover {
+  background: #8a7a3e;
+}
+.btn-viyo-gold .btn-viyo-icon {
+  color: rgb(var(--gold-r) var(--gold-g) var(--gold-b));
+}
+
+/* Deep-green sub-nav bar under the header — rounded pill segments with a
+   soft glassy fill, not the pointed chevron cut this had before (that read
+   as dated rather than premium). A drop shadow under the whole bar gives it
+   some separation/weight against whatever sits below it (a photo, in the
+   hero's case) instead of looking pasted flat on top. */
+/* Secondary category nav bar — Pistachio #93C572 & White Glassmorphic Ribbon */
+.viyo-subnav {
+  position: relative;
+  z-index: 3;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  justify-content: flex-start;
+  justify-content: safe center;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: 24px;
+}
+.viyo-subnav::-webkit-scrollbar {
+  display: none;
+}
+.viyo-subnav-segment {
+  border-radius: 999px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+@media (min-width: 768px) and (max-width: 1099px) {
+  .viyo-subnav {
+    gap: 0.5rem;
+    padding-inline: 1rem;
+  }
+  .viyo-subnav-segment {
+    padding: 0.4rem 0.85rem;
+    font-size: 11.5px;
+  }
+}
+.viyo-subnav-segment.is-primary {
+  background: #93C572;
+  border-color: transparent;
+  color: #0b140d;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(147, 197, 114, 0.4);
+}
+.viyo-subnav-segment.is-primary:hover {
+  background: #82b860;
+  box-shadow: 0 6px 20px rgba(147, 197, 114, 0.6);
+  transform: translateY(-1px) scale(1.03);
+}
+.viyo-subnav-segment:not(.is-primary):hover,
+.viyo-subnav-segment:not(.is-primary).is-open {
+  background: rgba(147, 197, 114, 0.15);
+  border-color: rgba(147, 197, 114, 0.5);
+  color: #93C572;
+  box-shadow: 0 4px 16px rgba(147, 197, 114, 0.2);
+}
+.viyo-subnav-segment:hover {
+  transform: translateY(-1px) scale(1.03);
+}
+.viyo-subnav-segment svg {
+  flex: none;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.viyo-subnav-segment:hover svg {
+  opacity: 1;
+}
+
+/* Stat tile: per the color handoff's "Our Strength" spec — white rounded
+   card, soft green-tinted icon badge (not a solid green tile), dark ink
+   numeral, muted label. --bg-elevated/--divider so the card and the
+   badge's edge (which needs to match whatever it's overlapping) stay
+   correct in dark mode too. */
+.viyo-stat-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--divider);
+  border-radius: 22px;
+  padding: 2.75rem 1rem 1.5rem;
+  text-align: center;
+  position: relative;
+  margin-top: 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.viyo-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 32px rgba(20, 32, 22, 0.14);
+}
+.viyo-stat-card:hover .viyo-stat-icon {
+  transform: translateX(-50%) scale(1.08);
+}
+.viyo-stat-icon {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: rgba(212, 209, 172, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--bg-elevated);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.viyo-stat-icon svg {
+  stroke: #24392f;
+}
+[data-theme="dark"] .viyo-stat-icon svg {
+  stroke: #7fae8c;
+}
+
+/* ============ MOTION ============
+   Continuous, slow "breathing" zoom for full-bleed static hero/banner photos
+   that have no carousel to hand off motion to — otherwise the page opens on
+   a dead, static frame. */
+@keyframes hero-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+.hero-photo {
+  /* Guaranteed even before Tailwind's CDN script finishes injecting its
+     generated stylesheet (async, and slow on mobile networks) — without
+     this, multiple crossfading hero images briefly stack in normal
+     document flow instead of overlapping, since the Tailwind utility
+     classes (absolute inset-0 object-cover) that normally do this aren't
+     applied yet. */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: hero-breathe 16s ease-in-out infinite;
+}
+/* Homepage hero (.home-hero & .home-hero-visual):
+   Ensures the background image visual container always fills 100% height and width
+   of the hero section across all viewports, preventing any black gaps at the bottom. */
+.home-hero {
+  position: relative;
+  width: 100%;
+}
+.home-hero-visual {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .home-hero {
+    min-height: auto;
+  }
+  .home-hero-visual {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .home-hero-visual .hero-parallax {
+    position: absolute;
+    inset: 0;
+  }
+  .home-hero .hero-photo {
+    animation: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo {
+    animation: none;
+  }
+}
+
+/* Staggered grid reveal: each [data-reveal] child of .stagger-grid
+   fades/lifts in with an increasing delay instead of the whole grid
+   appearing as one flat block — relies on the MutationObserver added to
+   js/app.js's reveal script so this still animates for grids that Alpine
+   renders after its async fetch resolves (categories, products). */
+.stagger-grid > [data-reveal]:nth-child(1) { transition-delay: 0s; }
+.stagger-grid > [data-reveal]:nth-child(2) { transition-delay: 0.07s; }
+.stagger-grid > [data-reveal]:nth-child(3) { transition-delay: 0.14s; }
+.stagger-grid > [data-reveal]:nth-child(4) { transition-delay: 0.21s; }
+.stagger-grid > [data-reveal]:nth-child(5) { transition-delay: 0.28s; }
+.stagger-grid > [data-reveal]:nth-child(6) { transition-delay: 0.35s; }
+.stagger-grid > [data-reveal]:nth-child(n+7) { transition-delay: 0.4s; }
+
+/* Icon micro-interaction for the differentiators band and application
+   tiles — a small lift + scale on hover instead of static icons. */
+.icon-hover {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.icon-hover:hover {
+  transform: translateY(-3px) scale(1.12);
+}
+
+/* Stronger, more visible reveal-on-scroll than the site-wide default in
+   /styles.css (22px, 0.8s) — this loads after that stylesheet so it wins on
+   these pages specifically. Bigger travel distance + a scale pop makes the
+   motion actually register instead of reading as a plain fade. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(48px) scale(0.96);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    transition-duration: 0.01ms;
+  }
+}
+
+/* Parallax wrapper for hero/banner photos — js/motion.js moves this at a
+   fraction of scroll speed while the .hero-photo <img> inside keeps its own
+   independent CSS "breathing" zoom, so the two motions don't fight over the
+   same transform. */
+.hero-parallax {
+  position: absolute;
+  inset: -12% 0;
+  will-change: transform;
+}
+
+/* Magnetic pill buttons — js/motion.js nudges these toward the cursor on
+   hover instead of just sitting still under it. */
+.btn-viyo,
+.viyo-subnav-segment {
+  will-change: transform;
+}
+
+/* Word-by-word heading reveal: js/motion.js wraps each word of a
+   [data-text-reveal] heading in a <span> inside an overflow-hidden mask, then
+   slides them up into place with a stagger — an actual "motion design" title
+   entrance instead of the whole line just fading in. */
+[data-text-reveal] .word-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+[data-text-reveal] .word-inner {
+  display: inline-block;
+  transform: translateY(115%);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-text-reveal].is-visible .word-inner {
+  transform: translateY(0);
+}
+/* When an element carries both attributes, let the word-mask animation do
+   all the work — cancel the generic block-level fade/lift from [data-reveal]
+   above so the heading isn't fading in as a block AND sliding in word-by-word
+   at the same time. */
+[data-reveal][data-text-reveal] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-text-reveal] .word-inner {
+    transition-duration: 0.01ms;
+  }
+}
+
+/* Soft light that follows the cursor across full-bleed photo sections —
+   injected by js/motion.js. Purely decorative, pointer-events disabled so it
+   never blocks clicks on the badges/heading sitting on top of it. */
+.cursor-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+/* Anchor-link targets (#products, #inquire, ...) need this or the fixed/
+   sticky header (~135px tall with the sub-nav) covers the top of whatever
+   they scroll to — clicking "Catalogue" would otherwise land with the
+   section heading hidden behind the header instead of visible below it. */
+[id] {
+  scroll-margin-top: 150px;
+}
+
+/* Interactive Hero Carousel Progress Animation & Scrollbar Helper */
+@keyframes carouselProgress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+

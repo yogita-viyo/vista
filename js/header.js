@@ -1,0 +1,459 @@
+// Single source of truth for the site header, injected into the
+// `#site-header` placeholder present on every page. Kept as a plain script
+// (not deferred) so it runs immediately where the placeholder sits in the
+// document, before app.js and the deferred Alpine bundle run — Alpine then
+// initializes `x-data="siteHeader"` on the injected markup like any other
+// element. Absolute hrefs ("/", "/#products", ...) work unchanged whether
+// the current page is "/" itself or another route.
+document.getElementById("site-header").outerHTML = `
+    <header
+      x-data="siteHeader"
+      class="site-header-root z-50 transition-all duration-300 w-full px-2 sm:px-4"
+      :class="overlayCapable ? 'fixed top-0 left-0 right-0' : 'sticky top-0'"
+    >
+      <!-- Floating Crystal Glass Main Navigation Dock with Pistachio #93C572 Gradient Accents -->
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="relative mt-2 sm:mt-3 rounded-2xl sm:rounded-3xl transition-all duration-500 backdrop-blur-2xl border shadow-2xl overflow-hidden"
+          :class="[
+            (scrolled || mobileMenuOpen || !overlayCapable)
+              ? (dark
+                  ? 'bg-gradient-to-r from-[#0d1410]/95 via-[#131d17]/95 to-[#0d1410]/95 border-[#93C572]/30 text-white shadow-[0_16px_50px_rgba(0,0,0,0.8)]'
+                  : 'bg-gradient-to-r from-white/95 via-[#f4faef]/95 to-white/95 border-[#93C572]/40 text-neutral-900 shadow-[0_16px_40px_rgba(147,197,114,0.18)]')
+              : 'bg-gradient-to-r from-black/50 via-neutral-900/40 to-black/50 border-white/20 text-white shadow-[0_12px_32px_rgba(0,0,0,0.3)]'
+          ]"
+        >
+          <!-- Top Ambient Glow Bar -->
+          <div class="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-[#93C572] to-transparent opacity-80"></div>
+
+          <div
+            class="px-4 sm:px-7 flex items-center justify-between gap-3 transition-[padding] duration-300"
+            :class="scrolled ? 'py-2 sm:py-2.5' : 'py-3 sm:py-4'"
+          >
+            
+            <!-- Logo Section -->
+            <a href="/" class="flex items-center shrink-0 group relative z-10" aria-label="VIYO | Vividvista International">
+              <img
+                :src="((overlayCapable && !scrolled && !mobileMenuOpen) || dark) ? '/images/logo-dark.png' : '/images/logo.png'"
+                alt="VIYO — Vividvista International"
+                width="314"
+                height="146"
+                class="w-auto transition-all duration-300 transform group-hover:scale-105"
+                :class="scrolled ? 'h-9 sm:h-11 md:h-12' : 'h-11 sm:h-13 md:h-15'"
+              />
+            </a>
+
+            <!-- Desktop Primary Navigation Links with #93C572 Gradient Pills -->
+            <nav class="hidden md:flex items-center gap-1 lg:gap-2 font-label text-[13.5px] font-bold uppercase tracking-wider">
+              <a
+                href="/"
+                class="px-4 py-2 rounded-full transition-all duration-300 flex items-center gap-1.5"
+                :class="location.pathname === '/' || location.pathname === '/index.html'
+                  ? 'bg-gradient-to-r from-[#93C572]/25 via-[#a5d985]/25 to-[#6fa847]/25 border border-[#93C572]/50 text-[#93C572] dark:text-[#a5d985] font-extrabold shadow-sm'
+                  : 'hover:bg-[#93C572]/15 hover:text-[#93C572] opacity-90 hover:opacity-100'"
+              >
+                <span>Home</span>
+              </a>
+
+              <a
+                href="/categories.html"
+                class="px-4 py-2 rounded-full transition-all duration-300 flex items-center gap-1.5"
+                :class="location.pathname.includes('/categories.html') || location.pathname.includes('/category.html')
+                  ? 'bg-gradient-to-r from-[#93C572]/25 via-[#a5d985]/25 to-[#6fa847]/25 border border-[#93C572]/50 text-[#93C572] dark:text-[#a5d985] font-extrabold shadow-sm'
+                  : 'hover:bg-[#93C572]/15 hover:text-[#93C572] opacity-90 hover:opacity-100'"
+              >
+                <span>Catalogue</span>
+              </a>
+
+              <a
+                href="/about.html"
+                class="px-4 py-2 rounded-full transition-all duration-300 flex items-center gap-1.5"
+                :class="location.pathname.includes('/about.html')
+                  ? 'bg-gradient-to-r from-[#93C572]/25 via-[#a5d985]/25 to-[#6fa847]/25 border border-[#93C572]/50 text-[#93C572] dark:text-[#a5d985] font-extrabold shadow-sm'
+                  : 'hover:bg-[#93C572]/15 hover:text-[#93C572] opacity-90 hover:opacity-100'"
+              >
+                <span>About Us</span>
+              </a>
+
+              <a
+                href="/contact.html"
+                class="px-4 py-2 rounded-full transition-all duration-300 flex items-center gap-1.5"
+                :class="location.pathname.includes('/contact.html')
+                  ? 'bg-gradient-to-r from-[#93C572]/25 via-[#a5d985]/25 to-[#6fa847]/25 border border-[#93C572]/50 text-[#93C572] dark:text-[#a5d985] font-extrabold shadow-sm'
+                  : 'hover:bg-[#93C572]/15 hover:text-[#93C572] opacity-90 hover:opacity-100'"
+              >
+                <span>Contact Us</span>
+              </a>
+            </nav>
+
+            <!-- Right Action Utilities -->
+            <div class="flex items-center gap-2.5 sm:gap-3.5">
+              
+              <!-- Search Bar Pill with #93C572 Glow -->
+              <div
+                class="relative hidden sm:block header-search-box"
+                @keydown.escape="isFocused = false; searchQuery = ''"
+                @click.outside="isFocused = false"
+              >
+                <div
+                  class="relative flex items-center rounded-full transition-all duration-300 shadow-inner overflow-hidden border"
+                  :class="[
+                    isFocused
+                      ? 'w-60 md:w-72 border-[#93C572] ring-2 ring-[#93C572]/40 bg-white dark:bg-neutral-900 shadow-md'
+                      : (overlayCapable && !scrolled && !mobileMenuOpen && !dark)
+                        ? 'w-40 md:w-52 bg-white/90 border-white/60 text-neutral-900 shadow-sm hover:bg-white'
+                        : 'w-40 md:w-52 bg-white dark:bg-neutral-900 border-neutral-300 dark:border-neutral-700 hover:border-[#93C572]/60 shadow-sm'
+                  ]"
+                >
+                  <button
+                    type="button"
+                    @click="submitSearch()"
+                    class="pl-3.5 pr-1 text-[#93C572] flex items-center justify-center hover:scale-110 transition-transform"
+                    title="Search amenities"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                      <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                  </button>
+                  <input
+                    type="search"
+                    x-ref="searchInput"
+                    x-model="searchQuery"
+                    @focus="isFocused = true"
+                    @keydown.enter="submitSearch()"
+                    placeholder="Search amenities..."
+                    aria-label="Search products"
+                    autocomplete="off"
+                    autocorrect="off"
+                    spellcheck="false"
+                    class="w-full bg-transparent pl-2 pr-8 py-2 text-[13px] font-medium font-body outline-none border-0 ring-0 focus:outline-none focus:border-0 focus:ring-0 text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-500 dark:placeholder:text-neutral-400"
+                  />
+                  <button
+                    x-show="searchQuery"
+                    @click="searchQuery = ''"
+                    type="button"
+                    class="absolute right-3 text-muted hover:text-ink text-xs font-bold"
+                  >✕</button>
+                </div>
+
+                <!-- Instant Autocomplete Live Dropdown -->
+                <div
+                  x-show="isFocused"
+                  x-cloak
+                  x-transition:enter="transition ease-out duration-200"
+                  x-transition:enter-start="opacity-0 translate-y-2 scale-95"
+                  x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                  x-transition:leave="transition ease-in duration-150"
+                  x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+                  x-transition:leave-end="opacity-0 translate-y-2 scale-95"
+                  class="header-search-dropdown absolute right-0 top-full mt-2.5 w-80 sm:w-96 rounded-2xl glass-panel shadow-2xl border border-[#93C572]/30 overflow-hidden z-50 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-xl text-ink text-left"
+                >
+                  <template x-if="searchQuery.trim().length > 0">
+                    <div class="p-3.5">
+                      <!-- Matching Categories -->
+                      <template x-if="searchResults.categories.length">
+                        <div class="mb-3 pb-2.5 border-b border-divider">
+                          <span class="font-label text-[10px] uppercase tracking-wider text-muted px-2 font-bold">Categories</span>
+                          <div class="flex flex-wrap gap-1.5 mt-2">
+                            <template x-for="cat in searchResults.categories" :key="cat.slug">
+                              <a
+                                :href="'/category.html?slug=' + cat.slug"
+                                @click="isFocused = false"
+                                class="px-3 py-1 rounded-full bg-[#93C572]/15 hover:bg-[#93C572]/25 text-[#93C572] font-label text-[11px] font-semibold transition-colors flex items-center gap-1 border border-[#93C572]/30"
+                              >
+                                <span x-text="cat.name"></span> →
+                              </a>
+                            </template>
+                          </div>
+                        </div>
+                      </template>
+
+                      <!-- Matching Products -->
+                      <template x-if="searchResults.products.length">
+                        <div>
+                          <span class="font-label text-[10px] uppercase tracking-wider text-muted px-2 font-bold">Products</span>
+                          <div class="space-y-1.5 mt-1.5">
+                            <template x-for="p in searchResults.products" :key="p.slug">
+                              <a
+                                :href="'/product.html?slug=' + p.slug"
+                                @click="isFocused = false"
+                                class="flex items-center gap-3 p-2 rounded-xl hover:bg-[#93C572]/15 transition-all group"
+                              >
+                                <div class="w-10 h-10 rounded-lg bg-white dark:bg-neutral-800 border border-glass-border overflow-hidden shrink-0 flex items-center justify-center p-0.5 shadow-sm">
+                                  <template x-if="firstImage(p.image)">
+                                    <img :src="firstImage(p.image)" :alt="p.name" class="w-full h-full object-contain" />
+                                  </template>
+                                  <template x-if="!firstImage(p.image)">
+                                    <span class="font-display text-xs text-[#93C572]/50 italic" x-text="p.name.charAt(0)"></span>
+                                  </template>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                  <h4 class="font-display text-[13.5px] font-medium text-ink truncate group-hover:text-[#93C572] transition-colors" x-text="p.name"></h4>
+                                  <p class="text-[11px] text-muted truncate" x-text="p.section || p.shortDescription"></p>
+                                </div>
+                                <span class="text-[#93C572] opacity-0 group-hover:opacity-100 transition-opacity text-xs font-bold mr-1">→</span>
+                              </a>
+                            </template>
+                          </div>
+                        </div>
+                      </template>
+
+                      <!-- No Match -->
+                      <template x-if="!searchResults.products.length && !searchResults.categories.length">
+                        <div class="py-6 text-center text-muted">
+                          <p class="text-xs mb-2.5">No instant matches for "<span class="font-semibold text-ink" x-text="searchQuery"></span>"</p>
+                          <button type="button" @click="submitSearch()" class="px-4 py-2 rounded-full bg-gradient-to-r from-[#93C572] to-[#6fa847] text-neutral-950 text-xs font-label uppercase tracking-wide font-bold hover:brightness-110 transition-all shadow-sm">
+                            Search full catalogue →
+                          </button>
+                        </div>
+                      </template>
+
+                      <!-- Footer Search View All -->
+                      <template x-if="searchResults.products.length || searchResults.categories.length">
+                        <div class="mt-2.5 pt-2.5 border-t border-divider flex items-center justify-between px-2">
+                          <span class="text-[11px] text-muted font-medium" x-text="searchResults.totalProducts + ' products found'"></span>
+                          <button
+                            type="button"
+                            @click="submitSearch()"
+                            class="font-label text-[11px] uppercase tracking-wide text-[#93C572] font-bold hover:underline flex items-center gap-1"
+                          >
+                            View all in catalogue →
+                          </button>
+                        </div>
+                      </template>
+                    </div>
+                  </template>
+
+                  <!-- Popular Searches -->
+                  <template x-if="!searchQuery.trim().length">
+                    <div class="p-4">
+                      <span class="font-label text-[10px] uppercase tracking-wider text-muted font-bold block mb-2.5">Popular Searches</span>
+                      <div class="flex flex-wrap gap-1.5">
+                        <button type="button" @click="searchQuery = 'kettle'; submitSearch('kettle');" class="px-3 py-1.5 rounded-full bg-[#93C572]/15 hover:bg-[#93C572]/25 text-[#93C572] font-label text-[11.5px] font-medium transition-colors border border-[#93C572]/25">Kettles</button>
+                        <button type="button" @click="searchQuery = 'lock'; submitSearch('lock');" class="px-3 py-1.5 rounded-full bg-[#93C572]/15 hover:bg-[#93C572]/25 text-[#93C572] font-label text-[11.5px] font-medium transition-colors border border-[#93C572]/25">RFID Door Locks</button>
+                        <button type="button" @click="searchQuery = 'minibar'; submitSearch('minibar');" class="px-3 py-1.5 rounded-full bg-[#93C572]/15 hover:bg-[#93C572]/25 text-[#93C572] font-label text-[11.5px] font-medium transition-colors border border-[#93C572]/25">Minibars</button>
+                        <button type="button" @click="searchQuery = 'safe'; submitSearch('safe');" class="px-3 py-1.5 rounded-full bg-[#93C572]/15 hover:bg-[#93C572]/25 text-[#93C572] font-label text-[11.5px] font-medium transition-colors border border-[#93C572]/25">Digital Safes</button>
+                        <button type="button" @click="searchQuery = 'hair dryer'; submitSearch('hair dryer');" class="px-3 py-1.5 rounded-full bg-[#93C572]/15 hover:bg-[#93C572]/25 text-[#93C572] font-label text-[11.5px] font-medium transition-colors border border-[#93C572]/25">Hair Dryers</button>
+                        <button type="button" @click="searchQuery = 'dustbin'; submitSearch('dustbin');" class="px-3 py-1.5 rounded-full bg-[#93C572]/15 hover:bg-[#93C572]/25 text-[#93C572] font-label text-[11.5px] font-medium transition-colors border border-[#93C572]/25">Dustbins</button>
+                      </div>
+                    </div>
+                  </template>
+                </div>
+              </div>
+
+              <!-- Theme Toggle Button Pill -->
+              <button
+                type="button"
+                @click="toggleTheme()"
+                aria-label="Toggle light/dark theme"
+                title="Toggle Theme Mode"
+                class="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center border backdrop-blur-md transition-all duration-300 shadow-sm cursor-pointer hover:scale-110 active:scale-95"
+                :class="(overlayCapable && !scrolled && !mobileMenuOpen && !dark)
+                  ? 'bg-black/30 border-white/30 text-white hover:bg-white/20'
+                  : (dark ? 'bg-neutral-800 border-[#93C572]/40 text-[#93C572] hover:bg-neutral-700 shadow-[#93C572]/20' : 'bg-white/90 border-neutral-300 text-neutral-800 hover:bg-neutral-100')"
+              >
+                <svg x-show="dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-500 rotate-0 hover:rotate-45">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+                </svg>
+                <svg x-show="!dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-500 rotate-0 hover:-rotate-12">
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>
+                </svg>
+              </button>
+
+              <!-- Pistachio #93C572 Gradient CTA "Enquire Now" Button -->
+              <a
+                href="/#inquire"
+                class="hidden sm:inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full font-label text-xs sm:text-[13px] font-bold uppercase tracking-wider text-neutral-950 bg-gradient-to-r from-[#93C572] via-[#b2e094] to-[#6fa847] hover:from-[#a5d985] hover:via-[#c2ebaa] hover:to-[#7db859] shadow-[0_4px_22px_rgba(147,197,114,0.45)] hover:shadow-[0_6px_30px_rgba(147,197,114,0.7)] hover:scale-105 active:scale-98 transition-all duration-300 group"
+              >
+                <span>Enquire Now</span>
+                <span class="w-6 h-6 rounded-full bg-neutral-950 text-[#93C572] flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M7 17 17 7M8 7h9v9"></path></svg>
+                </span>
+              </a>
+
+              <!-- Mobile Hamburger Toggle Button -->
+              <button
+                type="button"
+                aria-label="Toggle menu"
+                :aria-expanded="mobileMenuOpen"
+                @click="mobileMenuOpen = !mobileMenuOpen"
+                class="viyo-icon-btn md:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center flex-none shadow-sm cursor-pointer"
+              >
+                <svg x-show="!mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path d="M4 7h16M4 12h16M4 17h16"></path>
+                </svg>
+                <svg x-show="mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path d="M6 6l12 12M18 6L6 18"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Category Sub-Nav Ribbon (Pistachio & White Glassmorphism) -->
+        <nav
+          class="viyo-subnav hidden md:flex items-center justify-[safe_center] flex-nowrap overflow-x-auto gap-2 sm:gap-2.5 px-4 sm:px-6 py-2 mt-2 rounded-2xl backdrop-blur-2xl border shadow-lg font-label text-[12.5px] uppercase tracking-wide transition-all duration-300"
+          :class="dark
+            ? 'bg-neutral-900/90 border-[#93C572]/20 text-white shadow-[0_8px_30px_rgba(0,0,0,0.6)]'
+            : 'bg-white/90 border-[#93C572]/30 text-neutral-900 shadow-[0_8px_30px_rgba(147,197,114,0.12)]'"
+        >
+          <a
+            href="/#products"
+            class="viyo-subnav-segment is-primary font-bold flex-shrink-0 transition-all duration-300 px-4 py-2 rounded-full flex items-center gap-2 bg-[#93C572] text-neutral-950 shadow-md hover:bg-[#82b860] hover:scale-105"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5">
+              <rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+            </svg>
+            Our Products
+          </a>
+          <template x-for="mainCat in mainCategories" :key="mainCat.slug">
+            <div
+              class="relative flex-shrink-0"
+              x-data="{ open: false, menuTop: 0, menuLeft: 0, menuMaxHeight: 400 }"
+              @mouseenter="open = true; $nextTick(() => { const r = $el.getBoundingClientRect(); menuTop = r.bottom; menuLeft = Math.max(12, Math.min(r.left, window.innerWidth - 292)); menuMaxHeight = window.innerHeight - r.bottom - 16; })"
+              @mouseleave="open = false"
+            >
+              <button
+                type="button"
+                class="viyo-subnav-segment flex items-center gap-2 px-3.5 py-1.5 rounded-full border transition-all duration-300"
+                :class="open
+                  ? 'bg-[#93C572]/20 border-[#93C572] text-[#93C572] dark:text-[#a5d985] font-bold'
+                  : 'bg-white/50 dark:bg-white/5 border-neutral-200 dark:border-white/10 hover:bg-[#93C572]/15 hover:border-[#93C572]/40 hover:text-[#93C572]'"
+                @click="open = !open; $nextTick(() => { const r = $el.getBoundingClientRect(); menuTop = r.bottom; menuLeft = Math.max(12, Math.min(r.left, window.innerWidth - 292)); menuMaxHeight = window.innerHeight - r.bottom - 16; })"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-[#93C572]">
+                  <path d="M20.59 13.41 13.41 20.59a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><circle cx="7" cy="7" r="1" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span x-text="mainCat.name"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 transition-transform duration-200" :class="open ? 'rotate-180 text-[#93C572]' : ''">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div
+                x-show="open"
+                :style="\`top: \${menuTop}px; left: \${menuLeft}px; max-height: \${menuMaxHeight}px;\`"
+                x-transition:enter="transition ease-out duration-150"
+                x-transition:enter-start="opacity-0 translate-y-1 scale-98"
+                x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                x-transition:leave="transition ease-in duration-100"
+                x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+                x-transition:leave-end="opacity-0 translate-y-1 scale-98"
+                x-cloak
+                class="fixed nav-dropdown rounded-2xl shadow-2xl p-3.5 w-[280px] flex flex-col gap-1.5 normal-case text-left z-50 overflow-y-auto border border-[#93C572]/40 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-xl"
+              >
+                <template x-for="cat in categoriesFor(mainCat.slug)" :key="cat.slug">
+                  <a :href="\`/category.html?slug=\${cat.slug}\`" class="nav-dropdown-link text-[13px] px-3.5 py-2 rounded-xl transition-all flex items-center justify-between hover:bg-[#93C572]/20 hover:text-[#93C572] font-medium group">
+                    <span x-text="cat.name"></span>
+                    <span class="text-xs opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all text-[#93C572]">→</span>
+                  </a>
+                </template>
+              </div>
+            </div>
+          </template>
+        </nav>
+      </div>
+
+      <!-- Mobile Menu Drawer -->
+      <div
+        x-show="mobileMenuOpen"
+        x-cloak
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 -translate-y-2 scale-98"
+        x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+        x-transition:leave-end="opacity-0 -translate-y-2 scale-98"
+        class="mobile-menu-panel md:hidden mt-2 rounded-2xl border border-[#93C572]/40 bg-white/95 dark:bg-[#0d1410]/95 backdrop-blur-xl text-ink shadow-2xl max-h-[85vh] overflow-y-auto"
+      >
+        <div class="max-w-6xl mx-auto px-5 py-4 flex flex-col font-label text-[13px] font-bold uppercase tracking-wide text-ink">
+          <div class="pb-4 mb-1 border-b border-divider">
+            <div class="relative header-search-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2 text-[#93C572] pointer-events-none">
+                <circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.35-4.35"></path>
+              </svg>
+              <input
+                type="search"
+                x-model="searchQuery"
+                @keydown.enter="submitSearch()"
+                placeholder="Search amenities…"
+                aria-label="Search products"
+                class="w-full pl-11 pr-4 py-3 rounded-full bg-white dark:bg-neutral-900 border border-[#93C572]/40 focus:border-[#93C572] outline-none transition-colors text-[13px] normal-case text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-500 dark:placeholder:text-neutral-400 font-medium"
+              />
+            </div>
+            <!-- Live Mobile Search Overlay -->
+            <template x-if="searchQuery.trim().length > 0">
+              <div class="header-search-dropdown mt-3 bg-white dark:bg-neutral-900 rounded-xl border border-[#93C572]/30 p-3 shadow-lg font-normal text-ink normal-case">
+                <template x-if="searchResults.products.length">
+                  <div class="space-y-2">
+                    <template x-for="p in searchResults.products" :key="p.slug">
+                      <a
+                        :href="'/product.html?slug=' + p.slug"
+                        @click="mobileMenuOpen = false"
+                        class="flex items-center gap-3 p-1.5 rounded-lg hover:bg-[#93C572]/15 transition-colors"
+                      >
+                        <div class="w-9 h-9 rounded bg-white dark:bg-neutral-800 border border-glass-border shrink-0 flex items-center justify-center p-0.5">
+                          <template x-if="firstImage(p.image)">
+                            <img :src="firstImage(p.image)" :alt="p.name" class="w-full h-full object-contain" />
+                          </template>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                          <p class="text-xs font-medium text-ink truncate" x-text="p.name"></p>
+                          <p class="text-[10px] text-muted truncate" x-text="p.section || p.shortDescription"></p>
+                        </div>
+                      </a>
+                    </template>
+                  </div>
+                </template>
+                <div class="mt-2 pt-2 border-t border-divider text-right">
+                  <button type="button" @click="submitSearch()" class="text-xs font-bold text-[#93C572] uppercase tracking-wide">
+                    View all results →
+                  </button>
+                </div>
+              </div>
+            </template>
+          </div>
+
+          <div x-data="{ productsOpen: false }" class="border-b border-divider">
+            <button type="button" @click="productsOpen = !productsOpen" class="uppercase w-full flex items-center justify-between py-3 hover:text-[#93C572] transition-colors">
+              <span>Our Products</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform duration-200" :class="productsOpen ? 'rotate-180' : ''">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+            <div x-show="productsOpen" x-cloak class="pl-3 pb-3 flex flex-col gap-3">
+              <template x-for="mainCat in mainCategories" :key="mainCat.slug">
+                <div>
+                  <p class="normal-case text-[11px] tracking-normal text-muted/70 mb-2 pb-1.5 border-b border-divider font-semibold" x-text="mainCat.name"></p>
+                  <div class="flex flex-col gap-2 pl-2">
+                    <template x-for="cat in categoriesFor(mainCat.slug)" :key="cat.slug">
+                      <a :href="\`/category.html?slug=\${cat.slug}\`" @click="mobileMenuOpen = false" class="normal-case text-[13px] hover:text-[#93C572] transition-colors" x-text="cat.name"></a>
+                    </template>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+
+          <a href="/" @click="mobileMenuOpen = false" class="py-3 border-b border-divider hover:text-[#93C572] transition-colors">Home</a>
+          <a href="/categories.html" @click="mobileMenuOpen = false" class="py-3 border-b border-divider hover:text-[#93C572] transition-colors">Catalogue</a>
+          <a href="/about.html" @click="mobileMenuOpen = false" class="py-3 border-b border-divider hover:text-[#93C572] transition-colors">About Us</a>
+          <a href="/contact.html" @click="mobileMenuOpen = false" class="py-3 border-b border-divider hover:text-[#93C572] transition-colors">Contact Us</a>
+          
+          <button type="button" @click="toggleTheme()" class="py-3 border-b border-divider flex items-center justify-between font-bold text-ink">
+            <span>Theme Mode</span>
+            <span class="flex items-center gap-1.5 text-xs text-[#93C572]">
+              <span x-text="dark ? 'Dark Mode 🌙' : 'Light Mode ☀️'"></span>
+            </span>
+          </button>
+
+          <a href="/#inquire" @click="mobileMenuOpen = false" class="btn-viyo bg-gradient-to-r from-[#93C572] via-[#b2e094] to-[#6fa847] text-neutral-950 justify-center mt-4 normal-case shadow-md font-extrabold">
+            <span class="btn-viyo-icon bg-neutral-950 text-[#93C572]">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M7 17 17 7M8 7h9v9"></path></svg>
+            </span>
+            Enquire Now
+          </a>
+        </div>
+      </div>
+    </header>
+`;

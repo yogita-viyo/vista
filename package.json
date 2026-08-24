@@ -1,0 +1,16 @@
+{
+  "name": "vividvista-website",
+  "version": "1.0.0",
+  "description": "Vividvista International B2B Hotel Amenities Website",
+  "scripts": {
+    "build:tailwind": "npx @tailwindcss/cli -i css/input.css -o css/tailwind.min.css --minify",
+    "build:css": "npx esbuild styles.css --minify --outfile=styles.min.css && npx esbuild css/viyo-theme.css --minify --outfile=css/viyo-theme.min.css",
+    "build:js": "npx esbuild js/app.js js/header.js js/footer.js js/sector-gallery.js js/color-utils.js js/theme-init.js js/image-protect.js js/analytics.js js/config.js js/motion.js --minify --outdir=js/min --out-extension:.js=.min.js",
+    "build": "npm run build:tailwind && npm run build:css && npm run build:js",
+    "watch:css": "npx @tailwindcss/cli -i css/input.css -o css/tailwind.min.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

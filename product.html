@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DV61CF3S8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9DV61CF3S8');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+
+    <title>Product — VIYO | VividVista International</title>
+    <meta name="description" content="VIYO hotel amenities product detail." />
+
+    <!-- SEO: static fallbacks — js/app.js (productPage.syncTitle) overwrites
+         title/description/canonical/og:* once the real product loads. -->
+    <link rel="canonical" href="https://www.viyoindia.com/product.html" />
+    <meta property="og:type" content="product" />
+    <meta property="og:site_name" content="VIYO — VividVista International" />
+    <meta property="og:title" content="Product — VIYO | VividVista International" />
+    <meta property="og:description" content="VIYO hotel amenities product detail." />
+    <meta property="og:url" content="https://www.viyoindia.com/product.html" />
+    <meta property="og:image" content="https://www.viyoindia.com/favicon.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Product — VIYO | VividVista International" />
+    <meta name="twitter:description" content="VIYO hotel amenities product detail." />
+    <meta name="twitter:image" content="https://www.viyoindia.com/favicon.png" />
+
+    <link rel="stylesheet" href="/styles.min.css?v=114" />
+    <link rel="stylesheet" href="/css/tailwind.min.css?v=114" />
+
+    <script src="/js/min/config.min.js?v=114"></script>
+    <script src="/js/min/theme-init.min.js?v=114"></script>
+
+    <!-- Deferred non-critical head scripts -->
+    <script src="/js/min/analytics.min.js?v=114" defer></script>
+    <script src="/js/min/color-utils.min.js?v=114" defer></script>
+    <script src="/js/min/image-protect.min.js?v=114" defer></script>
+
+    <!-- The shared header (js/header.js) uses .viyo-header/.viyo-subnav/
+         .btn-viyo styling, so every page that includes it needs this too. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/css/viyo-theme.min.css?v=114" />
+  </head>
+
+  <body x-data="{}" class="font-body text-ink bg-gradient-to-b from-[#f4faf0] via-[#d5ecc4] to-[#eaf6e1] dark:from-[#0e1611] dark:via-[#16251b] dark:to-[#0d1510] min-h-screen antialiased transition-colors duration-500 relative" style="font-family: 'Inter', sans-serif;">
+    <div class="fixed top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#93C572]/25 dark:bg-[#93C572]/20 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-1/4 right-1/4 translate-y-1/2 w-[550px] h-[350px] bg-[#6fa847]/20 dark:bg-[#6fa847]/15 rounded-full blur-[110px] pointer-events-none -z-10"></div>
+<!-- ============ HEADER ============ -->
+    <div id="site-header"></div>
+    <script src="/js/min/header.min.js?v=114"></script>
+
+    <main class="pt-6 sm:pt-10 pb-24 px-6 max-w-7xl mx-auto w-full" x-data="productPage">
+      <!-- Loading state -->
+      <div x-show="loading" class="max-w-5xl mx-auto animate-pulse">
+        <div class="h-4 w-40 bg-accent/10 rounded mb-8"></div>
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="bg-white rounded-3xl aspect-square"></div>
+          <div class="space-y-4">
+            <div class="h-3 w-24 bg-accent/10 rounded"></div>
+            <div class="h-10 w-3/4 bg-accent/10 rounded"></div>
+            <div class="h-20 bg-accent/10 rounded"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Not found state -->
+      <div x-show="!loading && notFound" x-cloak class="max-w-2xl mx-auto text-center py-20">
+        <h1 class="font-display text-3xl font-medium mb-4">Product not found.</h1>
+        <p class="text-muted mb-8">The item you're looking for isn't in the catalogue, or the link may be out of date.</p>
+        <a :href="catalogueHref" class="inline-flex px-6 py-3 rounded-full bg-accent text-on-accent font-label text-sm uppercase tracking-wide hover:bg-accent-deep transition-colors">
+          Back to catalogue
+        </a>
+      </div>
+
+      <!-- Product content -->
+      <div x-show="!loading && !notFound && product" x-cloak class="max-w-5xl mx-auto">
+        <!-- Breadcrumb -->
+        <p class="font-label text-[11.5px] tracking-wide text-muted mb-6">
+          <a :href="catalogueHref" class="hover:text-accent transition-colors">Catalogue</a>
+          &nbsp;/&nbsp;
+          <a :href="`/category.html?slug=${product ? product.category : ''}`" class="hover:text-accent transition-colors" x-text="category ? category.name : ''"></a>
+          <template x-if="product && product.section">
+            <span>
+              &nbsp;/&nbsp;
+              <span class="text-accent" x-text="product.section"></span>
+            </span>
+          </template>
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-10 md:gap-14 mb-20" data-reveal>
+          <!-- Image gallery with 3D glass card frame -->
+          <div x-data="{ activeIndex: 0 }" class="flex flex-col justify-center">
+            <div class="relative group rounded-3xl bg-white dark:bg-neutral-800/50 backdrop-blur-2xl border border-white/60 dark:border-neutral-700/60 aspect-square flex items-center justify-center overflow-hidden p-8 sm:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform-gpu hover:shadow-[0_25px_60px_rgba(147,197,114,0.2)] transition-all duration-500">
+              <template x-if="images.length">
+                <img :src="images[activeIndex]" :alt="product.name" loading="eager" fetchpriority="high" decoding="async" class="w-full h-full object-contain max-h-[300px] sm:max-h-[350px] m-auto transition-transform duration-700 group-hover:scale-105 drop-shadow-lg" />
+              </template>
+              <template x-if="!images.length">
+                <span class="font-display text-8xl text-[#93C572]/30 italic" x-text="product ? product.name.charAt(0) : ''"></span>
+              </template>
+            </div>
+
+            <div x-show="images.length > 1" class="flex gap-3 mt-4">
+              <template x-for="(img, index) in images" :key="img">
+                <button
+                  type="button"
+                  @click="activeIndex = index"
+                  :aria-label="`Show image ${index + 1}`"
+                  class="w-16 h-16 rounded-2xl overflow-hidden shrink-0 bg-white dark:bg-neutral-800 relative transition-all duration-300 transform-gpu hover:scale-105"
+                  :class="index === activeIndex ? 'ring-2 ring-[#93C572] shadow-lg shadow-[#93C572]/20' : 'border border-white/40 dark:border-neutral-700 opacity-70 hover:opacity-100'"
+                >
+                  <img :src="img" :alt="`${product.name} ${index + 1}`" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-contain p-1.5" />
+                </button>
+              </template>
+            </div>
+          </div>
+
+          <!-- Details -->
+          <div class="flex flex-col justify-center">
+            <p class="font-label text-xs uppercase tracking-[0.25em] text-[#93C572] font-bold mb-4" x-text="product && product.section ? `${category ? category.name : ''} — ${product.section}` : (category ? category.name : '')"></p>
+            <h1 class="font-display text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 dark:text-white mb-5 leading-tight" x-text="product ? product.name : ''"></h1>
+            <p class="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-8 text-base" x-text="product ? product.description : ''"></p>
+
+            <!-- Spec table -->
+            <div
+              x-show="product && product.specs"
+              class="rounded-3xl bg-white/70 dark:bg-neutral-900/70 backdrop-blur-2xl border border-white/60 dark:border-neutral-800 overflow-hidden mb-8 shadow-xl"
+            >
+              <template x-for="[key, value] in specEntries()" :key="key">
+                <div class="grid grid-cols-[1fr_1.4fr] px-6 py-4 border-b border-neutral-200/50 dark:border-neutral-800/80 last:border-b-0">
+                  <span class="font-label text-xs uppercase tracking-wider text-neutral-500 dark:text-neutral-400 font-semibold" x-text="key"></span>
+                  <template x-if="key === 'Features'">
+                    <ul class="text-sm text-neutral-800 dark:text-neutral-200 list-disc pl-4 space-y-1">
+                      <template x-for="feature in value.split(',').map((f) => f.trim()).filter(Boolean)" :key="feature">
+                        <li class="capitalize" x-text="feature"></li>
+                      </template>
+                    </ul>
+                  </template>
+                  <template x-if="key !== 'Features'">
+                    <span class="text-sm font-medium text-neutral-800 dark:text-neutral-200" x-text="value"></span>
+                  </template>
+                </div>
+              </template>
+            </div>
+
+            <a
+              :href="inquireHref"
+              class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#93C572] text-neutral-950 font-label text-xs uppercase tracking-wider font-bold hover:bg-[#82B860] transition-all hover:scale-105 shadow-xl shadow-[#93C572]/20 w-fit"
+            >
+              Request Quote &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Related products section -->
+        <div x-show="related.length > 0" data-reveal class="mt-16 pt-12 border-t border-neutral-200 dark:border-neutral-800">
+          <div class="flex items-center justify-between mb-8">
+            <h2 class="font-display text-2xl md:text-3xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+              More from <span class="text-[#93C572]" x-text="relatedSectionTitle"></span>
+            </h2>
+            <a :href="`/category.html?slug=${product ? product.category : ''}`" class="font-label text-xs uppercase tracking-wider text-[#93C572] font-bold hover:underline">View Collection &rarr;</a>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <template x-for="p in related" :key="p.slug">
+              <a
+                :href="relatedHref(p.slug)"
+                class="group relative rounded-3xl bg-white/70 dark:bg-neutral-900/70 backdrop-blur-xl border border-white/60 dark:border-neutral-800 overflow-hidden flex flex-col transition-all duration-500 transform-gpu hover:-translate-y-2 hover:rotate-x-2 hover:shadow-[0_20px_40px_rgba(147,197,114,0.22)] hover:border-[#93C572]/50"
+              >
+                <div class="h-[180px] relative overflow-hidden bg-white dark:bg-neutral-800/40 p-4 flex items-center justify-center">
+                  <template x-if="hasRealImage(p.image)">
+                    <img :src="firstImage(p.image)" :alt="p.name" loading="lazy" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-sm" />
+                  </template>
+                  <template x-if="!hasRealImage(p.image)">
+                    <div class="flex items-center justify-center text-[#93C572]/40 font-display text-4xl italic">
+                      <span x-text="p.name.charAt(0)"></span>
+                    </div>
+                  </template>
+                </div>
+                <div class="p-5 flex-1 flex flex-col bg-white/40 dark:bg-neutral-900/40 backdrop-blur-md">
+                  <p class="font-label text-[10px] uppercase tracking-wider font-bold text-[#93C572] mb-1.5" x-text="p.section || (category ? category.name : '')"></p>
+                  <h3 class="font-display text-base font-semibold text-neutral-900 dark:text-white mb-1.5 leading-snug line-clamp-2 group-hover:text-[#93C572] transition-colors" x-text="p.name"></h3>
+                  <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed line-clamp-2 flex-1" x-text="p.shortDescription"></p>
+                </div>
+              </a>
+            </template>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ============ FOOTER (shared component — see js/footer.js) ============ -->
+    <div id="site-footer"></div>
+    <script src="/js/min/footer.min.js?v=114"></script>
+
+    <script src="/js/min/app.min.js?v=114"></script>
+    <script src="/js/min/alpine.min.js?v=114" defer></script>
+  </body>
+</html>

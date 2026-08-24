@@ -1,0 +1,3291 @@
+{
+  "clients": [
+    {
+      "name": "Taj",
+      "logo": "/images/logos/logo-taj.webp"
+    },
+    {
+      "name": "Lemon Tree Premier",
+      "logo": "/images/logos/logo-lemon-tree-premier.webp"
+    },
+    {
+      "name": "Radisson Blu",
+      "logo": "/images/logos/logo-radisson-blu.webp"
+    },
+    {
+      "name": "Hyatt",
+      "logo": "/images/logos/logo-hyatt.webp"
+    },
+    {
+      "name": "Hilton",
+      "logo": "/images/logos/logo-hilton.webp"
+    },
+    {
+      "name": "Wyndham Hotels & Resorts",
+      "logo": "/images/logos/logo-wyndham-hotels-resorts.webp"
+    },
+    {
+      "name": "Marriott",
+      "logo": "/images/logos/logo-marriott.webp"
+    },
+    {
+      "name": "The Park Hotels",
+      "logo": "/images/logos/logo-the-park-hotels.webp"
+    },
+    {
+      "name": "Sayaji",
+      "logo": "/images/logos/logo-sayaji.webp"
+    },
+    {
+      "name": "Sarovar Hotels & Resorts",
+      "logo": "/images/logos/logo-sarovar-hotels-resorts.webp"
+    },
+    {
+      "name": "Vantara",
+      "logo": "/images/logos/logo-vantara.webp"
+    },
+    {
+      "name": "Adani",
+      "logo": "/images/logos/logo-adani.webp"
+    },
+    {
+      "name": "The Fern Hotels & Resorts",
+      "logo": "/images/logos/logo-the-fern-hotels-resorts.webp"
+    },
+    {
+      "name": "Re:gen:ta Hotels & Resorts",
+      "logo": "/images/logos/logo-re-gen-ta-hotels-resorts.webp"
+    },
+    {
+      "name": "Mayfair Hotels & Resorts",
+      "logo": "/images/logos/logo-mayfair-hotels-resorts.webp"
+    },
+    {
+      "name": "Raas Residency",
+      "logo": "/images/logos/logo-raas-residency.webp"
+    },
+    {
+      "name": "IHG — InterContinental Hotels Group",
+      "logo": "/images/logos/logo-ihg.webp"
+    },
+    {
+      "name": "Fortune Hotels",
+      "logo": "/images/logos/logo-fortune-hotels.webp"
+    },
+    {
+      "name": "INOX",
+      "logo": "/images/logos/logo-inox.webp"
+    },
+    {
+      "name": "Praveg Hotels, Rezorts & Tents",
+      "logo": "/images/logos/logo-praveg-hotels.webp"
+    },
+    {
+      "name": "WelcomHotel by ITC Hotels",
+      "logo": "/images/logos/logo-welcomhotel-by-itc-hotels.webp"
+    },
+    {
+      "name": "The Leela Palaces, Hotels & Resorts",
+      "logo": "/images/logos/logo-the-leela.webp"
+    },
+    {
+      "name": "Le Méridien",
+      "logo": "/images/logos/logo-le-meridien.webp"
+    },
+    {
+      "name": "Garner by IHG",
+      "logo": "/images/logos/logo-garner-by-ihg.webp"
+    }
+  ],
+  "banners": [
+    {
+      "eyebrow": "B2B Amenities Catalogue",
+      "title": "Quiet luxury, delivered to every room",
+      "body": "Curated bath, bedding, minibar and spa essentials for five-star properties — sourced, tested, and ready to inquire.",
+      "cta": "Browse Catalogue",
+      "href": "#products",
+      "image": "/images/banners/banner-1.webp"
+    },
+    {
+      "eyebrow": "In-Room Security",
+      "title": "The details guests trust",
+      "body": "Battery-backed digital safes with manager override, sized for laptops and valuables — built for nightly commercial use.",
+      "cta": "View Safes",
+      "href": "#products",
+      "image": "/images/banners/banner-2.webp"
+    },
+    {
+      "eyebrow": "Bathroom Amenities",
+      "title": "Ready for the day, without asking twice",
+      "body": "Wall-mounted hair dryers and bathroom fittings guests expect to just be there — reliable, well-placed, and part of a room that feels considered.",
+      "cta": "View Bathroom Amenities",
+      "href": "#products",
+      "image": "/images/banners/banner-3.webp"
+    },
+    {
+      "eyebrow": "B2B Amenities Catalogue",
+      "title": "Quiet luxury, delivered to every room",
+      "body": "Curated bath, bedding, minibar and spa essentials for five-star properties — sourced, tested, and ready to inquire.",
+      "cta": "Browse Catalogue",
+      "href": "#products",
+      "image": "/images/banners/banner-5.webp"
+    }
+  ],
+  "newArrivals": [
+    {
+      "name": "प्राण",
+      "image": "/images/new-arrivals/new-arrival-1.webp",
+      "link": "https://pranindia.com/"
+    }
+  ],
+  "mainCategories": [
+    {
+      "slug": "in-room-amenities",
+      "name": "In Room Amenities",
+      "description": "Everything inside the guest room — locks, minibar, safe, kettle, hair dryer and room furniture."
+    },
+    {
+      "slug": "in-room-bathroom-amenities",
+      "name": "In Room Bathroom Amenities",
+      "description": "Guest bathroom fixtures and fittings — hair dryers, mirrors, dispensers, bath mats and bath accessories."
+    },
+    {
+      "slug": "in-washroom-amenities",
+      "name": "In Washroom Amenities",
+      "description": "Public and guest washroom essentials — hand dryers, tissue dispensers and baby changing stations."
+    },
+    {
+      "slug": "common-lobby-accessories",
+      "name": "Common Lobby Accessories",
+      "description": "Public-area and back-of-house essentials — trolleys, queue managers and lobby fixtures."
+    }
+  ],
+  "categories": [
+    {
+      "slug": "hotel-rfid-door-locks",
+      "name": "RFID Door Lock",
+      "mainCategory": "in-room-amenities",
+      "description": "RFID lock systems, encoders and accessories for guest room door security.",
+      "image": "/images/categories/hotel-rfid-door-locks.webp",
+      "banners": [
+        "/images/categories/hotel-rfid-door-locks-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "minibar",
+      "name": "Mini Bar Fridge",
+      "mainCategory": "in-room-amenities",
+      "description": "Silent, compressor-free thermoelectric minibars for standard and suite-tier guest rooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/minibar-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "electric-safe-locker",
+      "name": "Digital Safe Lockers",
+      "mainCategory": "in-room-amenities",
+      "description": "Digital-keypad in-room safes with manager override, sized for laptops and valuables.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/electric-safe-locker-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "kettle-with-tray",
+      "name": "Kettle & Tray Sets",
+      "mainCategory": "in-room-amenities",
+      "description": "In-room kettles and matching welcome trays for tea and coffee service.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/kettle-with-tray-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "hair-dryer",
+      "name": "Hair Dryers",
+      "mainCategory": "in-room-bathroom-amenities",
+      "description": "Wall-mount and handheld hair dryers for guest bathrooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/hair-dryer-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "shaving-mirror",
+      "name": "Magnifying Mirror",
+      "mainCategory": "in-room-bathroom-amenities",
+      "description": "Magnifying close-shave mirrors in chrome, matt black and LED-lit finishes.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/shaving-mirror-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "soap-tissue-dispenser",
+      "name": "Soap/Shampoo Dispensers",
+      "mainCategory": "in-room-bathroom-amenities",
+      "description": "Manual and automatic soap and shampoo dispensers for guest bathrooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/soap-tissue-dispenser-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "hand-dryer",
+      "name": "Hand Dryers",
+      "mainCategory": "in-washroom-amenities",
+      "description": "Wall-mount hand dryers and M-fold tissue dispensers for guest and public washrooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/hand-dryer-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "dustbin",
+      "name": "Dustbin",
+      "mainCategory": "in-room-amenities",
+      "description": "Pedal bins, swing bins, ashbins and housekeeping bins in stainless steel and other finishes.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/dustbin-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "steam-iron",
+      "name": "Steam Iron",
+      "mainCategory": "in-room-amenities",
+      "description": "Steam and dry irons sized for a guest room closet.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/steam-iron-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "iron-board",
+      "name": "Iron Board Stand",
+      "mainCategory": "in-room-amenities",
+      "description": "Foldable ironing tables and matching wall hangers for guest rooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/iron-board-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "dock-station-torch",
+      "name": "Dock Station & Torch",
+      "mainCategory": "in-room-amenities",
+      "description": "Bedside dock stations and emergency torch lights for guest rooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/dock-station-torch-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "telephone",
+      "name": "Landline Telephone",
+      "mainCategory": "in-room-amenities",
+      "description": "Desk, wall-mount, bathroom and lobby telephones with programmable memory buttons.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/telephone-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "closet-accessories",
+      "name": "Cloth Hangers",
+      "mainCategory": "in-room-amenities",
+      "description": "Wooden and satin cloth hangers, plus matching coat hanger stands, for guest room closets.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/closet-accessories-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "luggage-rack",
+      "name": "Luggage Rack",
+      "mainCategory": "in-room-amenities",
+      "description": "Folding luggage racks for guest rooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/luggage-rack-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "baby-coat",
+      "name": "Baby Coat",
+      "mainCategory": "in-room-amenities",
+      "description": "Baby cots with mattress for guest rooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/baby-coat-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "shoe-brush-horn",
+      "name": "Shoe Brush & Horn",
+      "mainCategory": "in-room-amenities",
+      "description": "Shoe horns and coat brushes for guest room closets.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/shoe-brush-horn-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "trolley",
+      "name": "Hotel Trolleys",
+      "mainCategory": "common-lobby-accessories",
+      "description": "Luggage, housekeeping, laundry and room-service trolleys for hotel back-of-house operations.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/trolley-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "folding-bed",
+      "name": "Folding Bed",
+      "mainCategory": "common-lobby-accessories",
+      "description": "Folding extra beds for guest rooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/folding-bed-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "queue-managers",
+      "name": "Queue Managers",
+      "mainCategory": "common-lobby-accessories",
+      "description": "Ribbon and rope queue managers for hotel lobbies and public areas.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/queue-managers-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "shoe-shining-machine",
+      "name": "Shoe Shining Machine",
+      "mainCategory": "common-lobby-accessories",
+      "description": "Fully automatic shoe polish machines for hotel lobbies.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/shoe-shining-machine-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "news-paper-stand",
+      "name": "Newspaper Stand",
+      "mainCategory": "common-lobby-accessories",
+      "description": "Newspaper stands for hotel lobbies and public areas.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/news-paper-stand-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "baby-changing-station",
+      "name": "Baby Changing Station",
+      "mainCategory": "in-washroom-amenities",
+      "description": "Wall-mounted baby changing stations for public washrooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/baby-changing-station-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "printing-customization",
+      "name": "Printing Customization",
+      "mainCategory": "in-room-amenities",
+      "description": "Branded telephone face plates, key card covers, tags and coaster paper printed to your property.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/printing-customization-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "cloth-liner",
+      "name": "Cloth Liner",
+      "mainCategory": "in-room-bathroom-amenities",
+      "description": "Cloth liners for guest bathroom bins.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/cloth-liner-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "ac",
+      "name": "Air Conditioner",
+      "mainCategory": "in-room-amenities",
+      "description": "In-room air conditioning units.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/ac-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "tv",
+      "name": "TV",
+      "mainCategory": "in-room-amenities",
+      "description": "In-room televisions.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/tv-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "dnd-plate",
+      "name": "DND Plate",
+      "mainCategory": "in-room-amenities",
+      "description": "Digital do-not-disturb door plates for guest rooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/dnd-plate-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "tissue-box",
+      "name": "Tissue Box",
+      "mainCategory": "in-room-amenities",
+      "description": "Tissue boxes for guest rooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/tissue-box-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "bathmat",
+      "name": "Bathmat",
+      "mainCategory": "in-room-bathroom-amenities",
+      "description": "Rubber and PVC bath mats for guest bathrooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/bathmat-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "ash-tray",
+      "name": "Ash Tray",
+      "mainCategory": "in-room-amenities",
+      "description": "Ashtrays for guest rooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/ash-tray-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "weight-scale",
+      "name": "Weight Scale",
+      "mainCategory": "in-room-amenities",
+      "description": "Manual and digital weighing scales for guest rooms.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/weight-scale-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "podium",
+      "name": "Podium",
+      "mainCategory": "common-lobby-accessories",
+      "description": "Lectern podiums and baby chairs for hotel events and public spaces.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/podium-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "caution-boards",
+      "name": "Caution Boards",
+      "mainCategory": "common-lobby-accessories",
+      "description": "Caution and wet-floor boards for hotel public areas.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/caution-boards-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "insect-catcher-machine",
+      "name": "Insect Catcher Machine",
+      "mainCategory": "common-lobby-accessories",
+      "description": "Insect catcher machines for hotel public areas.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/insect-catcher-machine-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "diffuser",
+      "name": "Diffuser",
+      "mainCategory": "common-lobby-accessories",
+      "description": "Aerosol dispensers, humidifiers and aroma diffusers for hotel lobby scenting.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/diffuser-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "bath-accessories",
+      "name": "Bathroom Accessories",
+      "mainCategory": "in-room-bathroom-amenities",
+      "description": "Towel racks, rods, napkin rings, tissue holders, robe hooks and toilet paper holders.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/bath-accessories-banner-1.webp"
+      ]
+    },
+    {
+      "slug": "door-safety-chain",
+      "name": "Door Safety Chain",
+      "mainCategory": "in-room-amenities",
+      "description": "Door safety chains for guest room doors.",
+      "image": "placeholder",
+      "banners": [
+        "/images/categories/door-safety-chain-banner-1.webp"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "slug": "hotel-rfid-door-lock-vylgm0001-02",
+      "name": "Hotel RFID Door Lock",
+      "category": "hotel-rfid-door-locks",
+      "featured": false,
+      "shortDescription": "Silver, matt-finish RFID door lock for guest rooms.",
+      "description": "A matt-finish RFID door lock in silver, built for nightly commercial guest-room turnover and standard hotel lock cutouts.",
+      "specs": {
+        "Model Code": "VYLGM0001/02",
+        "Color": "Silver",
+        "Finish": "Matt"
+      },
+      "image": "/images/products/hotel-rfid-door-lock-vylgm0001-02.webp"
+    },
+    {
+      "slug": "usb-room-card-encoder-vyreg0003",
+      "name": "USB Room Card Encoder",
+      "category": "hotel-rfid-door-locks",
+      "featured": false,
+      "shortDescription": "Desktop USB encoder for issuing RFID guest room cards at the front desk.",
+      "description": "A compact USB card encoder for issuing guest RFID key cards from the front desk, sized to sit neatly at a reception workstation.",
+      "specs": {
+        "Model Code": "VYREG0003",
+        "Use": "To issue card",
+        "Size": "133x88x25mm"
+      },
+      "image": "/images/products/usb-room-card-encoder-vyreg0003.webp"
+    },
+    {
+      "slug": "handset-programmer-vyrh0004",
+      "name": "Handset Programmer",
+      "category": "hotel-rfid-door-locks",
+      "featured": false,
+      "shortDescription": "Wireless portable programmer for managing hotel RFID locks.",
+      "description": "A wireless, portable handset programmer for on-site hotel lock management — reprogram or troubleshoot a door lock without pulling it apart.",
+      "specs": {
+        "Model Code": "VYRH0004",
+        "Type": "Wireless portable programmer",
+        "Use": "Helpful for hotel locks management"
+      },
+      "image": "/images/products/handset-programmer-vyrh0004.webp"
+    },
+    {
+      "slug": "rfid-key-card-vyrkp0005",
+      "name": "RFID Key Card",
+      "category": "hotel-rfid-door-locks",
+      "featured": false,
+      "shortDescription": "Mifare RFID key card for unlocking guest room doors.",
+      "description": "A Mifare-format RFID key card compatible with the hotel door lock range, for standard guest room unlocking.",
+      "specs": {
+        "Model Code": "VYRKP0005",
+        "Type": "Mifare card for unlock door"
+      },
+      "image": "/images/products/rfid-key-card-vyrkp0005.webp"
+    },
+    {
+      "slug": "energy-saver-switch-black-vyes0006",
+      "name": "Energy Saver Switch (Black)",
+      "category": "hotel-rfid-door-locks",
+      "featured": false,
+      "shortDescription": "Black Mifare card-activated energy saver switch that cuts room power when the card is removed.",
+      "description": "A black Mifare card-activated energy saver switch mounted by the entry door — pulls guest room power off automatically once the card is removed, cutting standby energy waste.",
+      "specs": {
+        "Model Code": "VYES0006",
+        "Type": "Mifare card for unlock door",
+        "Colour": "Black"
+      },
+      "image": "/images/products/energy-saver-switch-black-vyes0006.webp"
+    },
+    {
+      "slug": "energy-saver-switch-white-vyes0007",
+      "name": "Energy Saver Switch (White)",
+      "category": "hotel-rfid-door-locks",
+      "featured": false,
+      "shortDescription": "White Mifare card-activated energy saver switch that cuts room power when the card is removed.",
+      "description": "A white Mifare card-activated energy saver switch mounted by the entry door — pulls guest room power off automatically once the card is removed, cutting standby energy waste.",
+      "specs": {
+        "Model Code": "VYES0007",
+        "Type": "Mifare card for unlock door",
+        "Colour": "White"
+      },
+      "image": "/images/products/energy-saver-switch-white-vyes0007.webp"
+    },
+    {
+      "slug": "energy-saver-switch-gray-vyes0008",
+      "name": "Energy Saver Switch (Gray)",
+      "category": "hotel-rfid-door-locks",
+      "featured": false,
+      "shortDescription": "Gray Mifare card-activated energy saver switch that cuts room power when the card is removed.",
+      "description": "A gray Mifare card-activated energy saver switch mounted by the entry door — pulls guest room power off automatically once the card is removed, cutting standby energy waste.",
+      "specs": {
+        "Model Code": "VYES0008",
+        "Type": "Mifare card for unlock door",
+        "Colour": "Gray"
+      },
+      "image": "/images/products/energy-saver-switch-gray-vyes0008.webp"
+    },
+    {
+      "slug": "thermoelectric-minibar-vymb0011",
+      "name": "Thermoelectric Minibar",
+      "category": "minibar",
+      "featured": true,
+      "shortDescription": "Compressor-free thermoelectric minibar, 30L, cooling to 10-12°C.",
+      "description": "A compressor-free thermoelectric minibar with a semi-conductor cooling element, reversible door and built-in interior LED — cools to 10-12°C at 15dB, quiet enough for guest rooms.",
+      "specs": {
+        "Model Code": "VYMB0011",
+        "Capacity": "30 Ltr.",
+        "Max Cooling": "10° to 12°",
+        "Voltage": "220V-240V",
+        "Sound": "15 dB",
+        "Size": "40x39.8x48H cm",
+        "Features": "Without compressor, semi conductor, reversible door, built-in LED",
+        "Door Type": "Glass"
+      },
+      "image": "/images/products/thermoelectric-minibar-vymb0011-12.webp"
+    },
+    {
+      "slug": "thermoelectric-minibar-vymb0012",
+      "name": "Thermoelectric Minibar",
+      "category": "minibar",
+      "featured": true,
+      "shortDescription": "Compressor-free thermoelectric minibar, 40L, cooling to 10-12°C.",
+      "description": "A compressor-free thermoelectric minibar with a semi-conductor cooling element, reversible door and built-in interior LED — cools to 10-12°C at 15dB, quiet enough for guest rooms.",
+      "specs": {
+        "Model Code": "VYMB0012",
+        "Capacity": "40 Ltr.",
+        "Max Cooling": "10° to 12°",
+        "Voltage": "220V-240V",
+        "Sound": "15 dB",
+        "Size": "40x42.2x53H cm",
+        "Features": "Without compressor, semi conductor, reversible door, built-in LED",
+        "Door Type": "Glass"
+      },
+      "image": "/images/products/thermoelectric-minibar-vymb0011-12.webp"
+    },
+    {
+      "slug": "thermoelectric-minibar-vymb0013",
+      "name": "Thermoelectric Minibar",
+      "category": "minibar",
+      "featured": false,
+      "shortDescription": "Compressor-free thermoelectric minibar, 30L, cooling to 5-8°C.",
+      "description": "The deeper-cooling variant of our thermoelectric minibar, reaching 5-8°C via a compressor-free semi-conductor element, with a reversible door and built-in interior LED at 15dB.",
+      "specs": {
+        "Model Code": "VYMB0013",
+        "Capacity": "30 Ltr.",
+        "Max Cooling": "5° to 8°",
+        "Voltage": "220V-240V",
+        "Sound": "15 dB",
+        "Size": "40x39.8x48H",
+        "Features": "Without compressor, semi conductor, reversible door, built-in LED"
+      },
+      "image": "/images/products/thermoelectric-minibar-deep-cool-vymb0013-14.webp"
+    },
+    {
+      "slug": "thermoelectric-minibar-vymb0014",
+      "name": "Thermoelectric Minibar",
+      "category": "minibar",
+      "featured": false,
+      "shortDescription": "Compressor-free thermoelectric minibar, 40L, cooling to 5-8°C.",
+      "description": "The deeper-cooling variant of our thermoelectric minibar, reaching 5-8°C via a compressor-free semi-conductor element, with a reversible door and built-in interior LED at 15dB.",
+      "specs": {
+        "Model Code": "VYMB0014",
+        "Capacity": "40 Ltr.",
+        "Max Cooling": "5° to 8°",
+        "Voltage": "220V-240V",
+        "Sound": "15 dB",
+        "Size": "40x42.2x53H cm",
+        "Features": "Without compressor, semi conductor, reversible door, built-in LED"
+      },
+      "image": "/images/products/thermoelectric-minibar-deep-cool-vymb0013-14.webp"
+    },
+    {
+      "slug": "minibar-vymbg0015",
+      "name": "Minibar",
+      "category": "minibar",
+      "featured": false,
+      "shortDescription": "Compact 30L compressor-free minibar, cooling to 8-10°C.",
+      "description": "A compact 30L minibar for standard guest rooms, compressor-free with a semi-conductor cooling element, reversible door and built-in interior LED.",
+      "specs": {
+        "Model Code": "VYMBG0015",
+        "Capacity": "30 Ltr.",
+        "Max Cooling": "8° to 10°",
+        "Voltage": "220V-240V",
+        "Sound": "15 dB",
+        "Size": "49x44x46H cm",
+        "Features": "Without compressor, semi conductor, reversible door, built-in LED",
+        "Door Type": "Solid"
+      },
+      "image": "/images/products/minibar-vymbg0015.webp",
+      "section": "Thermo Electric Minibars"
+    },
+    {
+      "slug": "digital-safe-locker-vydsl0021",
+      "name": "Digital Safe Locker",
+      "category": "electric-safe-locker",
+      "featured": true,
+      "shortDescription": "Black digital safe locker with customer password and master override, 7kg.",
+      "description": "A digital-keypad safe with customer-set password, a master password and master key backup, so a forgotten code never needs a technician call-out.",
+      "specs": {
+        "Model Code": "VYDSL0021",
+        "Size": "42x37x20H cm",
+        "Color": "Black",
+        "Weight": "7 kg",
+        "Features": "Customer password, master password, master key,4 to 6 digit code,Fastening 4 bolts at base and 2 bolts at back, Blocked for 5 minutes after 4 incorrect password, Showing Warning when battery Level is low Battery Power: 4 x 1.5V, AA Battery (Duracell Not Included)"
+      },
+      "image": "/images/products/digital-safe-locker-vydsl0021-22.webp"
+    },
+    {
+      "slug": "digital-safe-locker-vydsl0022",
+      "name": "Digital Safe Locker",
+      "category": "electric-safe-locker",
+      "featured": true,
+      "shortDescription": "Black digital safe locker with customer password and master override, 11kg.",
+      "description": "A digital-keypad safe with customer-set password, a master password and master key backup, so a forgotten code never needs a technician call-out.",
+      "specs": {
+        "Model Code": "VYDSL0022",
+        "Size": "31x20x20H cm",
+        "Color": "Black",
+        "Weight": "11 kg",
+        "Features": "Customer password, master password, master key,4 to 6 digit code,Fastening 4 bolts at base and 2 bolts at back, Blocked for 5 minutes after 4 incorrect password, Showing Warning when battery Level is low Battery Power: 4 x 1.5V, AA Battery (Duracell Not Included)"
+      },
+      "image": "/images/products/digital-safe-locker-vydsl0021-22.webp"
+    },
+    {
+      "slug": "digital-safe-locker-15-laptop-vydsl0023",
+      "name": "Digital Safe Locker (15\" Laptop)",
+      "category": "electric-safe-locker",
+      "featured": false,
+      "shortDescription": "Fortress-sized digital safe with spring-loaded door, fits a 15-inch laptop.",
+      "description": "A fortress-sized digital safe built to fit a 15-inch laptop, with a spring-loaded door and interior LED light for finding contents in a dim closet.",
+      "specs": {
+        "Model Code": "VYDSL0023",
+        "Size": "42x37x20 cm",
+        "Fits": "15\" Laptop",
+        "Door": "Spring loaded, inside LED light",
+        "Weight": "10 kg",
+        "Features": "Customer password, master password, master key,4 to 6 digit code,Fastening 4 bolts at base and 2 bolts at back, Blocked for 5 minutes after 4 incorrect password, Showing Warning when battery Level is low Battery Power: 4 x 1.5V, AA Battery (Duracell Not Included)"
+      },
+      "image": "/images/products/digital-safe-locker-15-laptop-vydsl0023.webp"
+    },
+    {
+      "slug": "digital-safe-locker-compact-vydsl0024",
+      "name": "Digital Safe Locker (Compact)",
+      "category": "electric-safe-locker",
+      "featured": false,
+      "shortDescription": "Smaller-footprint black digital safe locker, 7kg.",
+      "description": "A smaller-footprint digital safe for rooms with limited closet space, still carrying the same customer-password and master-override system as the full-size units.",
+      "specs": {
+        "Model Code": "VYDSL0024",
+        "Size": "20x31x20H cm",
+        "Color": "Black",
+        "Weight": "7 kgs",
+        "Features": "Customer password, master password, master key,4 to 6 digit code,Fastening 4 bolts at base and 2 bolts at back, Blocked for 5 minutes after 4 incorrect password, Showing Warning when battery Level is low Battery Power: 4 x 1.5V, AA Battery (Duracell Not Included)"
+      },
+      "image": "/images/products/digital-safe-locker-compact-vydsl0024.webp"
+    },
+    {
+      "slug": "digital-safe-locker-15-laptop-black-vydsl0025",
+      "name": "Digital Safe Locker (15\" Laptop, Black)",
+      "category": "electric-safe-locker",
+      "featured": false,
+      "shortDescription": "Fortress-sized black digital safe with spring-loaded door, fits a 15-inch laptop.",
+      "description": "A fortress-sized black digital safe built to fit a 15-inch laptop, with a spring-loaded door and interior LED light for finding contents in a dim closet.",
+      "specs": {
+        "Model Code": "VYDSL0025",
+        "Size": "42x36x19H cm",
+        "Color": "Black",
+        "Fits": "15\" Laptop",
+        "Door": "Spring loaded, inside LED light",
+        "Weight": "10 kg",
+        "Features": "Customer password, master password, master key,4 to 6 digit code,Fastening 4 bolts at base and 2 bolts at back, Blocked for 5 minutes after 4 incorrect password, Showing Warning when battery Level is low Battery Power: 4 x 1.5V, AA Battery (Duracell Not Included)"
+      },
+      "image": "/images/products/digital-safe-locker-15-laptop-black-vydsl0025.webp"
+    },
+    {
+      "slug": "safe-locker-management-unit-vysle0026",
+      "name": "Safe Locker Management Unit",
+      "category": "electric-safe-locker",
+      "featured": false,
+      "shortDescription": "Computerized emergency unlocking unit for the digital safe locker range.",
+      "description": "A computerized emergency unit for unlocking any digital safe locker in the range and viewing a record of the date and time it was last opened — for housekeeping and lost-code overrides.",
+      "specs": {
+        "Model Code": "VYSLE0026",
+        "Type": "Computerized emergency unlocking unit",
+        "Feature": "Logs date/time the safe was opened"
+      },
+      "image": "/images/products/safe-locker-management-unit-vysle0026.webp"
+    },
+    {
+      "slug": "kettle-vykt0031",
+      "name": "Kettle",
+      "category": "kettle-with-tray",
+      "featured": false,
+      "shortDescription": "0.8L steel and ABS kettle with automatic cut-off.",
+      "description": "A 0.8L kettle in steel and ABS with automatic cut-off and a water level indicator, sized for a standard two-cup guest room service.",
+      "specs": {
+        "Model Code": "VYKT0031",
+        "Capacity": "0.8 Ltr",
+        "Material": "Steel + ABS",
+        "Safety": "Automatic cut-off (water level indicator)"
+      },
+      "image": "/images/products/kettle-vykt0031.webp",
+      "section": "Electric Kettle"
+    },
+    {
+      "slug": "kettle-304-steel-vykt0032",
+      "name": "Kettle (304 Steel)",
+      "category": "kettle-with-tray",
+      "featured": false,
+      "shortDescription": "1.0L kettle in 304 stainless steel with automatic cut-off.",
+      "description": "A 1.0L kettle in 304 stainless steel with automatic cut-off and a water level indicator, for a more premium in-room finish.",
+      "specs": {
+        "Model Code": "VYKT0032",
+        "Capacity": "1.0 Ltr",
+        "Material": "304 SS",
+        "Safety": "Automatic cut-off (water level indicator)"
+      },
+      "image": "/images/products/kettle-304-steel-vykt0032.webp",
+      "section": "Electric Kettle"
+    },
+    {
+      "slug": "kettle-1-2l-vykt0033",
+      "name": "Kettle (1.2L)",
+      "category": "kettle-with-tray",
+      "featured": false,
+      "shortDescription": "1.2L kettle in 304 stainless steel and ABS with automatic cut-off.",
+      "description": "A 1.2L kettle in 304 stainless steel and ABS with automatic cut-off, sized for suites or higher-occupancy rooms.",
+      "specs": {
+        "Model Code": "VYKT0033",
+        "Capacity": "1.2 Ltr",
+        "Material": "304 SS + ABS",
+        "Safety": "Automatic cut-off"
+      },
+      "image": "/images/products/kettle-1-2l-vykt0033.webp",
+      "section": "Electric Kettle"
+    },
+    {
+      "slug": "kettle-1-2l-steel-vykt0034s",
+      "name": "Kettle (1.2L, Steel)",
+      "category": "kettle-with-tray",
+      "featured": false,
+      "shortDescription": "1.2L kettle in 304 stainless steel and ABS with automatic cut-off.",
+      "description": "A 1.2L kettle in 304 stainless steel and ABS with automatic cut-off, an alternate finish to the standard 1.2L model.",
+      "specs": {
+        "Model Code": "VYKT0034S",
+        "Capacity": "1.2 Ltr",
+        "Material": "304 SS + ABS",
+        "Safety": "Automatic cut-off"
+      },
+      "image": "/images/products/kettle-1-2l-steel-vykt0034s.webp",
+      "section": "Electric Kettle"
+    },
+    {
+      "slug": "kettle-1-0l-steel-vykt0035s",
+      "name": "Kettle (1.0L, Steel)",
+      "category": "kettle-with-tray",
+      "featured": false,
+      "shortDescription": "1.0L kettle in 304 stainless steel and ABS with automatic cut-off.",
+      "description": "A 1.0L kettle in 304 stainless steel and ABS with automatic cut-off, sized for a standard guest room welcome tray.",
+      "specs": {
+        "Model Code": "VYKT0035S",
+        "Capacity": "1.0 Ltr",
+        "Material": "304 SS + ABS",
+        "Safety": "Automatic cut-off"
+      },
+      "image": "/images/products/kettle-1-0l-steel-vykt0035s.webp",
+      "section": "Electric Kettle"
+    },
+    {
+      "slug": "tcm-tray-melamine-vvt0049",
+      "name": "TCM Tray (Melamine)",
+      "category": "kettle-with-tray",
+      "featured": false,
+      "shortDescription": "32x39cm melamine welcome tray.",
+      "description": "A 32x39cm welcome tray in melamine, sized to hold the kettle, cups and sachets without crowding the room desk.",
+      "specs": {
+        "Model Code": "VVT0049",
+        "Tray Size": "32x39 cm",
+        "Material": "Melamine"
+      },
+      "image": "/images/products/tcm-tray-melamine-vvt0049.webp",
+      "section": "Tray Sets"
+    },
+    {
+      "slug": "tcm-tray-vyt0041",
+      "name": "TCM Tray",
+      "category": "kettle-with-tray",
+      "featured": false,
+      "shortDescription": "32x39cm ABS welcome tray.",
+      "description": "A 32x39cm ABS welcome tray, matched in size to our standard kettle sets.",
+      "specs": {
+        "Model Code": "VYT0041",
+        "Tray Size": "32x39 cm",
+        "Material": "ABS"
+      },
+      "image": "/images/products/tcm-tray-vyt0041.webp",
+      "section": "Tray Sets"
+    },
+    {
+      "slug": "tcm-tray-compact-vyt0043",
+      "name": "TCM Tray (Compact)",
+      "category": "kettle-with-tray",
+      "featured": false,
+      "shortDescription": "24x36cm ABS welcome tray.",
+      "description": "A 24x36cm ABS welcome tray for a more compact room desk footprint.",
+      "specs": {
+        "Model Code": "VYT0043",
+        "Tray Size": "24x36 cm",
+        "Material": "ABS"
+      },
+      "image": "/images/products/tcm-tray-compact-vyt0043.webp",
+      "section": "Tray Sets"
+    },
+    {
+      "slug": "tcm-tray-long-vyt0042",
+      "name": "TCM Tray (Long)",
+      "category": "kettle-with-tray",
+      "featured": false,
+      "shortDescription": "23x45cm ABS welcome tray.",
+      "description": "A 23x45cm ABS welcome tray, a longer format for desks with a narrower depth.",
+      "specs": {
+        "Model Code": "VYT0042",
+        "Tray Size": "23x45 cm",
+        "Material": "ABS"
+      },
+      "image": "/images/products/tcm-tray-long-vyt0042.webp",
+      "section": "Tray Sets"
+    },
+    {
+      "slug": "step-tray-vyt0044",
+      "name": "Step Tray",
+      "category": "kettle-with-tray",
+      "featured": false,
+      "shortDescription": "33x21.6cm stepped ABS tray.",
+      "description": "A stepped-profile ABS tray at 33x21.6cm, giving cups and sachets separate tiers on a single tray.",
+      "specs": {
+        "Model Code": "VYT0044",
+        "Tray Size": "33x21.6 cm",
+        "Material": "ABS"
+      },
+      "image": "/images/products/step-tray-vyt0044.webp",
+      "section": "Tray Sets"
+    },
+    {
+      "slug": "tcm-tray-wood-vywt0045",
+      "name": "TCM Tray Wood",
+      "category": "kettle-with-tray",
+      "featured": false,
+      "shortDescription": "32x39cm beech wood welcome tray.",
+      "description": "A 32x39cm welcome tray in beech wood, for properties running a warmer, natural-material room aesthetic.",
+      "specs": {
+        "Model Code": "VYWT0045",
+        "Tray Size": "32x39 cm",
+        "Material": "Beech Wood"
+      },
+      "image": "/images/products/tcm-tray-wood-vywt0045.webp",
+      "section": "Tray Sets"
+    },
+    {
+      "slug": "tray-wood-vywt0047",
+      "name": "Tray Wood",
+      "category": "kettle-with-tray",
+      "featured": false,
+      "shortDescription": "Beech wood welcome tray.",
+      "description": "A beech wood welcome tray, matched to the TCM Tray Wood for properties standardizing on natural-material service pieces.",
+      "specs": {
+        "Model Code": "VYWT0047",
+        "Material": "Beech Wood",
+        "Size": "35x20/35x25/35x30 cm"
+      },
+      "image": "/images/products/tray-wood-vywt0047.webp",
+      "section": "Tray Sets"
+    },
+    {
+      "slug": "hair-dryer-vyhd0051",
+      "name": "Hair Dryer",
+      "category": "hair-dryer",
+      "featured": true,
+      "shortDescription": "1600W ABS hair dryer.",
+      "description": "A 1600W ABS hair dryer for guest bathrooms, built for repeated daily use across nightly turnover.",
+      "specs": {
+        "Model Code": "VYHD0051",
+        "Power": "1600W",
+        "Voltage": "220V-240V",
+        "Material": "ABS"
+      },
+      "image": "/images/products/hair-dryer-vyhd0051.webp",
+      "section": "Hair Dryers"
+    },
+    {
+      "slug": "hair-dryer-black-vyhd0052",
+      "name": "Hair Dryer (Black)",
+      "category": "hair-dryer",
+      "featured": false,
+      "shortDescription": "1600W ABS hair dryer, Black.",
+      "description": "A 1600W ABS hair dryer in black, for guest bathrooms with a darker fixture palette.",
+      "specs": {
+        "Model Code": "VYHD0052",
+        "Power": "1600W",
+        "Voltage": "220V-240V",
+        "Material": "ABS",
+        "Colour": "Black"
+      },
+      "image": "/images/products/hair-dryer-black-vyhd0052.webp",
+      "section": "Hair Dryers"
+    },
+    {
+      "slug": "hair-dryer-white-vyhd0053",
+      "name": "Hair Dryer (White)",
+      "category": "hair-dryer",
+      "featured": false,
+      "shortDescription": "1600W ABS hair dryer, White.",
+      "description": "A 1600W ABS hair dryer in white, for guest bathrooms with a lighter fixture palette.",
+      "specs": {
+        "Model Code": "VYHD0053",
+        "Power": "1600W",
+        "Voltage": "220V-240V",
+        "Material": "ABS",
+        "Colour": "White"
+      },
+      "image": "/images/products/hair-dryer-white-vyhd0053.webp",
+      "section": "Hair Dryers"
+    },
+    {
+      "slug": "hair-dryer-1300w-vyhd0054",
+      "name": "Hair Dryer (1300W)",
+      "category": "hair-dryer",
+      "featured": false,
+      "shortDescription": "1300W ABS hair dryer.",
+      "description": "A 1300W ABS hair dryer, a lighter-duty option for standard guest rooms.",
+      "specs": {
+        "Model Code": "VYHD0054",
+        "Power": "1300W",
+        "Voltage": "220V-240V",
+        "Material": "ABS"
+      },
+      "image": "/images/products/hair-dryer-1300w-vyhd0054.webp",
+      "section": "Hair Dryers"
+    },
+    {
+      "slug": "hair-dryer-1300w-white-vyhd0055",
+      "name": "Hair Dryer (1300W, White)",
+      "category": "hair-dryer",
+      "featured": false,
+      "shortDescription": "1300W ABS hair dryer, White.",
+      "description": "A 1300W ABS hair dryer in white, a lighter-duty option for standard guest rooms.",
+      "specs": {
+        "Model Code": "VYHD0055",
+        "Power": "1300W",
+        "Voltage": "220V-240V",
+        "Material": "ABS",
+        "Colour": "White"
+      },
+      "image": "/images/products/hair-dryer-1300w-white-vyhd0055.webp",
+      "section": "Hair Dryers"
+    },
+    {
+      "slug": "hair-dryer-1300w-black-vyhd0056",
+      "name": "Hair Dryer (1300W, Black)",
+      "category": "hair-dryer",
+      "featured": false,
+      "shortDescription": "1300W ABS hair dryer, Black.",
+      "description": "A 1300W ABS hair dryer in black, a lighter-duty option for standard guest rooms.",
+      "specs": {
+        "Model Code": "VYHD0056",
+        "Power": "1300W",
+        "Voltage": "220V-240V",
+        "Material": "ABS",
+        "Colour": "Black"
+      },
+      "image": "/images/products/hair-dryer-1300w-black-vyhd0056.webp",
+      "section": "Hair Dryers"
+    },
+    {
+      "slug": "hair-dryer-premium-vyhd0057",
+      "name": "Hair Dryer (Premium)",
+      "category": "hair-dryer",
+      "featured": false,
+      "shortDescription": "1600W ABS hair dryer.",
+      "description": "A 1600W ABS hair dryer, our premium-line finish for suite and higher-tier rooms.",
+      "specs": {
+        "Model Code": "VYHD0057",
+        "Power": "1600W",
+        "Voltage": "220V-240V",
+        "Material": "ABS"
+      },
+      "image": "/images/products/hair-dryer-premium-vyhd0057.webp",
+      "section": "Hair Dryers"
+    },
+    {
+      "slug": "hair-dryer-bag-vyhdb0058",
+      "name": "Hair Dryer Bag",
+      "category": "hair-dryer",
+      "featured": false,
+      "shortDescription": "Black velvet storage bag for wall-mounted hair dryers.",
+      "description": "A black velvet fabric storage bag sized for the room's hair dryer, keeping it tidy on the bathroom shelf between guests.",
+      "specs": {
+        "Model Code": "VYHDB0058",
+        "Color": "Black",
+        "Material": "Velvet Fabric"
+      },
+      "image": "/images/products/hair-dryer-bag-vyhdb0058.webp",
+      "section": "Hair Dryer Bag"
+    },
+    {
+      "slug": "close-shave-mirror-chrome-vymr0061",
+      "name": "Close Shave Mirror (Chrome)",
+      "category": "shaving-mirror",
+      "featured": true,
+      "shortDescription": "Chrome-finish magnifying mirror, 3x&1x , 20cm diameter.",
+      "description": "A chrome-finish close-shave mirror at 20cm diameter, offered in 3x&1x magnification for guest bathroom vanities.",
+      "specs": {
+        "Model Code": "VYMR0061",
+        "Magnification": "3x & 1x",
+        "Diameter": "20 cm",
+        "Finish": "Chrome"
+      },
+      "image": "/images/products/close-shave-mirror-chrome-vymr0061-64.webp"
+    },
+    {
+      "slug": "close-shave-mirror-chrome-vymr0064",
+      "name": "Close Shave Mirror (Chrome)",
+      "category": "shaving-mirror",
+      "featured": true,
+      "shortDescription": "Chrome-finish magnifying mirror, 3x&1x or 5x&1x, 20cm diameter.",
+      "description": "A chrome-finish close-shave mirror at 20cm diameter, offered in 3x&1x or 5x&1x magnification for guest bathroom vanities.",
+      "specs": {
+        "Model Code": "VYMR0064",
+        "Magnification": "5x & 1x",
+        "Diameter": "20 cm",
+        "Finish": "Chrome"
+      },
+      "image": "/images/products/close-shave-mirror-chrome-vymr0061-64.webp"
+    },
+    {
+      "slug": "close-shave-mirror-matt-black-vymr0062",
+      "name": "Close Shave Mirror (Matt Black)",
+      "category": "shaving-mirror",
+      "featured": false,
+      "shortDescription": "Matt black magnifying mirror, 3x&1x, 20cm diameter.",
+      "description": "A matt black close-shave mirror at 20cm diameter with 3x&1x magnification, for a darker bathroom hardware finish.",
+      "specs": {
+        "Model Code": "VYMR0062",
+        "Magnification": "3x & 1x",
+        "Diameter": "20 cm",
+        "Finish": "Matt Black"
+      },
+      "image": "/images/products/close-shave-mirror-matt-black-vymr0062.webp"
+    },
+    {
+      "slug": "close-shave-led-mirror-vymr0063",
+      "name": "Close Shave LED Mirror",
+      "category": "shaving-mirror",
+      "featured": false,
+      "shortDescription": "Solid brass and chrome LED-lit magnifying mirror, 3x, 20cm diameter.",
+      "description": "An LED-lit close-shave mirror in solid brass and chrome plating, at 20cm diameter with 3x magnification and a built-in light ring.",
+      "specs": {
+        "Model Code": "VYMR0063",
+        "Magnification": "3x",
+        "Diameter": "20 cm",
+        "Finish": "Solid Brass & Chrome plated",
+        "Light Colour": "White, Yellow, Warm"
+      },
+      "image": "/images/products/close-shave-led-mirror-vymr0063.webp"
+    },
+    {
+      "slug": "soap-dispenser-vysd0071",
+      "name": "Soap Dispenser",
+      "category": "soap-tissue-dispenser",
+      "featured": false,
+      "shortDescription": "Single-chamber 350ml ABS soap dispenser.",
+      "description": "A single-chamber 350ml ABS soap dispenser for a standard guest bathroom vanity.",
+      "specs": {
+        "Model Code": "VYSD0071",
+        "Capacity": "350 ml",
+        "Material": "ABS"
+      },
+      "image": "/images/products/soap-dispenser-vysd0071.webp"
+    },
+    {
+      "slug": "soap-dispenser-dual-vysd0072",
+      "name": "Soap Dispenser (Dual)",
+      "category": "soap-tissue-dispenser",
+      "featured": false,
+      "shortDescription": "Dual-chamber 350+350ml ABS soap dispenser.",
+      "description": "A dual-chamber ABS soap dispenser at 350+350ml, for pairing two products in one bathroom fixture.",
+      "specs": {
+        "Model Code": "VYSD0072",
+        "Capacity": "350 + 350ml",
+        "Material": "ABS"
+      },
+      "image": "/images/products/soap-dispenser-dual-vysd0072.webp"
+    },
+    {
+      "slug": "soap-dispenser-triple-vysd0073",
+      "name": "Soap Dispenser (Triple)",
+      "category": "soap-tissue-dispenser",
+      "featured": false,
+      "shortDescription": "Triple-chamber 350+350+350ml ABS soap dispenser.",
+      "description": "A triple-chamber ABS soap dispenser at 350+350+350ml, for properties standardizing three amenities into one wall fixture.",
+      "specs": {
+        "Model Code": "VYSD0073",
+        "Capacity": "350 + 350 + 350ml",
+        "Material": "ABS"
+      },
+      "image": "/images/products/soap-dispenser-triple-vysd0073.webp"
+    },
+    {
+      "slug": "soap-dispenser-compact-vysd0076",
+      "name": "Soap Dispenser (Compact)",
+      "category": "soap-tissue-dispenser",
+      "featured": false,
+      "shortDescription": "Single-chamber 300ml ABS soap dispenser.",
+      "description": "A compact single-chamber ABS soap dispenser at 300ml.",
+      "specs": {
+        "Model Code": "VYSD0076",
+        "Capacity": "300ml",
+        "Material": "ABS"
+      },
+      "image": "/images/products/soap-dispenser-vysd0076.webp"
+    },
+    {
+      "slug": "soap-dispenser-compact-alt-vysd0074",
+      "name": "Soap Dispenser",
+      "category": "soap-tissue-dispenser",
+      "featured": false,
+      "shortDescription": "Single-chamber 300ml ABS soap dispenser.",
+      "description": "A compact single-chamber ABS soap dispenser at 300ml, an alternate housing to VYSD0076.",
+      "specs": {
+        "Model Code": "VYSD0074",
+        "Capacity": "300 ml",
+        "Material": "ABS"
+      },
+      "image": "/images/products/soap-dispenser-compact-alt-vysd0074.webp"
+    },
+    {
+      "slug": "soap-dispenser-compact-dual-vysd0075",
+      "name": "Soap Dispenser (Compact Dual)",
+      "category": "soap-tissue-dispenser",
+      "featured": false,
+      "shortDescription": "Dual-chamber 300+300ml ABS soap dispenser.",
+      "description": "A dual-chamber compact ABS soap dispenser at 300+300ml.",
+      "specs": {
+        "Model Code": "VYSD0075",
+        "Capacity": "300 + 300ml",
+        "Material": "ABS"
+      },
+      "image": "/images/products/soap-dispenser-compact-dual-vysd0075.webp"
+    },
+    {
+      "slug": "automatic-soap-dispenser-vysd0771",
+      "name": "Automatic Soap Dispenser",
+      "category": "soap-tissue-dispenser",
+      "featured": false,
+      "shortDescription": "1000ml touchless ABS soap dispenser.",
+      "description": "A 1000ml touchless automatic soap dispenser in ABS, for higher-traffic public washrooms.",
+      "specs": {
+        "Model Code": "VYSD0771",
+        "Capacity": "1000ml",
+        "Material": "ABS"
+      },
+      "image": "/images/products/automatic-soap-dispenser-vysd0771.webp"
+    },
+    {
+      "slug": "automatic-soap-dispenser-ss-vysd0077",
+      "name": "Automatic Soap Dispenser (SS)",
+      "category": "soap-tissue-dispenser",
+      "featured": false,
+      "shortDescription": "700ml touchless stainless steel soap dispenser, battery-powered.",
+      "description": "A 700ml touchless automatic soap dispenser in SS304, battery-powered (6x AA, not included) for wall installs without wiring.",
+      "specs": {
+        "Model Code": "VYSD0077",
+        "Capacity": "700ml",
+        "Material": "SS 304",
+        "Power": "Battery 6 x AA (not included)"
+      },
+      "image": "/images/products/automatic-soap-dispenser-ss-vysd0077.webp"
+    },
+    {
+      "slug": "hand-dryer-vyhand0081",
+      "name": "Hand Dryer",
+      "category": "hand-dryer",
+      "featured": false,
+      "shortDescription": "1000W ABS hand dryer.",
+      "description": "A 1000W ABS wall-mount hand dryer for standard guest washrooms.",
+      "specs": {
+        "Model Code": "VYHAND0081",
+        "Power": "1000W",
+        "Material": "ABS"
+      },
+      "image": "/images/products/hand-dryer-vyhand0081.webp",
+      "section": "Hand Dryers"
+    },
+    {
+      "slug": "hand-dryer-steel-vyhand0082",
+      "name": "Hand Dryer (Steel)",
+      "category": "hand-dryer",
+      "featured": false,
+      "shortDescription": "1100W stainless steel hand dryer.",
+      "description": "A 1100W hand dryer in 304 stainless steel, for a more durable public-area finish.",
+      "specs": {
+        "Model Code": "VYHAND0082",
+        "Power": "1100W",
+        "Material": "304 SS"
+      },
+      "image": "/images/products/hand-dryer-steel-vyhand0082.webp",
+      "section": "Hand Dryers"
+    },
+    {
+      "slug": "hand-dryer-high-power-vyhand0083",
+      "name": "Hand Dryer (High Power)",
+      "category": "hand-dryer",
+      "featured": false,
+      "shortDescription": "1800W stainless steel hand dryer.",
+      "description": "A 1800W high-power hand dryer in 304 stainless steel, for high-traffic public washrooms.",
+      "specs": {
+        "Model Code": "VYHAND0083",
+        "Power": "1800W",
+        "Material": "304 SS"
+      },
+      "image": "/images/products/hand-dryer-high-power-vyhand0083.webp",
+      "section": "Hand Dryers"
+    },
+    {
+      "slug": "hand-dryer-1800w-white-vyhand0084",
+      "name": "Hand Dryer (1800W, White)",
+      "category": "hand-dryer",
+      "featured": false,
+      "shortDescription": "1800W ABS hand dryer, White.",
+      "description": "A 1800W ABS hand dryer in white, for guest and public washrooms.",
+      "specs": {
+        "Model Code": "VYHAND0084",
+        "Power": "1800W",
+        "Material": "ABS",
+        "Colour": "White"
+      },
+      "image": "/images/products/hand-dryer-1800w-white-vyhand0084.webp",
+      "section": "Hand Dryers"
+    },
+    {
+      "slug": "hand-dryer-1800w-black-vyhand0085",
+      "name": "Hand Dryer (1800W, Black)",
+      "category": "hand-dryer",
+      "featured": false,
+      "shortDescription": "1800W ABS hand dryer, Black.",
+      "description": "A 1800W ABS hand dryer in black, for guest and public washrooms.",
+      "specs": {
+        "Model Code": "VYHAND0085",
+        "Power": "1800W",
+        "Material": "ABS",
+        "Colour": "Black"
+      },
+      "image": "/images/products/hand-dryer-1800w-black-vyhand0085.webp",
+      "section": "Hand Dryers"
+    },
+    {
+      "slug": "m-fold-tissue-dispenser-white-vvtd0088",
+      "name": "M-Fold Tissue Dispenser (White)",
+      "category": "hand-dryer",
+      "featured": false,
+      "shortDescription": "ABS plastic M-fold tissue dispenser, White, 26x10x20H cm.",
+      "description": "An ABS plastic M-fold tissue dispenser in white, sized 26x10x20H cm, for washroom and public area installs.",
+      "specs": {
+        "Model Code": "VVTD0088",
+        "Material": "ABS Plastic",
+        "Size": "26x10x20H cm",
+        "Colour": "White"
+      },
+      "image": "/images/products/m-fold-tissue-dispenser-white-vvtd0088.webp",
+      "section": "M-Fold Tissue Dispenser"
+    },
+    {
+      "slug": "m-fold-tissue-dispenser-black-vvtd0089",
+      "name": "M-Fold Tissue Dispenser (Black)",
+      "category": "hand-dryer",
+      "featured": false,
+      "shortDescription": "ABS plastic M-fold tissue dispenser, Black, 26x10x20H cm.",
+      "description": "An ABS plastic M-fold tissue dispenser in black, sized 26x10x20H cm, for washroom and public area installs.",
+      "specs": {
+        "Model Code": "VVTD0089",
+        "Material": "ABS Plastic",
+        "Size": "26x10x20H cm",
+        "Colour": "Black"
+      },
+      "image": "/images/products/m-fold-tissue-dispenser-black-vvtd0089.webp",
+      "section": "M-Fold Tissue Dispenser"
+    },
+    {
+      "slug": "pedal-dustbin-rct-vypdrtbin0998",
+      "name": "Pedal Dustbin RCT",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "5L stainless steel pedal dustbin.",
+      "description": "A 5L stainless steel pedal dustbin sized 14x25x28cm for guest rooms and compact spaces.",
+      "specs": {
+        "Model Code": "VYPDRTBIN0998",
+        "Material": "SS",
+        "Size": "14x25x28 cm",
+        "Capacity": "5 Ltr."
+      },
+      "image": "/images/products/pedal-dustbin-rct-vypdrtbin0998.webp",
+      "section": "Pedal Room Dustbin"
+    },
+    {
+      "slug": "2-compartment-bin-vycbin0997",
+      "name": "2 Compartment Bin",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "16L (8+8) two-compartment stainless steel bin.",
+      "description": "A two-compartment stainless steel bin splitting 16L into 8+8, for basic in-room waste separation.",
+      "specs": {
+        "Model Code": "VYCBIN0997",
+        "Material": "SS",
+        "Size": "30x28x38H",
+        "Capacity": "16 Ltr. (8+8)"
+      },
+      "image": "/images/products/2-compartment-bin-vycbin0997.webp",
+      "section": "Pedal Room Dustbin"
+    },
+    {
+      "slug": "pedal-bin-vypdbin0093-94-95",
+      "name": "Pedal Bin",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "Stainless steel pedal bin, 5-12L across three sizes.",
+      "description": "A stainless steel pedal bin in SS304/202, available across three sizes from 5L to 12L for rooms through public areas.",
+      "specs": {
+        "Model Code": "VYPDBIN0093/94/95",
+        "Material": "SS 304/202",
+        "Size": "18x26 cm / 25x38 cm / 30x40 cm",
+        "Capacity": "5 Ltr. / 7 Ltr. / 12 Ltr."
+      },
+      "image": "/images/products/pedal-bin-vypdbin0093-94-95.webp",
+      "section": "Pedal Room Dustbin"
+    },
+    {
+      "slug": "soft-close-bin-ss-vyspdbin0099-100",
+      "name": "Soft Close Bin SS",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "Soft-close stainless steel pedal bin, 5-7L.",
+      "description": "A soft-close stainless steel pedal bin in SS304/202, closing quietly rather than clanging shut during nightly housekeeping.",
+      "specs": {
+        "Model Code": "VYSPDBIN0099/100",
+        "Material": "SS 304/202",
+        "Size": "18x26 cm / 25x38 cm",
+        "Capacity": "5 Ltr. / 7 Ltr."
+      },
+      "image": "/images/products/soft-close-bin-ss-vyspdbin0099-100.webp",
+      "section": "Pedal Room Dustbin"
+    },
+    {
+      "slug": "pedal-bin-black-vypdbbin0991-992",
+      "name": "Pedal Bin Black",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "Black-finish stainless steel pedal bin, 5-7L.",
+      "description": "A black-finish stainless steel pedal bin in SS304/202, for rooms running a darker hardware palette.",
+      "specs": {
+        "Model Code": "VYPDBBIN0991/992",
+        "Material": "SS 304/202",
+        "Size": "18x26 cm / 25x38 cm",
+        "Capacity": "5 Ltr. / 7 Ltr."
+      },
+      "image": "/images/products/pedal-bin-black-vypdbbin0991-992.webp",
+      "section": "Pedal Room Dustbin"
+    },
+    {
+      "slug": "perforated-bin-vypbin0091-92",
+      "name": "Perforated Bin",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "Perforated stainless steel bin, 5-7L.",
+      "description": "A perforated stainless steel bin in SS304/202, available at 18x26cm (5L) or 20x30cm (7L).",
+      "specs": {
+        "Model Code": "VYPBIN0091/92",
+        "Material": "SS 304/202",
+        "Size": "18x26 cm / 20x30 cm",
+        "Capacity": "5 Ltr. / 7 Ltr."
+      },
+      "image": "/images/products/perforated-bin-vypbin0091-92.webp",
+      "section": "Trash Can & Bin"
+    },
+    {
+      "slug": "swing-bin-vysbin0096-97-98",
+      "name": "Swing Bin",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "Stainless steel swing-lid bin, 10-28L across three sizes.",
+      "description": "A swing-lid stainless steel bin in SS304/202, scaling from a 5L room bin up to a 28L public-area unit.",
+      "specs": {
+        "Model Code": "VYSBIN0096/97/98",
+        "Material": "SS 304/202",
+        "Size": "20x30 cm / 26x60 cm / 30x70 cm",
+        "Capacity": "10 Ltr. / 20 Ltr. / 28 Ltr."
+      },
+      "image": "/images/products/swing-bin-vysbin0096-97-98.webp",
+      "section": "Trash Can & Bin"
+    },
+    {
+      "slug": "leather-bin-vylbin0993",
+      "name": "Leather Bin",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "10L iron bin with a leather wrap.",
+      "description": "A 10L bin in iron with a leather wrap, for a softer, lounge-style finish over bare metal.",
+      "specs": {
+        "Model Code": "VYLBIN0993",
+        "Material": "Iron + Leather",
+        "Size": "23x25 cm",
+        "Capacity": "10 Ltr."
+      },
+      "image": "/images/products/leather-bin-vylbin0993.webp",
+      "section": "Trash Can & Bin"
+    },
+    {
+      "slug": "outdoor-dustbin-vyodbin0994",
+      "name": "Outdoor Dustbin",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "30L galvanized steel outdoor dustbin.",
+      "description": "A 30L galvanized steel dustbin built for outdoor placement — driveways, entrances and pool decks.",
+      "specs": {
+        "Model Code": "VYODBIN0994",
+        "Material": "Galvanized Steel",
+        "Size": "40x40x93 cm",
+        "Capacity": "30 Ltr."
+      },
+      "image": "/images/products/outdoor-dustbin-vyodbin0994.webp",
+      "section": "Ash Barrel"
+    },
+    {
+      "slug": "ashbin-round-premium-vyabin0995",
+      "name": "Ashbin Round Premium",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "21L round stainless steel ashbin.",
+      "description": "A round SS202 ashbin at 21L for lobbies and smoking areas, standing 70cm tall.",
+      "specs": {
+        "Model Code": "VYABIN0995",
+        "Material": "SS 202",
+        "Size": "30x70H cm",
+        "Capacity": "21 Ltr."
+      },
+      "image": "/images/products/ashbin-round-premium-vyabin0995.webp",
+      "section": "Ash Barrel"
+    },
+    {
+      "slug": "lounge-ashbin-flip-black-vylabin0996",
+      "name": "Lounge Ashbin Flip Black",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "26L black flip-top stainless steel ashbin.",
+      "description": "A flip-top SS202 ashbin in black at 26L, 74cm tall, for lounge and outdoor seating areas.",
+      "specs": {
+        "Model Code": "VYLABIN0996",
+        "Material": "SS 202",
+        "Size": "28x74H cm",
+        "Capacity": "26 Ltr.",
+        "Color": "Black"
+      },
+      "image": "/images/products/lounge-ashbin-flip-black-vylabin0996.webp",
+      "section": "Ash Barrel"
+    },
+    {
+      "slug": "dustbin-large-vydlbin9994",
+      "name": "Dustbin Large",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "24L large-capacity stainless steel dustbin.",
+      "description": "A 24L stainless steel dustbin in a taller, large-capacity size for high-traffic lobby and back-of-house areas.",
+      "specs": {
+        "Model Code": "VYDLBIN9994",
+        "Material": "SS 304",
+        "Size": "25x28x68H cm",
+        "Capacity": "24 Ltr."
+      },
+      "image": "/images/products/dustbin-large-vydlbin9994.webp",
+      "section": "Ash Barrel"
+    },
+    {
+      "slug": "pedalbin-large-vypdlbin9995",
+      "name": "Pedalbin Large",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "30L large-capacity stainless steel pedal bin.",
+      "description": "A 30L stainless steel pedal bin in a taller, large-capacity size, hands-free foot-pedal lid for busy service areas.",
+      "specs": {
+        "Model Code": "VYPDLBIN9995",
+        "Material": "SS 304",
+        "Size": "32x29x68H cm",
+        "Capacity": "30 Ltr."
+      },
+      "image": "/images/products/pedalbin-large-vypdlbin9995.webp",
+      "section": "Ash Barrel"
+    },
+    {
+      "slug": "lounge-ashbin-marble-vylambin9996",
+      "name": "Lounge Ashbin Marble",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "13L marble and stainless steel lounge ashbin.",
+      "description": "A 13L ashbin finished in marble and stainless steel, 70cm tall, for upscale lounge and outdoor seating areas.",
+      "specs": {
+        "Model Code": "VYLAMBIN9996",
+        "Material": "Marble & SS",
+        "Size": "30x30x70H cm",
+        "Capacity": "13 Ltr."
+      },
+      "image": "/images/products/lounge-ashbin-marble-vylambin9996.webp",
+      "section": "Ash Barrel"
+    },
+    {
+      "slug": "lounge-ashbin-flip-rose-gold-vylabin9993",
+      "name": "Lounge Ashbin Flip (Rose Gold)",
+      "category": "dustbin",
+      "featured": false,
+      "shortDescription": "26L rose gold flip-top stainless steel ashbin.",
+      "description": "A flip-top SS202 ashbin in rose gold at 26L, 74cm tall, for lounge and outdoor seating areas.",
+      "specs": {
+        "Model Code": "VYLABIN9993",
+        "Material": "SS 202",
+        "Size": "28x74H cm",
+        "Capacity": "26 Ltr.",
+        "Color": "Rose Gold"
+      },
+      "image": "/images/products/lounge-ashbin-marble-vylambin9993.webp",
+      "section": "Ash Barrel"
+    },
+    {
+      "slug": "steam-spray-iron-vyir0101s",
+      "name": "Steam & Spray Iron",
+      "category": "steam-iron",
+      "featured": false,
+      "shortDescription": "1600W steam and spray iron with a non-stick soleplate.",
+      "description": "A 1600W steam and spray iron with a 200ml water tank and non-stick soleplate, sized for a guest room closet.",
+      "specs": {
+        "Model Code": "VYIR0101S",
+        "Power": "1600W",
+        "Water Tank": "200 ml",
+        "Size": "23x10x16 cm",
+        "Soleplate": "Non-Stick"
+      },
+      "image": "/images/products/steam-spray-iron-vyir0101s.webp"
+    },
+    {
+      "slug": "dry-iron-vyir0102s",
+      "name": "Dry Iron",
+      "category": "steam-iron",
+      "featured": false,
+      "shortDescription": "1000W dry iron with a non-stick soleplate.",
+      "description": "A 1000W dry iron with a non-stick soleplate, a lighter-duty option than the steam & spray model.",
+      "specs": {
+        "Model Code": "VYIR0102S",
+        "Power": "1000W",
+        "Size": "29.4 x 10.5 x 13 cm",
+        "Soleplate": "Non-Stick"
+      },
+      "image": "/images/products/dry-iron-vyir0102s.webp"
+    },
+    {
+      "slug": "iron-board-gray-vyirb0104",
+      "name": "Iron Board (Gray)",
+      "category": "iron-board",
+      "section": "Foldable Ironing Table",
+      "featured": false,
+      "shortDescription": "Height-adjustable iron board, Gray, folds down for closet storage.",
+      "description": "A height-adjustable gray iron board (60-79cm, 7 levels) with a 91.5x30cm ironing surface, folding down to 124x33.5cm for closet storage.",
+      "specs": {
+        "Model Code": "VYIRB0104",
+        "Iron Surface": "L91.5 x W30 cm",
+        "Folded Size": "L124 x W33.5 cm",
+        "Height Adjustment": "7 levels (60 to 79 cm)",
+        "Color": "Gray"
+      },
+      "image": "/images/products/iron-board-gray-vyirb0104.webp"
+    },
+    {
+      "slug": "iron-board-black-vyirb0107",
+      "name": "Iron Board (Black)",
+      "category": "iron-board",
+      "section": "Foldable Ironing Table",
+      "featured": false,
+      "shortDescription": "Height-adjustable iron board, Black, folds down for closet storage.",
+      "description": "A height-adjustable black iron board (60-79cm, 7 levels) with a 91.5x30cm ironing surface, folding down to 124x33.5cm for closet storage.",
+      "specs": {
+        "Model Code": "VYIRB0107",
+        "Iron Surface": "L91.5 x W30 cm",
+        "Folded Size": "L124 x W33.5 cm",
+        "Height Adjustment": "7 levels (60 to 79 cm)",
+        "Color": "Black"
+      },
+      "image": "/images/products/iron-board-black-vyirb0107.webp"
+    },
+    {
+      "slug": "iron-board-hanger-vyibh0103",
+      "name": "Iron Board Hanger",
+      "category": "iron-board",
+      "section": "Iron Board Hanger",
+      "featured": false,
+      "shortDescription": "PBT wall hanger for storing the iron board.",
+      "description": "A PBT wall hanger sized to store the iron board neatly inside a guest room closet.",
+      "specs": {
+        "Model Code": "VYIBH0103",
+        "Material": "PBT",
+        "Size": "31.5 x 13.5 x 10 cm"
+      },
+      "image": "/images/products/iron-board-hanger-vyibh0103.webp"
+    },
+    {
+      "slug": "iron-board-guard-vyig0109",
+      "name": "Iron Board Guard",
+      "category": "iron-board",
+      "section": "Iron Board Hanger",
+      "featured": false,
+      "shortDescription": "Wall-mounted double-hook bracket for the iron board.",
+      "description": "A wall-mounted double-hook bracket that holds the iron board securely against the wall inside a guest room closet.",
+      "specs": {
+        "Model Code": "VYIG0109",
+        "Size": "16 x 4.5 x 3H cm"
+      },
+      "image": "/images/products/iron-board-guard-vyig0109.webp"
+    },
+    {
+      "slug": "dock-station-vydc0105",
+      "name": "Dock Station",
+      "category": "dock-station-torch",
+      "featured": false,
+      "shortDescription": "5.5-inch LED clock with wireless Qi charging and FM radio.",
+      "description": "A 5.5-inch LED bedside clock with wireless Qi phone charging and a built-in digital FM radio.",
+      "specs": {
+        "Model Code": "VYDC0105",
+        "Display": "5.5\" LED",
+        "Charging": "Wireless Qi",
+        "Radio": "Digital FM"
+      },
+      "image": "/images/products/digital-clock-vydc0105.webp",
+      "section": "Dock Station"
+    },
+    {
+      "slug": "torch-vytl0108",
+      "name": "Torch",
+      "category": "dock-station-torch",
+      "featured": false,
+      "shortDescription": "Rechargeable in-room torch for power outages.",
+      "description": "A rechargeable in-room torch, 3 x AA battery-backed, kept in the nightstand for power outages.",
+      "specs": {
+        "Model Code": "VYTL0108",
+        "Battery": "3 x AA, rechargeable (Duracell not included)"
+      },
+      "image": "/images/products/torch-vytl0108.webp",
+      "section": "Emergency Torch Light"
+    },
+    {
+      "slug": "10-button-telephone-ivory-vytr0111",
+      "name": "10 Button Telephone (Ivory)",
+      "category": "telephone",
+      "featured": false,
+      "shortDescription": "Desk or wall-mount telephone with up to 10 programmable memory buttons, Ivory.",
+      "description": "A desk or wall-mountable telephone in ivory with up to 10 programmable memory buttons.",
+      "specs": {
+        "Model Code": "VYTR0111",
+        "Memory": "Up to 10 programmable buttons",
+        "Mount": "Desk or wall mount",
+        "Colour": "Ivory"
+      },
+      "image": "/images/products/10-button-telephone-ivory-vytr0111.webp",
+      "section": "Hotel Room Telephone"
+    },
+    {
+      "slug": "10-button-telephone-black-vytr0112",
+      "name": "10 Button Telephone (Black)",
+      "category": "telephone",
+      "featured": false,
+      "shortDescription": "Desk or wall-mount telephone with up to 10 programmable memory buttons, Black.",
+      "description": "A desk or wall-mountable telephone in black with up to 10 programmable memory buttons.",
+      "specs": {
+        "Model Code": "VYTR0112",
+        "Memory": "Up to 10 programmable buttons",
+        "Mount": "Desk or wall mount",
+        "Colour": "Black"
+      },
+      "image": "/images/products/10-button-telephone-black-vytr0112.webp",
+      "section": "Hotel Room Telephone"
+    },
+    {
+      "slug": "8-button-telephone-vytr0113-114",
+      "name": "8 Button Telephone",
+      "category": "telephone",
+      "featured": false,
+      "shortDescription": "Desk or wall-mount telephone with up to 8 programmable memory buttons.",
+      "description": "A desk or wall-mountable telephone with up to 8 programmable memory buttons, in a choice of colours.",
+      "specs": {
+        "Model Code": "VYTR0113/114",
+        "Memory": "Up to 8 programmable buttons",
+        "Mount": "Desk or wall mount",
+        "Colour": "Multiple options"
+      },
+      "image": "/images/products/8-button-telephone-vytr0113-114.webp",
+      "section": "Hotel Room Telephone"
+    },
+    {
+      "slug": "led-display-telephone-vytr0115",
+      "name": "LED Display Telephone",
+      "category": "telephone",
+      "featured": false,
+      "shortDescription": "Telephone with a 16-digit LCD display and call memory.",
+      "description": "A telephone with a 16-digit LCD display, storing 30 incoming and 5 outgoing numbers in memory.",
+      "specs": {
+        "Model Code": "VYTR0115",
+        "Display": "16 Digit LCD",
+        "Incoming Memory": "30",
+        "Outgoing Memory": "5"
+      },
+      "image": "/images/products/led-display-telephone-vytr0115.webp",
+      "section": "Lobby Phone"
+    },
+    {
+      "slug": "bathroom-telephone-ivory-vybt0117",
+      "name": "Bathroom Telephone (Ivory)",
+      "category": "telephone",
+      "featured": false,
+      "shortDescription": "Bathroom telephone with a magnetic handset mount, up to 8 memory buttons, Ivory.",
+      "description": "An ivory bathroom telephone with up to 8 programmable memory buttons and a magnetic effect to hold the handset securely on a wet counter.",
+      "specs": {
+        "Model Code": "VYBT0117",
+        "Memory": "Up to 8 programmable buttons",
+        "Mount": "Desk or wall mount, magnetic handset hold",
+        "Colour": "Ivory"
+      },
+      "image": "/images/products/bathroom-telephone-ivory-vybt0117.webp",
+      "section": "Bathroom Telephone"
+    },
+    {
+      "slug": "bathroom-telephone-black-vybt0118",
+      "name": "Bathroom Telephone (Black)",
+      "category": "telephone",
+      "featured": false,
+      "shortDescription": "Bathroom telephone with a magnetic handset mount, up to 8 memory buttons, Black.",
+      "description": "A black bathroom telephone with up to 8 programmable memory buttons and a magnetic effect to hold the handset securely on a wet counter.",
+      "specs": {
+        "Model Code": "VYBT0118",
+        "Memory": "Up to 8 programmable buttons",
+        "Mount": "Desk or wall mount, magnetic handset hold",
+        "Colour": "Black"
+      },
+      "image": "/images/products/bathroom-telephone-black-vybt0118.webp",
+      "section": "Bathroom Telephone"
+    },
+    {
+      "slug": "bathroom-telephone-wall-mount-vybt0119",
+      "name": "Bathroom Telephone (Wall Mount)",
+      "category": "telephone",
+      "featured": false,
+      "shortDescription": "Wall-mount bathroom telephone with up to 8 memory buttons.",
+      "description": "A wall-mount-only bathroom telephone with up to 8 programmable memory buttons.",
+      "specs": {
+        "Model Code": "VYBT0119",
+        "Memory": "Up to 8 programmable buttons",
+        "Mount": "Wall mount"
+      },
+      "image": "/images/products/bathroom-telephone-wall-mount-vybt0119.webp",
+      "section": "Bathroom Telephone"
+    },
+    {
+      "slug": "bathroom-telephone-full-feature-vybt0120",
+      "name": "Bathroom Telephone (Full Feature)",
+      "category": "telephone",
+      "featured": false,
+      "shortDescription": "Bathroom telephone with volume control, tone/pulse switch and redial.",
+      "description": "A full-feature bathroom telephone with ringer volume control, tone/pulse switching, redial, flash and pause, mountable on desk or wall.",
+      "specs": {
+        "Model Code": "VYBT0120",
+        "Features": "Ringer volume control, tone/pulse switchable, redial, flash, pause",
+        "Mount": "Desk/Wall mountable"
+      },
+      "image": "/images/products/bathroom-telephone-full-feature-vybt0120.webp",
+      "section": "Bathroom Telephone"
+    },
+    {
+      "slug": "shirt-hanger-anti-theft-vyhg0121",
+      "name": "Shirt Hanger Anti-Theft",
+      "category": "closet-accessories",
+      "featured": false,
+      "shortDescription": "Wooden anti-theft shirt hanger.",
+      "description": "A wooden shirt hanger with an anti-theft fitting, so closet hangers don't walk off with departing guests.",
+      "specs": {
+        "Model Code": "VYHG0121",
+        "Material": "Wood",
+        "Colour": "Multiple options"
+      },
+      "image": [
+        "/images/products/shirt-hanger-anti-theft-vyhg0121.webp",
+        "/images/products/shirt-hanger-anti-theft-vyhg0121-1.webp"
+      ],
+      "section": "Wooden Cloth Hangers"
+    },
+    {
+      "slug": "clip-hanger-anti-theft-vyhg0122",
+      "name": "Clip Hanger Anti-Theft",
+      "category": "closet-accessories",
+      "featured": false,
+      "shortDescription": "Wooden anti-theft clip hanger.",
+      "description": "A wooden clip hanger with an anti-theft fitting, for skirts and trousers.",
+      "specs": {
+        "Model Code": "VYHG0122",
+        "Material": "Wood",
+        "Colour": "Multiple options"
+      },
+      "image": [
+        "/images/products/clip-hanger-anti-theft-vyhg0122.webp",
+        "/images/products/clip-hanger-anti-theft-vyhg0122-1.webp"
+      ],
+      "section": "Wooden Cloth Hangers"
+    },
+    {
+      "slug": "coat-hanger-anti-theft-vyhg0123",
+      "name": "Coat Hanger Anti-Theft",
+      "category": "closet-accessories",
+      "featured": false,
+      "shortDescription": "Wooden anti-theft coat hanger.",
+      "description": "A wooden coat hanger with an anti-theft fitting, for guest room closets.",
+      "specs": {
+        "Model Code": "VYHG0123",
+        "Material": "Wood",
+        "Colour": "Multiple options"
+      },
+      "image": [
+        "/images/products/coat-hanger-anti-theft-vyhg0123.webp",
+        "/images/products/coat-hanger-anti-theft-vyhg0123-1.webp"
+      ],
+      "section": "Wooden Cloth Hangers"
+    },
+    {
+      "slug": "shirt-hanger-vyhg0124",
+      "name": "Shirt Hanger",
+      "category": "closet-accessories",
+      "featured": false,
+      "shortDescription": "Wooden shirt hanger.",
+      "description": "A standard wooden shirt hanger for guest room closets.",
+      "specs": {
+        "Model Code": "VYHG0124",
+        "Material": "Wood",
+        "Colour": "Multiple options"
+      },
+      "image": [
+        "/images/products/shirt-hanger-vyhg0124.webp",
+        "/images/products/shirt-hanger-vyhg0124-1.webp"
+      ],
+      "section": "Wooden Cloth Hangers"
+    },
+    {
+      "slug": "clip-hanger-vyhg0125",
+      "name": "Clip Hanger",
+      "category": "closet-accessories",
+      "featured": false,
+      "shortDescription": "Wooden clip hanger.",
+      "description": "A standard wooden clip hanger for skirts and trousers.",
+      "specs": {
+        "Model Code": "VYHG0125",
+        "Material": "Wood",
+        "Colour": "Multiple options"
+      },
+      "image": [
+        "/images/products/clip-hanger-vyhg0125.webp",
+        "/images/products/clip-hanger-vyhg0125-1.webp"
+      ],
+      "section": "Wooden Cloth Hangers"
+    },
+    {
+      "slug": "coat-hanger-vyhg0126",
+      "name": "Coat Hanger",
+      "category": "closet-accessories",
+      "featured": false,
+      "shortDescription": "Wooden coat hanger.",
+      "description": "A standard wooden coat hanger for guest room closets.",
+      "specs": {
+        "Model Code": "VYHG0126",
+        "Material": "Wood",
+        "Colour": "Multiple options"
+      },
+      "image": [
+        "/images/products/coat-hanger-vyhg0126.webp",
+        "/images/products/coat-hanger-vyhg0126-1.webp"
+      ],
+      "section": "Wooden Cloth Hangers"
+    },
+    {
+      "slug": "satin-hanger-ivory-vyhg0127",
+      "name": "Satin Hanger (Ivory)",
+      "category": "closet-accessories",
+      "featured": false,
+      "shortDescription": "Satin-covered hanger for suite-tier closets, Ivory.",
+      "description": "An ivory satin-covered hanger for a softer, suite-tier closet finish.",
+      "specs": {
+        "Model Code": "VYHG0127",
+        "Material": "Satin",
+        "Colour": "Ivory"
+      },
+      "image": "/images/products/satin-hanger-ivory-vyhg0127.webp",
+      "section": "Wooden Cloth Hangers"
+    },
+    {
+      "slug": "satin-hanger-black-vyhg0130",
+      "name": "Satin Hanger (Black)",
+      "category": "closet-accessories",
+      "featured": false,
+      "shortDescription": "Satin-covered hanger for suite-tier closets, Black.",
+      "description": "A black satin-covered hanger for a softer, suite-tier closet finish.",
+      "specs": {
+        "Model Code": "VYHG0130",
+        "Material": "Satin",
+        "Colour": "Black"
+      },
+      "image": "/images/products/satin-hanger-black-vyhg0130.webp",
+      "section": "Wooden Cloth Hangers"
+    },
+    {
+      "slug": "coat-hanger-stand-vyhs0131",
+      "name": "Coat Hanger Stand",
+      "category": "closet-accessories",
+      "featured": false,
+      "shortDescription": "Stainless steel and wood freestanding coat hanger stand.",
+      "description": "A freestanding coat hanger stand in stainless steel and wood, sized 47x15x124cm for a guest room corner.",
+      "specs": {
+        "Model Code": "VYHS0131",
+        "Material": "SS + Wood",
+        "Size": "47 x 15 x 124 cm"
+      },
+      "image": "/images/products/coat-hanger-stand-vyhs0131.webp",
+      "section": "Coat Hanger Stand"
+    },
+    {
+      "slug": "coat-hanger-stand-vyhs0136",
+      "name": "Coat Hanger Stand",
+      "category": "closet-accessories",
+      "featured": false,
+      "shortDescription": "Stainless steel and wood freestanding coat hanger stand.",
+      "description": "A freestanding coat hanger stand in stainless steel and wood, sized 47x15x124cm for a guest room corner.",
+      "specs": {
+        "Model Code": "VYHS0136",
+        "Material": "SS + Wood",
+        "Size": "40 x 35 x 120 cm"
+      },
+      "image": "/images/products/coat-hanger-stand-vyhs0136.webp",
+      "section": "Coat Hanger Stand"
+    },
+    {
+      "slug": "coat-hanger-stand-vyhs0137",
+      "name": "Coat Hanger Stand",
+      "category": "closet-accessories",
+      "featured": false,
+      "shortDescription": "Wooden freestanding coat hanger stand.",
+      "description": "A freestanding coat hanger stand in wood, sized 46x26x120 cm for a guest room corner.",
+      "specs": {
+        "Model Code": "VYHS0137",
+        "Material": "Wood",
+        "Size": "46 x 26 x 120 cm"
+      },
+      "image": "/images/products/coat-hanger-stand-vyhs0137.webp",
+      "section": "Coat Hanger Stand"
+    },
+    {
+      "slug": "luggage-rack-vylr0132",
+      "name": "Luggage Rack",
+      "category": "luggage-rack",
+      "featured": false,
+      "shortDescription": "Wood-framed folding luggage rack.",
+      "description": "A wood-framed luggage rack sized 60x50x50cm for a guest room or suite.",
+      "specs": {
+        "Model Code": "VYLR0132",
+        "Material": "Wood",
+        "Size": "60 x 50 x 50 cm"
+      },
+      "image": "/images/products/luggage-rack-vylr0132.webp"
+    },
+    {
+      "slug": "baby-cot-with-mattress-vybcm0134",
+      "name": "Baby Cot with Mattress",
+      "category": "baby-coat",
+      "featured": false,
+      "shortDescription": "Wooden baby cot with mattress for family rooms.",
+      "description": "A wooden baby cot with mattress sized 105x62x140cm, for family-room and crib-on-request service.",
+      "specs": {
+        "Model Code": "VYBCM0134",
+        "Material": "Wood",
+        "Size": "105 x 62 x 140 cm"
+      },
+      "image": "/images/products/baby-cot-with-mattress-vybcm0134.webp"
+    },
+    {
+      "slug": "shoe-horn-vysh0128",
+      "name": "Shoe Horn",
+      "category": "shoe-brush-horn",
+      "featured": false,
+      "shortDescription": "38cm wooden shoe horn.",
+      "description": "A 38cm wooden shoe horn for guest room closets.",
+      "specs": {
+        "Model Code": "VYSH0128",
+        "Material": "Wood",
+        "Size": "38 cm"
+      },
+      "image": "/images/products/shoe-horn-vysh0128.webp"
+    },
+    {
+      "slug": "coat-brush-vycb0129",
+      "name": "Coat Brush",
+      "category": "shoe-brush-horn",
+      "featured": false,
+      "shortDescription": "38cm wooden coat brush.",
+      "description": "A 38cm wooden coat brush, paired with the closet hanger range.",
+      "specs": {
+        "Model Code": "VYCB0129",
+        "Material": "Wood",
+        "Size": "38 cm"
+      },
+      "image": "/images/products/coat-brush-vycb0129.webp"
+    },
+    {
+      "slug": "bird-cage-trolley-golden-vybct0141",
+      "name": "Bird Cage Trolley (Golden)",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "190cm-tall bird cage luggage trolley, Golden.",
+      "description": "A gold-finish bird-cage-style luggage trolley standing 190cm tall, for lobby and bell-desk use.",
+      "specs": {
+        "Model Code": "VYBCT0141",
+        "Size": "60x105x190H cm",
+        "Colour": "Golden"
+      },
+      "image": "/images/products/bird-cage-trolley-golden-vybct0141.webp",
+      "section": "Luggage Cart"
+    },
+    {
+      "slug": "bird-cage-trolley-silver-vybct0158",
+      "name": "Bird Cage Trolley (Silver)",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "190cm-tall bird cage luggage trolley, Silver.",
+      "description": "A silver-finish bird-cage-style luggage trolley standing 190cm tall, for lobby and bell-desk use.",
+      "specs": {
+        "Model Code": "VYBCT0158",
+        "Size": "60x105x190H cm",
+        "Colour": "Silver"
+      },
+      "image": "/images/products/bird-cage-trolley-silver-vybct0158.webp",
+      "section": "Luggage Cart"
+    },
+    {
+      "slug": "truck-side-trolley-vytst0142",
+      "name": "Truck Side Trolley",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "Truck-side luggage trolley.",
+      "description": "A truck-side luggage trolley sized 105x65x90H cm for lobby and loading-area use.",
+      "specs": {
+        "Model Code": "VYTST0142",
+        "Size": "105x65x90H cm"
+      },
+      "image": "/images/products/truck-side-trolley-vytst0142.webp",
+      "section": "Luggage Cart"
+    },
+    {
+      "slug": "men-s-cart-trolley-vymct0143",
+      "name": "Men's Cart Trolley",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "Tall narrow luggage cart trolley.",
+      "description": "A tall, narrow men's cart trolley sized 45x38x110H cm for single-piece luggage runs.",
+      "specs": {
+        "Model Code": "VYMCT0143",
+        "Size": "45x38x110H cm"
+      },
+      "image": "/images/products/men-s-cart-trolley-vymct0143.webp",
+      "section": "Luggage Cart"
+    },
+    {
+      "slug": "housekeeping-trolley-premium-large-vyhkthd0144",
+      "name": "Housekeeping Trolley Premium (Large)",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "Large fibre housekeeping trolley, 155x60x120H cm.",
+      "description": "A large fibre-bodied housekeeping trolley sized 155x60x120H cm, for full-floor room servicing.",
+      "specs": {
+        "Model Code": "VYHKTHD0144",
+        "Size": "155x60x120H cm",
+        "Material": "Fibre"
+      },
+      "image": "/images/products/housekeeping-trolley-premium-large-vyhkthd0144.webp",
+      "section": "Housekeeping Trolleys"
+    },
+    {
+      "slug": "housekeeping-trolley-premium-compact-vyhkthd0145s",
+      "name": "Housekeeping Trolley Premium (Compact)",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "Compact fibre housekeeping trolley, 125x55x122H cm.",
+      "description": "A more compact fibre-bodied housekeeping trolley sized 125x55x122H cm, for narrower corridors.",
+      "specs": {
+        "Model Code": "VYHKTHD0145S",
+        "Size": "125x55x122H cm",
+        "Material": "Fibre"
+      },
+      "image": "/images/products/housekeeping-trolley-premium-compact-vyhkthd0145s.webp",
+      "section": "Housekeeping Trolleys"
+    },
+    {
+      "slug": "housekeeping-trolley-ss-vyhktss0146",
+      "name": "Housekeeping Trolley SS",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "Stainless steel housekeeping trolley, 140x45x120H cm.",
+      "description": "A stainless steel housekeeping trolley sized 140x45x120H cm, for properties standardizing on metal back-of-house equipment.",
+      "specs": {
+        "Model Code": "VYHKTSS0146",
+        "Size": "140x45x120H cm"
+      },
+      "image": "/images/products/housekeeping-trolley-ss-vyhktss0146.webp",
+      "section": "Housekeeping Trolleys"
+    },
+    {
+      "slug": "hk-trolley-metal-2-bags-vyhktml0147w2",
+      "name": "HK Trolley Metal (2 Bags)",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "Metal housekeeping trolley with 2 linen bags.",
+      "description": "A powder-coated metal housekeeping trolley fitted with 2 linen bags, sized 145x40x120H cm.",
+      "specs": {
+        "Model Code": "VYHKTML0147W2",
+        "Size": "145x40x120H cm",
+        "Material": "Metal Powder Coated",
+        "Color": "Brown & Black"
+      },
+      "image": "/images/products/hk-trolley-metal-2-bags-vyhktml0147w2.webp",
+      "section": "Housekeeping Trolleys"
+    },
+    {
+      "slug": "hk-trolley-metal-1-bag-vyhktml0148",
+      "name": "HK Trolley Metal (1 Bag)",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "Metal housekeeping trolley with 1 linen bag.",
+      "description": "A powder-coated metal housekeeping trolley fitted with 1 linen bag, sized 145x40x120H cm.",
+      "specs": {
+        "Model Code": "VYHKTML0148",
+        "Size": "145x40x120H cm",
+        "Material": "Metal Powder Coated",
+        "Color": "Brown & Black"
+      },
+      "image": "/images/products/hk-trolley-metal-1-bag-vyhktml0148.webp",
+      "section": "Housekeeping Trolleys"
+    },
+    {
+      "slug": "wringer-trolley-vywt0151",
+      "name": "Wringer Trolley",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "34L ABS plastic wringer trolley.",
+      "description": "A 34L ABS plastic wringer trolley for mopping rounds across guest floors and public areas.",
+      "specs": {
+        "Model Code": "VYWT0151",
+        "Capacity": "34 Ltr.",
+        "Material": "ABS Plastic"
+      },
+      "image": "/images/products/wringer-trolley-vywt0151.webp",
+      "section": "Housekeeping Trolleys"
+    },
+    {
+      "slug": "janitor-s-cart-vyjc0152",
+      "name": "Janitor's Cart",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "ABS plastic janitor's cart.",
+      "description": "An ABS plastic janitor's cart sized 105x50x100H cm for consolidated cleaning-supply rounds.",
+      "specs": {
+        "Model Code": "VYJC0152",
+        "Size": "105x50x100H cm",
+        "Material": "ABS Plastic"
+      },
+      "image": "/images/products/janitor-s-cart-vyjc0152.webp",
+      "section": "Housekeeping Trolleys"
+    },
+    {
+      "slug": "soiled-linen-trolley-vysltf0149",
+      "name": "Soiled Linen Trolley",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "Soiled linen collection trolley.",
+      "description": "A soiled linen collection trolley sized 60x60x90H cm for housekeeping rounds.",
+      "specs": {
+        "Model Code": "VYSLTF0149",
+        "Size": "60x60x90H cm"
+      },
+      "image": "/images/products/soiled-linen-trolley-vysltf0149.webp",
+      "section": "Laundry Trolleys"
+    },
+    {
+      "slug": "linen-trolley-folding-vyltf0150",
+      "name": "Linen Trolley Folding",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "Folding linen trolley for storage-friendly housekeeping.",
+      "description": "A folding linen trolley sized 105x50x100H cm, collapsing down when not in use.",
+      "specs": {
+        "Model Code": "VYLTF0150",
+        "Size": "105x50x100H cm"
+      },
+      "image": "/images/products/linen-trolley-folding-vyltf0150.webp",
+      "section": "Laundry Trolleys"
+    },
+    {
+      "slug": "food-clearance-trolley-vyfct0153",
+      "name": "Food Clearance Trolley",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "Food clearance trolley for room service and banqueting.",
+      "description": "A food clearance trolley sized 80x40x80H cm for room service and banqueting teams.",
+      "specs": {
+        "Model Code": "VYFCT0153",
+        "Size": "80x40x80H cm"
+      },
+      "image": "/images/products/food-clearance-trolley-vyfct0153.webp",
+      "section": "Room Service Trolleys"
+    },
+    {
+      "slug": "serving-trolley-vystq0154",
+      "name": "Serving Trolley",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "Serving trolley for room service and events.",
+      "description": "A serving trolley sized 85x45x110H cm for room service delivery and small events.",
+      "specs": {
+        "Model Code": "VYSTQ0154",
+        "Size": "85x45x110H cm"
+      },
+      "image": "/images/products/serving-trolley-vystq0154.webp",
+      "section": "Room Service Trolleys"
+    },
+    {
+      "slug": "serving-trolley-premium-vystq0155",
+      "name": "Serving Trolley Premium",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "Premium finish serving trolley, compact format.",
+      "description": "A premium-finish serving trolley in a more compact 65x40x85H cm format.",
+      "specs": {
+        "Model Code": "VYSTQ0155",
+        "Size": "65x40x85H cm"
+      },
+      "image": "/images/products/serving-trolley-premium-vystq0155.webp",
+      "section": "Room Service Trolleys"
+    },
+    {
+      "slug": "toolkit-caddy-vytc0186",
+      "name": "Toolkit Caddy",
+      "category": "trolley",
+      "featured": false,
+      "shortDescription": "ABS plastic toolkit caddy for maintenance staff.",
+      "description": "An ABS plastic toolkit caddy sized 27x37x11H cm for engineering and maintenance rounds.",
+      "specs": {
+        "Model Code": "VYTC0186",
+        "Material": "ABS Plastic",
+        "Size": "27x37x11H cm"
+      },
+      "image": "/images/products/toolkit-caddy-vytc0186.webp",
+      "section": "Toolkit Caddy"
+    },
+    {
+      "slug": "folding-bed-vyfb0106",
+      "name": "Folding Bed",
+      "category": "folding-bed",
+      "featured": false,
+      "shortDescription": "SS metal-frame folding bed, 75x36 inch.",
+      "description": "A stainless steel metal-frame folding bed sized 75x36 inch, for extra-bed and rollaway requests.",
+      "specs": {
+        "Model Code": "VYFB0106",
+        "Size": "75x36 inch",
+        "Material": "SS Metal Frame"
+      },
+      "image": "/images/products/folding-bed-vyfb0106.webp"
+    },
+    {
+      "slug": "queue-manager-ribbon-silver-vyqm0161",
+      "name": "Queue Manager Ribbon (Silver)",
+      "category": "queue-managers",
+      "featured": true,
+      "shortDescription": "90cm ribbon queue manager with 165cm ribbon, Silver.",
+      "description": "A 90cm-tall silver ribbon queue manager with a 165cm ribbon, for lobby and check-in queuing.",
+      "specs": {
+        "Model Code": "VYQM0161",
+        "Height": "90 cm",
+        "Ribbon Length": "165 cm",
+        "Colour": "Silver"
+      },
+      "image": "/images/products/queue-manager-ribbon-silver-vyqm0161.webp"
+    },
+    {
+      "slug": "queue-manager-ribbon-golden-vyqm0162",
+      "name": "Queue Manager Ribbon (Golden)",
+      "category": "queue-managers",
+      "featured": true,
+      "shortDescription": "90cm ribbon queue manager with 165cm ribbon, Golden.",
+      "description": "A 90cm-tall gold ribbon queue manager with a 165cm ribbon, for lobby and check-in queuing.",
+      "specs": {
+        "Model Code": "VYQM0162",
+        "Height": "90 cm",
+        "Ribbon Length": "165 cm",
+        "Colour": "Golden"
+      },
+      "image": "/images/products/queue-manager-ribbon-golden-vyqm0162.webp"
+    },
+    {
+      "slug": "queue-manager-ribbon-black-vyqm0163",
+      "name": "Queue Manager Ribbon (Black)",
+      "category": "queue-managers",
+      "featured": true,
+      "shortDescription": "90cm ribbon queue manager with 165cm ribbon, Black.",
+      "description": "A 90cm-tall black ribbon queue manager with a 165cm ribbon, for lobby and check-in queuing.",
+      "specs": {
+        "Model Code": "VYQM0163",
+        "Height": "90 cm",
+        "Ribbon Length": "165 cm",
+        "Colour": "Black"
+      },
+      "image": "/images/products/queue-manager-ribbon-black-vyqm0163.webp"
+    },
+    {
+      "slug": "queue-manager-royal-vyqm0164",
+      "name": "Queue Manager Royal",
+      "category": "queue-managers",
+      "featured": false,
+      "shortDescription": "100cm premium ribbon queue manager with 140cm ribbon.",
+      "description": "A taller, premium-finish ribbon queue manager at 100cm with a 140cm ribbon, for higher-tier lobby areas.",
+      "specs": {
+        "Model Code": "VYQM0164",
+        "Height": "100 cm",
+        "Ribbon Length": "140 cm"
+      },
+      "image": "/images/products/queue-manager-royal-vyqm0164.webp"
+    },
+    {
+      "slug": "queue-manager-royal-vyqm1162",
+      "name": "Queue Manager SS Golden",
+      "category": "queue-managers",
+      "featured": false,
+      "shortDescription": "100cm premium queue manager with 100cm ribbon.",
+      "description": "A premium-finish queue manager at 100cm with a 100cm ribbon.",
+      "specs": {
+        "Model Code": "VYQM1162",
+        "Height": "100 cm",
+        "Ribbon Length": "100 cm"
+      },
+      "image": "/images/products/queue-manager-ss-golden-vyqm1162.webp"
+    },
+    {
+      "slug": "shoe-polish-machine-vyssm0166",
+      "name": "Shoe Polish Machine",
+      "category": "shoe-shining-machine",
+      "featured": true,
+      "shortDescription": "Fully automatic gold-plated stainless steel shoe polish machine.",
+      "description": "A fully automatic shoe polish machine in gold-plated stainless steel, sized 28x48x76H cm for a lobby corner.",
+      "specs": {
+        "Model Code": "VYSSM0166",
+        "Size": "28x48x76H cm",
+        "Operation": "Fully Automatic",
+        "Material": "SS Gold Plated"
+      },
+      "image": "/images/products/shoe-polish-machine-vyssm0166.webp"
+    },
+    {
+      "slug": "shoe-polish-machine-small-vyssm0167",
+      "name": "Shoe Polish Machine (Small)",
+      "category": "shoe-shining-machine",
+      "featured": false,
+      "shortDescription": "Compact fully automatic gold-plated shoe polish machine.",
+      "description": "A more compact fully automatic shoe polish machine in gold-plated stainless steel, sized 23x38x38H cm.",
+      "specs": {
+        "Model Code": "VYSSM0167",
+        "Size": "23x38x38H cm",
+        "Operation": "Fully Automatic",
+        "Material": "SS Gold Plated",
+        "Color": "Silver"
+      },
+      "image": "/images/products/shoe-polish-machine-small-vyssm0167.webp"
+    },
+    {
+      "slug": "shoe-polish-machine-small-vyssm0170",
+      "name": "Shoe Polish Machine (Small, SS Plated)",
+      "category": "shoe-shining-machine",
+      "featured": false,
+      "shortDescription": "Compact fully automatic stainless steel shoe polish machine.",
+      "description": "A more compact fully automatic shoe polish machine in stainless steel, sized 23x38x38H cm — a non-gold-plated alternative finish.",
+      "specs": {
+        "Model Code": "VYSSM0170",
+        "Size": "23x38x38H cm",
+        "Operation": "Fully Automatic",
+        "Material": "SS Plated",
+        "Color": "Silver"
+      },
+      "image": "/images/products/shoe-polish-machine-small-vyssm0170.webp"
+    },
+    {
+      "slug": "newspaper-stand-vyns0165",
+      "name": "Newspaper Stand",
+      "category": "news-paper-stand",
+      "featured": false,
+      "shortDescription": "Stainless steel newspaper stand.",
+      "description": "A stainless steel newspaper stand for hotel lobbies.",
+      "specs": {
+        "Model Code": "VYNS0165",
+        "Material": "SS 304",
+        "Color": "Silver"
+      },
+      "image": "/images/products/newspaper-stand-vyns0165.webp"
+    },
+    {
+      "slug": "newspaper-stand-wood-finish-vynpsg0168",
+      "name": "Newspaper Stand (Wood Finish)",
+      "category": "news-paper-stand",
+      "featured": false,
+      "shortDescription": "Wood newspaper stand.",
+      "description": "A newspaper stand with a wood finish, sized 60x47x150cm for a statement lobby piece.",
+      "specs": {
+        "Model Code": "VYNPSG0168",
+        "Size": "60x47x150 cm",
+        "Material": "Wood Finish"
+      },
+      "image": "/images/products/newspaper-stand-gold-finish-vynpsg0168.webp"
+    },
+    {
+      "slug": "baby-changing-station-vybcs0169",
+      "name": "Baby Changing Station",
+      "category": "baby-changing-station",
+      "featured": false,
+      "shortDescription": "Wall-hanging fibre baby changing station.",
+      "description": "A wall-hanging fibre baby changing station for family-friendly public washrooms.",
+      "specs": {
+        "Model Code": "VYBCS0169",
+        "Material": "Fibre",
+        "Mount": "Wall hanging"
+      },
+      "image": "/images/products/baby-changing-station-vybcs0169.webp"
+    },
+    {
+      "slug": "telephone-face-plate-customization-vytfp0211",
+      "name": "Telephone Face Plate Customization",
+      "category": "printing-customization",
+      "featured": false,
+      "shortDescription": "Custom-printed telephone face plate.",
+      "description": "A custom-printed telephone face plate carrying your property's branding.",
+      "specs": {
+        "Model Code": "VYTFP0211"
+      },
+      "image": "/images/products/telephone-face-plate-customization-vytfp0211.webp"
+    },
+    {
+      "slug": "coaster-paper-customization-vycpp0212",
+      "name": "Coaster Paper Customization",
+      "category": "printing-customization",
+      "featured": false,
+      "shortDescription": "Custom-printed coaster paper.",
+      "description": "Custom-printed coaster paper for minibar and room service use.",
+      "specs": {
+        "Model Code": "VYCPP0212"
+      },
+      "image": "/images/products/coaster-paper-customization-vycpp0212.webp"
+    },
+    {
+      "slug": "rfid-key-card-cover-customization-vyrkc0213",
+      "name": "RFID Key Card Cover Customization",
+      "category": "printing-customization",
+      "featured": false,
+      "shortDescription": "Custom-printed RFID key card cover/sleeve.",
+      "description": "A custom-printed sleeve for the guest RFID key card, branded to your property.",
+      "specs": {
+        "Model Code": "VYRKC0213"
+      },
+      "image": "/images/products/rfid-key-card-cover-customization-vyrkc0213.webp"
+    },
+    {
+      "slug": "rfid-key-card-customization-vyrkc0214",
+      "name": "RFID Key Card Customization",
+      "category": "printing-customization",
+      "featured": false,
+      "shortDescription": "Custom-printed RFID key card.",
+      "description": "A custom-printed RFID key card, branded to your property.",
+      "specs": {
+        "Model Code": "VYRKC0214"
+      },
+      "image": "/images/products/rfid-key-card-customization-vyrkc0214.webp"
+    },
+    {
+      "slug": "luggage-tag-customization-vylt0215",
+      "name": "Luggage Tag Customization",
+      "category": "printing-customization",
+      "featured": false,
+      "shortDescription": "Custom-printed luggage tag.",
+      "description": "A custom-printed luggage tag for bell desk and valet use.",
+      "specs": {
+        "Model Code": "VYLT0215"
+      },
+      "image": "/images/products/luggage-tag-customization-vylt0215.webp"
+    },
+    {
+      "slug": "dnd-service-tag-customization-vydst0216",
+      "name": "DND & Service Tag Customization",
+      "category": "printing-customization",
+      "featured": false,
+      "shortDescription": "Custom-printed Do Not Disturb and service door tags.",
+      "description": "Custom-printed Do Not Disturb and service door tags, branded to your property.",
+      "specs": {
+        "Model Code": "VYDST0216"
+      },
+      "image": "/images/products/dnd-service-tag-customization-vydst0216.webp"
+    },
+    {
+      "slug": "cloth-liner-vycl201",
+      "name": "Cloth Liner",
+      "category": "cloth-liner",
+      "featured": false,
+      "shortDescription": "270cm stainless steel cloth liner.",
+      "description": "A stainless steel retractable cloth liner with a 270cm rope length, for in-room laundry drying.",
+      "specs": {
+        "Model Code": "VYCL201",
+        "Material": "SS",
+        "Rope Length": "270 cm"
+      },
+      "image": "/images/products/cloth-liner-vycl201.webp"
+    },
+    {
+      "slug": "cloth-liner-compact-vycl202",
+      "name": "Cloth Liner (Compact)",
+      "category": "cloth-liner",
+      "featured": false,
+      "shortDescription": "230cm stainless steel cloth liner.",
+      "description": "A stainless steel retractable cloth liner with a 230cm rope length, for smaller bathrooms.",
+      "specs": {
+        "Model Code": "VYCL202",
+        "Material": "SS",
+        "Rope Length": "230 cm"
+      },
+      "image": "/images/products/cloth-liner-compact-vycl202.webp"
+    },
+    {
+      "slug": "air-conditioner-vyac0192",
+      "name": "Air Conditioner",
+      "category": "ac",
+      "featured": false,
+      "shortDescription": "Inverter air conditioner (Daikin / Mitsubishi).",
+      "description": "An inverter-technology air conditioner from Daikin or Mitsubishi for guest room climate control.",
+      "specs": {
+        "Model Code": "VYAC0192",
+        "Brand": "Daikin / Mitsubishi",
+        "Technology": "Inverter"
+      },
+      "image": "/images/products/air-conditioner-vyac0192.webp"
+    },
+    {
+      "slug": "room-tv-vytv0191",
+      "name": "Room TV",
+      "category": "tv",
+      "featured": false,
+      "shortDescription": "Hospitality-series smart TV (TCL / Samsung / LG) with free installation.",
+      "description": "A hospitality-series web-based smart TV from TCL, Samsung or LG, with free installation included.",
+      "specs": {
+        "Model Code": "VYTV0191",
+        "TV Brand": "TCL / Samsung / LG",
+        "Type": "Web based smart TV",
+        "Installation": "Free",
+        "Series": "Hospitality Series"
+      },
+      "image": "/images/products/room-tv-vytv0191.webp"
+    },
+    {
+      "slug": "digital-door-plate-vyddp0171-180",
+      "name": "Digital Door Plate",
+      "category": "dnd-plate",
+      "featured": false,
+      "shortDescription": "LED-backlit digital room number and logo plate.",
+      "description": "An LED-backlit digital door plate showing the room number and property logo.",
+      "specs": {
+        "Model Code": "VYDDP0171/180",
+        "Display": "Room number / logo",
+        "Lighting": "LED back light"
+      },
+      "image": "/images/products/digital-door-plate-vyddp0171-180.webp"
+    },
+    {
+      "slug": "square-tissue-box-vytb0172",
+      "name": "Square Tissue Box",
+      "category": "tissue-box",
+      "featured": false,
+      "shortDescription": "Square-format tissue box cover.",
+      "description": "A square-format tissue box cover for the guest room desk or bathroom counter.",
+      "specs": {
+        "Model Code": "VYTB0172",
+        "Size": "12 x 12 x 14.5H cm"
+      },
+      "image": "/images/products/square-tissue-box-vytb0172.webp"
+    },
+    {
+      "slug": "tissue-box-vytb0173",
+      "name": "Tissue Box",
+      "category": "tissue-box",
+      "featured": false,
+      "shortDescription": "Standard tissue box cover.",
+      "description": "A standard tissue box cover for guest rooms.",
+      "specs": {
+        "Model Code": "VYTB0173",
+        "Size": "25 x 14 x 10H cm"
+      },
+      "image": "/images/products/tissue-box-vytb0173.webp"
+    },
+    {
+      "slug": "bathroom-mat-rubber-vybtr0174",
+      "name": "Bathroom Mat (Rubber)",
+      "category": "bathmat",
+      "featured": false,
+      "shortDescription": "40x58cm rubber bathroom mat.",
+      "description": "A 40x58cm rubber bathroom mat for the shower or bath exit.",
+      "specs": {
+        "Model Code": "VYBTR0174",
+        "Material": "Rubber",
+        "Size": "40 x 58 cm"
+      },
+      "image": "/images/products/bathroom-mat-rubber-vybtr0174.webp"
+    },
+    {
+      "slug": "bathroom-mat-pvc-vybtp0175",
+      "name": "Bathroom Mat (PVC)",
+      "category": "bathmat",
+      "featured": false,
+      "shortDescription": "70x40cm PVC and rubber bathroom mat.",
+      "description": "A 70x40cm PVC and rubber bathroom mat, a larger format for suite bathrooms.",
+      "specs": {
+        "Model Code": "VYBTP0175",
+        "Material": "PVC + Rubber",
+        "Size": "70 x 40 cm"
+      },
+      "image": "/images/products/bathroom-mat-pvc-vybtp0175.webp"
+    },
+    {
+      "slug": "square-ashtray-vyas0176",
+      "name": "Square Ashtray",
+      "category": "ash-tray",
+      "featured": false,
+      "shortDescription": "Black melamine square ashtray.",
+      "description": "A black melamine square ashtray for designated smoking rooms and balconies.",
+      "specs": {
+        "Model Code": "VYAS0176",
+        "Color": "Black",
+        "Material": "Melamine"
+      },
+      "image": "/images/products/square-ashtray-vyas0176.webp"
+    },
+    {
+      "slug": "weight-scale-vyws0177",
+      "name": "Weight Scale",
+      "category": "weight-scale",
+      "featured": false,
+      "shortDescription": "150kg capacity bathroom weight scale.",
+      "description": "A bathroom weight scale rated to 150kg.",
+      "specs": {
+        "Model Code": "VYWS0177",
+        "Capacity": "150 kgs"
+      },
+      "image": "/images/products/weight-scale-vyws0177.webp"
+    },
+    {
+      "slug": "weight-scale-200kg-vyws0178",
+      "name": "Weight Scale (200kg)",
+      "category": "weight-scale",
+      "featured": false,
+      "shortDescription": "200kg capacity bathroom weight scale.",
+      "description": "A bathroom weight scale rated to 200kg for a higher-capacity option.",
+      "specs": {
+        "Model Code": "VYWS0178",
+        "Capacity": "200 kgs"
+      },
+      "image": "/images/products/weight-scale-200kg-vyws0178.webp"
+    },
+    {
+      "slug": "weight-scale-digital-vyws0179",
+      "name": "Weight Scale (Digital)",
+      "category": "weight-scale",
+      "featured": false,
+      "shortDescription": "150kg capacity digital weighing scale.",
+      "description": "A digital bathroom weighing scale rated to 150kg.",
+      "specs": {
+        "Model Code": "VYWS0179",
+        "Type": "Digital Weighing",
+        "Capacity": "150 kgs"
+      },
+      "image": "/images/products/weight-scale-digital-vyws0179.webp"
+    },
+    {
+      "slug": "podium-steel-leather-vypd0181",
+      "name": "Podium (Steel & Leather)",
+      "category": "podium",
+      "featured": false,
+      "shortDescription": "Steel and leather reception podium.",
+      "description": "A reception podium in steel and leather, sized 51x49x116cm.",
+      "specs": {
+        "Model Code": "VYPD0181",
+        "Material": "Steel & Leather",
+        "Size": "51x49x116 cm"
+      },
+      "image": "/images/products/podium-steel-leather-vypd0181.webp",
+      "section": "Podium"
+    },
+    {
+      "slug": "podium-mdf-steel-vypd0182",
+      "name": "Podium (MDF & Steel)",
+      "category": "podium",
+      "featured": false,
+      "shortDescription": "MDF wood and steel panel reception podium.",
+      "description": "A reception podium in MDF wood with a steel panel, sized 70x49x115cm.",
+      "specs": {
+        "Model Code": "VYPD0182",
+        "Material": "MDF Wood & Steel Panel",
+        "Size": "70x49x115 cm"
+      },
+      "image": "/images/products/podium-mdf-steel-vypd0182.webp",
+      "section": "Podium"
+    },
+    {
+      "slug": "podium-compact-vypd0183",
+      "name": "Podium (Compact)",
+      "category": "podium",
+      "featured": false,
+      "shortDescription": "Compact MDF wood and steel reception podium.",
+      "description": "A compact reception podium in MDF wood and steel, sized 46x46x120cm.",
+      "specs": {
+        "Model Code": "VYPD0183",
+        "Material": "MDF Wood & Steel",
+        "Size": "46x46x120 cm"
+      },
+      "image": "/images/products/podium-compact-vypd0183.webp",
+      "section": "Podium"
+    },
+    {
+      "slug": "baby-chair-vybc0133",
+      "name": "Baby Chair",
+      "category": "podium",
+      "featured": false,
+      "shortDescription": "Wooden baby chair for family rooms.",
+      "description": "A wooden baby chair sized 41x69x79cm, for properties offering family-room amenities.",
+      "specs": {
+        "Model Code": "VYBC0133",
+        "Material": "Wood",
+        "Size": "41 x 69 x 79 cm"
+      },
+      "image": "/images/products/baby-chair-vybc0133.webp",
+      "section": "Baby Chair"
+    },
+    {
+      "slug": "caution-boards-vycb0185",
+      "name": "Caution Boards",
+      "category": "caution-boards",
+      "featured": false,
+      "shortDescription": "Plastic wet floor / cleaning in progress caution board.",
+      "description": "A plastic caution board in \"Wet Floor\" or \"Cleaning in Progress\" formats for housekeeping rounds.",
+      "specs": {
+        "Model Code": "VYCB0185",
+        "Option": "Wet Floor / Cleaning in Progress",
+        "Material": "Plastic"
+      },
+      "image": "/images/products/caution-boards-vycb0185.webp"
+    },
+    {
+      "slug": "caution-boards-premium-vycb0193",
+      "name": "Caution Boards Premium",
+      "category": "caution-boards",
+      "featured": false,
+      "shortDescription": "Stainless steel premium caution board.",
+      "description": "A stainless steel premium caution board sized 30x28x60cm for a more upscale lobby finish.",
+      "specs": {
+        "Model Code": "VYCB0193",
+        "Material": "SS",
+        "Size": "30x28x60 cm"
+      },
+      "image": "/images/products/caution-boards-premium-vycb0193.webp"
+    },
+    {
+      "slug": "insect-catcher-machine-vyim0184",
+      "name": "Insect Catcher Machine",
+      "category": "insect-catcher-machine",
+      "featured": false,
+      "shortDescription": "Plastic insect catcher machine with glue pads, 2 or 3 tubes.",
+      "description": "A plastic insect catcher machine with 2 or 3 catch tubes and glue pads, sized 51x13x33H cm for back-of-house or outdoor areas.",
+      "specs": {
+        "Model Code": "VYIM0184",
+        "Material": "Plastic",
+        "Tubes": "2 or 3",
+        "Size": "51x13x33H cm",
+        "Includes": "Glue pads"
+      },
+      "image": "/images/products/insect-catcher-machine-vyim0184.webp"
+    },
+    {
+      "slug": "aerosol-dispenser-vyad0187",
+      "name": "Aerosol Dispenser",
+      "category": "diffuser",
+      "featured": false,
+      "shortDescription": "Plastic wall-mount aerosol dispenser.",
+      "description": "A plastic wall-mount aerosol dispenser for washroom and public-area scenting.",
+      "specs": {
+        "Model Code": "VYAD0187",
+        "Material": "Plastic"
+      },
+      "image": "/images/products/aerosol-dispenser-vyad0187.webp"
+    },
+    {
+      "slug": "air-humidifier-vyah0188",
+      "name": "Air Humidifier",
+      "category": "diffuser",
+      "featured": false,
+      "shortDescription": "Plastic air humidifier for lobby and public areas.",
+      "description": "A plastic air humidifier for lobby and public-area air comfort.",
+      "specs": {
+        "Model Code": "VYAH0188",
+        "Material": "Plastic"
+      },
+      "image": "/images/products/air-humidifier-vyah0188.webp"
+    },
+    {
+      "slug": "aroma-diffuser-vyad0189",
+      "name": "Aroma Diffuser",
+      "category": "diffuser",
+      "featured": false,
+      "shortDescription": "400ml ABS aroma diffuser, covers 500-1000m³.",
+      "description": "An ABS aroma diffuser at 400ml capacity, covering 500-1000m³ of space on 12V DC power — the scale most lobbies scent with.",
+      "specs": {
+        "Model Code": "VYAD0189",
+        "Material": "ABS",
+        "Capacity": "400ml",
+        "Voltage": "DC 12V",
+        "Space Coverage": "500-1000m³",
+        "Power": "8V",
+        "Size": "21.2x15.8x7.5 cm"
+      },
+      "image": "/images/products/aroma-diffuser-vyad0189.webp"
+    },
+    {
+      "slug": "toilet-paper-holder-silver-vytphms203",
+      "name": "Toilet Paper Holder (Silver)",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Stainless steel toilet paper holder, Silver.",
+      "description": "A stainless steel toilet paper holder in 304, silver finish.",
+      "specs": {
+        "Model Code": "VYTPHMS203C",
+        "Material": "SS 304",
+        "Color": "Silver"
+      },
+      "image": "/images/products/toilet-paper-holder-silver-vytphms203.webp"
+    },
+    {
+      "slug": "toilet-paper-holder-black-vytphms204",
+      "name": "Toilet Paper Holder (Black)",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Stainless steel toilet paper holder, Black.",
+      "description": "A stainless steel toilet paper holder in 304, black finish.",
+      "specs": {
+        "Model Code": "VYTPHMS204C",
+        "Material": "SS 304",
+        "Color": "Black"
+      },
+      "image": "/images/products/toilet-paper-holder-black-vytphms204.webp"
+    },
+    {
+      "slug": "moon-silver-towel-rack-vymoon0221",
+      "name": "Moon Silver Towel Rack",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Towel Rack in the Moon Silver finish.",
+      "description": "A towel rack in the Moon Silver bath accessories line, matched to the rest of the Moon Silver set.",
+      "specs": {
+        "Model Code": "VYMOON0221",
+        "Finish": "Moon Silver"
+      },
+      "image": "/images/products/moon-silver-towel-rack-vymoon0221.webp"
+    },
+    {
+      "slug": "moon-silver-towel-rod-vymoon0222",
+      "name": "Moon Silver Towel Rod",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Towel Rod in the Moon Silver finish.",
+      "description": "A towel rod in the Moon Silver bath accessories line, matched to the rest of the Moon Silver set.",
+      "specs": {
+        "Model Code": "VYMOON0222",
+        "Finish": "Moon Silver"
+      },
+      "image": "/images/products/moon-silver-towel-rod-vymoon0222.webp"
+    },
+    {
+      "slug": "moon-silver-napkin-ring-vymoon0223",
+      "name": "Moon Silver Napkin Ring",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Napkin Ring in the Moon Silver finish.",
+      "description": "A napkin ring in the Moon Silver bath accessories line, matched to the rest of the Moon Silver set.",
+      "specs": {
+        "Model Code": "VYMOON0223",
+        "Finish": "Moon Silver"
+      },
+      "image": "/images/products/moon-silver-napkin-ring-vymoon0223.webp"
+    },
+    {
+      "slug": "moon-silver-tissue-paper-holder-with-lid-vymoon0224",
+      "name": "Moon Silver Tissue Paper Holder with Lid",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Tissue Paper Holder with Lid in the Moon Silver finish.",
+      "description": "A tissue paper holder with lid in the Moon Silver bath accessories line, matched to the rest of the Moon Silver set.",
+      "specs": {
+        "Model Code": "VYMOON0224",
+        "Finish": "Moon Silver"
+      },
+      "image": "/images/products/moon-silver-tissue-paper-holder-with-lid-vymoon0224.webp"
+    },
+    {
+      "slug": "moon-silver-robe-hook-vymoon0225",
+      "name": "Moon Silver Robe Hook",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Robe Hook in the Moon Silver finish.",
+      "description": "A robe hook in the Moon Silver bath accessories line, matched to the rest of the Moon Silver set.",
+      "specs": {
+        "Model Code": "VYMOON0225",
+        "Finish": "Moon Silver"
+      },
+      "image": "/images/products/moon-silver-robe-hook-vymoon0225.webp"
+    },
+    {
+      "slug": "mercury-black-towel-rack-vymrcy0231",
+      "name": "Mercury Black Towel Rack",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Towel Rack in the Mercury Black finish.",
+      "description": "A towel rack in the Mercury Black bath accessories line, matched to the rest of the Mercury Black set.",
+      "specs": {
+        "Model Code": "VYMRCY0231",
+        "Finish": "Mercury Black"
+      },
+      "image": "/images/products/mercury-black-towel-rack-vymrcy0231.webp"
+    },
+    {
+      "slug": "mercury-black-towel-rod-vymrcy0232",
+      "name": "Mercury Black Towel Rod",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Towel Rod in the Mercury Black finish.",
+      "description": "A towel rod in the Mercury Black bath accessories line, matched to the rest of the Mercury Black set.",
+      "specs": {
+        "Model Code": "VYMRCY0232",
+        "Finish": "Mercury Black"
+      },
+      "image": "/images/products/mercury-black-towel-rod-vymrcy0232.webp"
+    },
+    {
+      "slug": "mercury-black-napkin-ring-vymrcy0233",
+      "name": "Mercury Black Napkin Ring",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Napkin Ring in the Mercury Black finish.",
+      "description": "A napkin ring in the Mercury Black bath accessories line, matched to the rest of the Mercury Black set.",
+      "specs": {
+        "Model Code": "VYMRCY0233",
+        "Finish": "Mercury Black"
+      },
+      "image": "/images/products/mercury-black-napkin-ring-vymrcy0233.webp"
+    },
+    {
+      "slug": "mercury-black-tissue-paper-holder-with-lid-vymrcy0234",
+      "name": "Mercury Black Tissue Paper Holder with Lid",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Tissue Paper Holder with Lid in the Mercury Black finish.",
+      "description": "A tissue paper holder with lid in the Mercury Black bath accessories line, matched to the rest of the Mercury Black set.",
+      "specs": {
+        "Model Code": "VYMRCY0234",
+        "Finish": "Mercury Black"
+      },
+      "image": "/images/products/mercury-black-tissue-paper-holder-with-lid-vymrcy0234.webp"
+    },
+    {
+      "slug": "mercury-black-robe-hook-vymrcy0235",
+      "name": "Mercury Black Robe Hook",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Robe Hook in the Mercury Black finish.",
+      "description": "A robe hook in the Mercury Black bath accessories line, matched to the rest of the Mercury Black set.",
+      "specs": {
+        "Model Code": "VYMRCY0235",
+        "Finish": "Mercury Black"
+      },
+      "image": "/images/products/mercury-black-robe-hook-vymrcy0235.webp"
+    },
+    {
+      "slug": "mars-rose-gold-towel-rack-vymars0241",
+      "name": "Mars Rose Gold Towel Rack",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Towel Rack in the Mars Rose Gold finish.",
+      "description": "A towel rack in the Mars Rose Gold bath accessories line, matched to the rest of the Mars Rose Gold set.",
+      "specs": {
+        "Model Code": "VYMARS0241",
+        "Finish": "Mars Rose Gold"
+      },
+      "image": "/images/products/mars-rose-gold-towel-rack-vymars0241.webp"
+    },
+    {
+      "slug": "mars-rose-gold-towel-rod-vymars0242",
+      "name": "Mars Rose Gold Towel Rod",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Towel Rod in the Mars Rose Gold finish.",
+      "description": "A towel rod in the Mars Rose Gold bath accessories line, matched to the rest of the Mars Rose Gold set.",
+      "specs": {
+        "Model Code": "VYMARS0242",
+        "Finish": "Mars Rose Gold"
+      },
+      "image": "/images/products/mars-rose-gold-towel-rod-vymars0242.webp"
+    },
+    {
+      "slug": "mars-rose-gold-napkin-ring-vymars0243",
+      "name": "Mars Rose Gold Napkin Ring",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Napkin Ring in the Mars Rose Gold finish.",
+      "description": "A napkin ring in the Mars Rose Gold bath accessories line, matched to the rest of the Mars Rose Gold set.",
+      "specs": {
+        "Model Code": "VYMARS0243",
+        "Finish": "Mars Rose Gold"
+      },
+      "image": "/images/products/mars-rose-gold-napkin-ring-vymars0243.webp"
+    },
+    {
+      "slug": "mars-rose-gold-tissue-paper-holder-with-lid-vymars0244",
+      "name": "Mars Rose Gold Tissue Paper Holder with Lid",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Tissue Paper Holder with Lid in the Mars Rose Gold finish.",
+      "description": "A tissue paper holder with lid in the Mars Rose Gold bath accessories line, matched to the rest of the Mars Rose Gold set.",
+      "specs": {
+        "Model Code": "VYMARS0244",
+        "Finish": "Mars Rose Gold"
+      },
+      "image": "/images/products/mars-rose-gold-tissue-paper-holder-with-lid-vymars0244.webp"
+    },
+    {
+      "slug": "mars-rose-gold-robe-hook-vymars0245",
+      "name": "Mars Rose Gold Robe Hook",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Robe Hook in the Mars Rose Gold finish.",
+      "description": "A robe hook in the Mars Rose Gold bath accessories line, matched to the rest of the Mars Rose Gold set.",
+      "specs": {
+        "Model Code": "VYMARS0245",
+        "Finish": "Mars Rose Gold"
+      },
+      "image": "/images/products/mars-rose-gold-robe-hook-vymars0245.webp"
+    },
+    {
+      "slug": "sun-gold-towel-rack-vysun0251",
+      "name": "Sun Gold Towel Rack",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Towel Rack in the Sun Gold finish.",
+      "description": "A towel rack in the Sun Gold bath accessories line, matched to the rest of the Sun Gold set.",
+      "specs": {
+        "Model Code": "VYSUN0251",
+        "Finish": "Sun Gold"
+      },
+      "image": "/images/products/sun-gold-towel-rack-vysun0251.webp"
+    },
+    {
+      "slug": "sun-gold-towel-rod-vysun0252",
+      "name": "Sun Gold Towel Rod",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Towel Rod in the Sun Gold finish.",
+      "description": "A towel rod in the Sun Gold bath accessories line, matched to the rest of the Sun Gold set.",
+      "specs": {
+        "Model Code": "VYSUN0252",
+        "Finish": "Sun Gold"
+      },
+      "image": "/images/products/sun-gold-towel-rod-vysun0252.webp"
+    },
+    {
+      "slug": "sun-gold-napkin-ring-vysun0253",
+      "name": "Sun Gold Napkin Ring",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Napkin Ring in the Sun Gold finish.",
+      "description": "A napkin ring in the Sun Gold bath accessories line, matched to the rest of the Sun Gold set.",
+      "specs": {
+        "Model Code": "VYSUN0253",
+        "Finish": "Sun Gold"
+      },
+      "image": "/images/products/sun-gold-napkin-ring-vysun0253.webp"
+    },
+    {
+      "slug": "sun-gold-tissue-paper-holder-with-lid-vysun0254",
+      "name": "Sun Gold Tissue Paper Holder with Lid",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Tissue Paper Holder with Lid in the Sun Gold finish.",
+      "description": "A tissue paper holder with lid in the Sun Gold bath accessories line, matched to the rest of the Sun Gold set.",
+      "specs": {
+        "Model Code": "VYSUN0254",
+        "Finish": "Sun Gold"
+      },
+      "image": "/images/products/sun-gold-tissue-paper-holder-with-lid-vysun0254.webp"
+    },
+    {
+      "slug": "sun-gold-robe-hook-vysun0255",
+      "name": "Sun Gold Robe Hook",
+      "category": "bath-accessories",
+      "featured": false,
+      "shortDescription": "Robe Hook in the Sun Gold finish.",
+      "description": "A robe hook in the Sun Gold bath accessories line, matched to the rest of the Sun Gold set.",
+      "specs": {
+        "Model Code": "VYSUN0255",
+        "Finish": "Sun Gold"
+      },
+      "image": "/images/products/sun-gold-robe-hook-vysun0255.webp"
+    },
+    {
+      "slug": "door-safety-chain-vydsc205",
+      "name": "Door Safety Chain",
+      "category": "door-safety-chain",
+      "featured": false,
+      "shortDescription": "Stainless steel door safety chain.",
+      "description": "A stainless steel door safety chain for guest room entry doors.",
+      "specs": {
+        "Model Code": "VYDSC205",
+        "Material": "SS"
+      },
+      "image": "/images/products/door-safety-chain-vydsc205.webp"
+    }
+  ]
+}
