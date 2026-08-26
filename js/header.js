@@ -27,8 +27,8 @@ document.getElementById("site-header").outerHTML = `
           <div class="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-[#93C572] to-transparent opacity-80"></div>
 
           <div
-            class="px-4 sm:px-7 flex items-center justify-between gap-3 transition-[padding] duration-300"
-            :class="scrolled ? 'py-2 sm:py-2.5' : 'py-3 sm:py-4'"
+            class="px-3 sm:px-7 flex items-center justify-between gap-2.5 sm:gap-3 transition-[padding] duration-300"
+            :class="scrolled ? 'py-1.5 sm:py-2.5' : 'py-2.5 sm:py-4'"
           >
             
             <!-- Logo Section -->
@@ -39,7 +39,7 @@ document.getElementById("site-header").outerHTML = `
                 width="314"
                 height="146"
                 class="w-auto transition-all duration-300 transform group-hover:scale-105"
-                :class="scrolled ? 'h-9 sm:h-11 md:h-12' : 'h-11 sm:h-13 md:h-15'"
+                :class="scrolled ? 'h-8 sm:h-10 md:h-12' : 'h-9 sm:h-12 md:h-14'"
               />
             </a>
 

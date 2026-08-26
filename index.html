@@ -104,7 +104,7 @@
     <main x-data="catalog">
       <!-- ============ HERO (Interactive Full-Bleed Luxury Carousel with Strict Tailwind CSS) ============ -->
       <section
-        class="relative overflow-hidden w-full min-h-[85vh] md:min-h-[92vh] bg-neutral-900 select-none"
+        class="relative overflow-hidden w-full h-[52vh] sm:h-[75vh] md:h-[88vh] lg:h-[92vh] min-h-[360px] sm:min-h-[500px] bg-neutral-900 select-none flex flex-col justify-between"
         x-data="{
           timer: null,
           isPlaying: true,
@@ -176,7 +176,7 @@
             <img
               src="/images/banners/banner-1.webp"
               alt="VividVista Hotel Amenities"
-              class="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out"
+              class="absolute inset-0 w-full h-full object-cover object-[75%_55%] sm:object-center transition-all duration-700 ease-out"
               :class="bannerIndex === 0 ? 'opacity-100 scale-105' : 'opacity-0 scale-100'"
               fetchpriority="high"
               decoding="async"
@@ -187,7 +187,7 @@
               <img
                 :src="banner.image"
                 :alt="banner.title || 'VividVista Banner'"
-                class="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out"
+                class="absolute inset-0 w-full h-full object-cover object-[75%_55%] sm:object-center transition-all duration-700 ease-out"
                 :class="(index + 1) === bannerIndex ? 'opacity-100 scale-105' : 'opacity-0 scale-100'"
                 loading="lazy"
                 decoding="async"
@@ -198,16 +198,16 @@
           </div>
         </div>
 
-        <!-- Hero Content Overlay & Interactive Controls Container -->
-        <div class="relative z-[2] max-w-7xl mx-auto px-5 sm:px-8 md:px-12 min-h-[85vh] md:min-h-[92vh] flex flex-col justify-between py-8 md:py-12">
+        <!-- Hero Content Overlay & Interactive Controls Container (Tablet & Desktop) -->
+        <div class="relative z-[2] max-w-7xl mx-auto w-full px-4 sm:px-8 md:px-12 flex-1 flex flex-col justify-between py-4 sm:py-8 md:py-12">
 
-          <!-- Clearance Spacer for Fixed Top Header & Green Subnav Bar (~140px) -->
-          <div class="h-28 sm:h-32 md:h-36"></div>
+          <!-- Clearance Spacer for Fixed Top Header (~64px on mobile) -->
+          <div class="h-16 sm:h-28 md:h-36 shrink-0"></div>
 
-          <!-- Bottom Navigation Strip: Interactive Thumbnail Tabs & Controls -->
-          <div class="w-full pt-4 flex flex-col md:flex-row items-center justify-between gap-4">
+          <!-- Bottom Navigation Strip: Interactive Thumbnail Tabs & Controls (Desktop & Tablet only) -->
+          <div class="hidden sm:flex w-full pb-3 sm:pb-0 flex-row items-center justify-between gap-2 sm:gap-4 shrink-0">
 
-            <!-- Slide Tabs / Thumbnails Selector -->
+            <!-- Desktop Slide Tabs / Thumbnails Selector -->
             <div class="flex items-center gap-2 sm:gap-3 overflow-x-auto max-w-full pb-2 md:pb-0 scrollbar-none">
               <template x-for="(banner, index) in (banners.length ? banners : [
                 { title: 'Quiet luxury', image: '/images/banners/banner-1.webp' },
@@ -228,8 +228,8 @@
                     <img :src="banner.image" :alt="banner.title || 'Slide'" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                   </div>
 
-                  <!-- Text label (desktop/tablet) -->
-                  <div class="hidden sm:flex flex-col pr-1">
+                  <!-- Text label -->
+                  <div class="flex flex-col pr-1">
                     <span class="font-mono text-[10px] text-white/50 leading-none mb-0.5" x-text="`0${index + 1}`"></span>
                     <span class="font-label text-xs text-white font-medium truncate max-w-[110px]" x-text="banner.eyebrow || banner.title || `Slide 0${index + 1}`"></span>
                   </div>
@@ -244,12 +244,12 @@
               </template>
             </div>
 
-            <!-- Sleek Glassmorphism Circular Prev / Next & Auto-Play Controls -->
-            <div class="flex items-center gap-2.5 sm:gap-3">
+            <!-- Sleek Glassmorphism Circular Prev / Next & Auto-Play Controls (Desktop & Tablet) -->
+            <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
               <button
                 type="button"
                 @click="togglePlay()"
-                class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/15 hover:bg-white/30 border border-white/20 backdrop-blur-md flex items-center justify-center text-white transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg cursor-pointer"
+                class="w-11 h-11 rounded-full bg-white/15 hover:bg-white/30 border border-white/20 backdrop-blur-md flex items-center justify-center text-white transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg cursor-pointer"
                 :title="isPlaying ? 'Pause Auto-Play' : 'Start Auto-Play'"
                 :aria-label="isPlaying ? 'Pause Auto-Play' : 'Start Auto-Play'"
               >
@@ -269,7 +269,7 @@
                 type="button"
                 aria-label="Previous slide"
                 @click="bannerPrev(banners.length || 4); startTimer()"
-                class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/15 hover:bg-white/30 border border-white/20 backdrop-blur-md flex items-center justify-center text-white transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg cursor-pointer"
+                class="w-11 h-11 rounded-full bg-white/15 hover:bg-white/30 border border-white/20 backdrop-blur-md flex items-center justify-center text-white transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg cursor-pointer"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                   <path d="m15 18-6-6 6-6"></path>
@@ -280,7 +280,7 @@
                 type="button"
                 aria-label="Next slide"
                 @click="bannerNext(banners.length || 4); startTimer()"
-                class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/15 hover:bg-white/30 border border-white/20 backdrop-blur-md flex items-center justify-center text-white transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg cursor-pointer"
+                class="w-11 h-11 rounded-full bg-white/15 hover:bg-white/30 border border-white/20 backdrop-blur-md flex items-center justify-center text-white transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg cursor-pointer"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                   <path d="m9 18 6-6-6-6"></path>
@@ -292,6 +292,70 @@
 
         </div>
       </section>
+
+      <!-- Sleek Mobile Carousel Dock (Positioned below the hero image for 100% clean photo visibility) -->
+      <div class="sm:hidden w-full bg-neutral-950/95 border-b border-white/10 px-4 py-2.5 flex items-center justify-between z-10 relative shadow-md">
+        <!-- Slide Indicator & Dots -->
+        <div class="flex items-center gap-2 text-white text-xs font-mono">
+          <span class="text-[#93C572] font-bold" x-text="`0${bannerIndex + 1}`"></span>
+          <span class="text-white/40">/</span>
+          <span class="text-white/60" x-text="`0${banners.length || 4}`"></span>
+          <div class="flex items-center gap-1 ml-1.5">
+            <template x-for="(b, i) in (banners.length || 4)" :key="i">
+              <button
+                type="button"
+                @click="bannerIndex = i; startTimer()"
+                class="w-1.5 h-1.5 rounded-full transition-all duration-300 cursor-pointer"
+                :class="i === bannerIndex ? 'w-3.5 bg-[#93C572]' : 'bg-white/40'"
+                :aria-label="`Go to slide ${i + 1}`"
+              ></button>
+            </template>
+          </div>
+        </div>
+
+        <!-- Mobile Control Buttons -->
+        <div class="flex items-center gap-2">
+          <button
+            type="button"
+            @click="togglePlay()"
+            class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white cursor-pointer active:scale-95 transition-transform"
+            :aria-label="isPlaying ? 'Pause Auto-Play' : 'Start Auto-Play'"
+          >
+            <template x-if="isPlaying">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-[#93C572]">
+                <path fill-rule="evenodd" d="M6.75 5.25a.75.75 0 01.75-.75H9a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H7.5a.75.75 0 01-.75-.75V5.25zm7.5 0a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75h-1.5a.75.75 0 01-.75-.75V5.25z" clip-rule="evenodd" />
+              </svg>
+            </template>
+            <template x-if="!isPlaying">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-[#93C572]">
+                <path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd" />
+              </svg>
+            </template>
+          </button>
+
+          <button
+            type="button"
+            aria-label="Previous slide"
+            @click="bannerPrev(banners.length || 4); startTimer()"
+            class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white cursor-pointer active:scale-95 transition-transform"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+              <path d="m15 18-6-6 6-6"></path>
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            aria-label="Next slide"
+            @click="bannerNext(banners.length || 4); startTimer()"
+            class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white cursor-pointer active:scale-95 transition-transform"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
 
       <!-- ============ ABOUT US (Vivid High-Visibility Glassmorphism - Dual Light & Dark Mode - Strict Tailwind CSS) ============ -->
       <section class="relative bg-gradient-to-b from-[#eaf6e1] via-[#d5ecc4] to-[#eaf6e1] dark:from-[#0d1510] dark:via-[#16251b] dark:to-[#0d1510] py-12 lg:py-16 px-5 sm:px-8 overflow-hidden transition-colors duration-500">
@@ -696,56 +760,63 @@
             </p>
           </div>
 
-          <!-- 5 OVAL CAROUSEL STAGE -->
-          <div class="relative max-w-5xl mx-auto mb-8 sm:mb-12 z-10">
-            <div class="grid grid-cols-5 gap-2 sm:gap-4 md:gap-6 items-center justify-items-center min-h-[280px] sm:min-h-[340px]">
-              <template x-for="(item, index) in viyoCollectionItems" :key="item.slug">
-                <div
-                  @click="activeCollectionSlug = item.slug"
-                  class="group/oval relative flex flex-col items-center justify-center cursor-pointer transition-all duration-500 ease-out w-full"
-                  :class="activeCollectionSlug === item.slug ? 'scale-110 z-30' : 'scale-95 opacity-75 hover:opacity-100 z-10'"
-                >
-                  <!-- STADIUM OVAL CAPSULE -->
-                  <div
-                    class="w-full aspect-[2/3] max-w-[140px] sm:max-w-[180px] md:max-w-[210px] rounded-full transition-all duration-500 ease-out flex items-center justify-center p-4 relative overflow-hidden shadow-xl border-2"
-                    :class="activeCollectionSlug === item.slug
-                      ? 'bg-white/90 dark:bg-neutral-800/90 text-neutral-900 border-[#93C572] dark:border-[#a5d985] ring-4 ring-[#93C572]/30 shadow-2xl scale-105'
-                      : 'bg-white/40 dark:bg-neutral-900/50 backdrop-blur-xl border-white/80 dark:border-white/15 hover:bg-white/60 dark:hover:bg-neutral-800/60'"
-                  >
-                    <!-- Glass specular glare line inside side ovals -->
-                    <template x-if="activeCollectionSlug !== item.slug">
-                      <div class="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-black/10 dark:from-white/10 pointer-events-none"></div>
-                    </template>
+          <!-- FEATURED SPOTLIGHT CARD (Big Crisp Product Photo + Details) -->
+          <div class="relative max-w-2xl mx-auto mb-8 sm:mb-10 z-10">
+            <div class="relative rounded-3xl backdrop-blur-2xl bg-white/80 dark:bg-neutral-900/80 border-2 border-[#93C572]/40 dark:border-[#93C572]/30 p-6 sm:p-8 shadow-[0_20px_50px_-10px_rgba(147,197,114,0.3)] dark:shadow-[0_25px_60px_rgba(0,0,0,0.8)] text-center overflow-hidden flex flex-col items-center group">
 
-                    <!-- Product Image -->
-                    <img
-                      :src="item.image"
-                      :alt="item.caption"
-                      class="max-w-[85%] max-h-[85%] object-contain filter drop-shadow-xl transition-all duration-500"
-                      :class="activeCollectionSlug === item.slug ? 'scale-105' : 'group-hover/oval:scale-110'"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
+              <!-- Glass Specular Reflection Highlight -->
+              <div class="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-black/10 dark:from-white/10 pointer-events-none"></div>
+
+              <!-- Top Glass Accent Line -->
+              <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#93C572] to-transparent"></div>
+
+              <!-- BIG HIGH-VISIBILITY PRODUCT IMAGE DISPLAY -->
+              <div class="relative w-48 h-48 sm:w-60 sm:h-60 rounded-2xl bg-gradient-to-b from-neutral-100/90 to-white dark:from-neutral-800/80 dark:to-neutral-900 border border-[#93C572]/30 p-4 mb-6 shadow-inner flex items-center justify-center overflow-hidden">
+                <img
+                  :src="activeCollectionItem && activeCollectionItem.image"
+                  :alt="activeCollectionProduct && activeCollectionProduct.name"
+                  class="max-w-[90%] max-h-[90%] object-contain filter drop-shadow-2xl transition-all duration-500 transform group-hover:scale-105"
+                />
+              </div>
+
+              <!-- PRODUCT DETAILS BLOCK -->
+              <div class="space-y-2 max-w-md mx-auto">
+                <p class="font-mono text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#93C572] dark:text-[#a5d985] font-bold" x-text="activeCollectionItem && activeCollectionItem.eyebrow"></p>
+                <h3 class="font-display text-2xl sm:text-3xl font-semibold text-neutral-900 dark:text-white leading-tight" x-text="activeCollectionProduct && activeCollectionProduct.name"></h3>
+                <p class="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 font-light leading-relaxed" x-text="activeCollectionProduct && activeCollectionProduct.shortDescription"></p>
+
+                <div class="pt-4">
+                  <a
+                    :href="`/product.html?slug=${activeCollectionSlug}`"
+                    class="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-[#93C572] via-[#a5d985] to-[#6fa847] hover:from-[#a5d985] hover:via-[#c2ebaa] hover:to-[#7db859] text-neutral-950 font-mono text-xs uppercase tracking-wider font-extrabold shadow-[0_4px_22px_rgba(147,197,114,0.45)] hover:shadow-[0_6px_30px_rgba(147,197,114,0.7)] transition-all duration-300 hover:scale-105 cursor-pointer"
+                  >
+                    <span>View Details</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                  </a>
                 </div>
-              </template>
+              </div>
+
             </div>
           </div>
 
-          <!-- CENTERED ACTIVE ITEM DETAILS -->
-          <div class="relative text-center max-w-md mx-auto space-y-2 transition-all duration-300 z-10">
-            <p class="font-mono text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#93C572] dark:text-[#a5d985] font-bold" x-text="activeCollectionItem && activeCollectionItem.eyebrow"></p>
-            <h3 class="font-display text-2xl sm:text-3xl font-semibold text-neutral-900 dark:text-white leading-tight" x-text="activeCollectionProduct && activeCollectionProduct.name"></h3>
-            <p class="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 font-light leading-relaxed" x-text="activeCollectionProduct && activeCollectionProduct.shortDescription"></p>
-
-            <div class="pt-4">
-              <a
-                :href="`/product.html?slug=${activeCollectionSlug}`"
-                class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#93C572] via-[#a5d985] to-[#6fa847] hover:from-[#a5d985] hover:via-[#c2ebaa] hover:to-[#7db859] text-neutral-950 font-mono text-xs uppercase tracking-wider font-extrabold shadow-[0_4px_22px_rgba(147,197,114,0.45)] hover:shadow-[0_6px_30px_rgba(147,197,114,0.7)] transition-all duration-300 hover:scale-105 cursor-pointer"
-              >
-                <span>View Details</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-              </a>
+          <!-- 5-ITEM SELECTOR STRIP (Instant Product Switcher) -->
+          <div class="relative max-w-4xl mx-auto z-10">
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+              <template x-for="(item, index) in viyoCollectionItems" :key="item.slug">
+                <button
+                  type="button"
+                  @click="activeCollectionSlug = item.slug"
+                  class="group relative flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-2xl border transition-all duration-300 text-left shrink-0 cursor-pointer"
+                  :class="activeCollectionSlug === item.slug
+                    ? 'border-[#93C572] bg-white/95 dark:bg-neutral-800/95 text-neutral-900 dark:text-white shadow-lg ring-2 ring-[#93C572]/50 scale-105'
+                    : 'border-white/20 dark:border-white/10 bg-white/40 dark:bg-neutral-900/50 backdrop-blur-md hover:bg-white/70 dark:hover:bg-neutral-800/70 text-neutral-700 dark:text-neutral-300 opacity-80 hover:opacity-100'"
+                >
+                  <div class="w-7 h-7 sm:w-9 sm:h-9 rounded-xl overflow-hidden relative shrink-0 bg-neutral-100 dark:bg-neutral-800 p-1 flex items-center justify-center border border-white/30">
+                    <img :src="item.image" :alt="item.caption" class="max-w-full max-h-full object-contain" />
+                  </div>
+                  <span class="font-mono text-[11px] sm:text-xs font-bold truncate max-w-[100px] sm:max-w-[130px]" x-text="item.caption"></span>
+                </button>
+              </template>
             </div>
           </div>
 
