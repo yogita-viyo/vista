@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.viyoindia.com/sitemap.xml
+Sitemap: https://viyoindia.com/sitemap.xml

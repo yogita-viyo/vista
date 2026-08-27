@@ -17,19 +17,31 @@
     <title>Category — VIYO | VividVista International</title>
     <meta name="description" content="VIYO hotel amenities, browsed by category." />
 
-    <!-- SEO: static fallbacks — js/app.js (categoryPage.syncTitle) overwrites
-         title/description/canonical/og:* once the real category loads. -->
-    <link rel="canonical" href="https://www.viyoindia.com/category.html" />
+    <!-- SEO: dynamic self-referencing canonical & fallbacks for instant crawler detection -->
+    <link rel="canonical" href="https://viyoindia.com/category.html" />
+    <script>
+      (function() {
+        var params = new URLSearchParams(window.location.search);
+        var slug = params.get('slug');
+        var canonicalEl = document.querySelector('link[rel="canonical"]');
+        if (slug) {
+          var fullUrl = 'https://viyoindia.com/category.html?slug=' + encodeURIComponent(slug);
+          if (canonicalEl) canonicalEl.setAttribute('href', fullUrl);
+          var formattedTitle = slug.split('-').map(function(w){ return w.charAt(0).toUpperCase() + w.slice(1); }).join(' ');
+          document.title = formattedTitle + ' — VIYO | VividVista International';
+        }
+      })();
+    </script>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="VIYO — VividVista International" />
     <meta property="og:title" content="Category — VIYO | VividVista International" />
     <meta property="og:description" content="VIYO hotel amenities, browsed by category." />
-    <meta property="og:url" content="https://www.viyoindia.com/category.html" />
-    <meta property="og:image" content="https://www.viyoindia.com/favicon.png" />
+    <meta property="og:url" content="https://viyoindia.com/category.html" />
+    <meta property="og:image" content="https://viyoindia.com/favicon.png" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Category — VIYO | VividVista International" />
     <meta name="twitter:description" content="VIYO hotel amenities, browsed by category." />
-    <meta name="twitter:image" content="https://www.viyoindia.com/favicon.png" />
+    <meta name="twitter:image" content="https://viyoindia.com/favicon.png" />
 
     <link rel="stylesheet" href="/styles.min.css?v=114" />
     <link rel="stylesheet" href="/css/tailwind.min.css?v=114" />
