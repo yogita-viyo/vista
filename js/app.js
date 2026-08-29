@@ -116,7 +116,7 @@ function hasRealImage(image) {
 // static tags in each page's <head> are just a fallback for the instant
 // before this runs and for crawlers that don't execute JS. Domain is
 // hardcoded to match the <head> fallbacks — update both if it ever changes.
-const SITE_ORIGIN = "https://viyoindia.com";
+const SITE_ORIGIN = "https://vividvistaindia.com";
 function updateSeoTags({ title, description, path, image, jsonLd }) {
   document.title = title;
   const setAttr = (selector, attr, value) => {

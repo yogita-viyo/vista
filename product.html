@@ -18,14 +18,14 @@
     <meta name="description" content="VIYO hotel amenities product detail." />
 
     <!-- SEO: dynamic self-referencing canonical & fallbacks for instant crawler detection -->
-    <link rel="canonical" href="https://viyoindia.com/product.html" />
+    <link rel="canonical" href="https://vividvistaindia.com/product.html" />
     <script>
       (function() {
         var params = new URLSearchParams(window.location.search);
         var slug = params.get('slug');
         var canonicalEl = document.querySelector('link[rel="canonical"]');
         if (slug) {
-          var fullUrl = 'https://viyoindia.com/product.html?slug=' + encodeURIComponent(slug);
+          var fullUrl = 'https://vividvistaindia.com/product.html?slug=' + encodeURIComponent(slug);
           if (canonicalEl) canonicalEl.setAttribute('href', fullUrl);
           var formattedTitle = slug.split('-').map(function(w){ return w.charAt(0).toUpperCase() + w.slice(1); }).join(' ');
           document.title = formattedTitle + ' — VIYO | VividVista International';
@@ -36,12 +36,12 @@
     <meta property="og:site_name" content="VIYO — VividVista International" />
     <meta property="og:title" content="Product — VIYO | VividVista International" />
     <meta property="og:description" content="VIYO hotel amenities product detail." />
-    <meta property="og:url" content="https://viyoindia.com/product.html" />
-    <meta property="og:image" content="https://viyoindia.com/favicon.png" />
+    <meta property="og:url" content="https://vividvistaindia.com/product.html" />
+    <meta property="og:image" content="https://vividvistaindia.com/favicon.png" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Product — VIYO | VividVista International" />
     <meta name="twitter:description" content="VIYO hotel amenities product detail." />
-    <meta name="twitter:image" content="https://viyoindia.com/favicon.png" />
+    <meta name="twitter:image" content="https://vividvistaindia.com/favicon.png" />
 
     <link rel="stylesheet" href="/styles.min.css?v=114" />
     <link rel="stylesheet" href="/css/tailwind.min.css?v=114" />
