@@ -903,3 +903,11 @@ function matchText(text, query) {
     },
   }));
 });
+
+// Register Service Worker for instant 0ms asset caching and background updates
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch(() => {});
+  });
+}
+

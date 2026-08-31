@@ -1,18 +1,15 @@
-# Cloudflare Pages / Netlify Headers configuration for Cache Control
+# Cloudflare Pages / Netlify Headers configuration for Cache Control & Speed
 
-# HTML pages - revalidate on every request so structural updates & meta updates reflect immediately
+# HTML pages - revalidate instantly with stale-while-revalidate for 0ms load
 /*.html
-  Cache-Control: no-cache, must-revalidate
-  Pragma: no-cache
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
 
 /
-  Cache-Control: no-cache, must-revalidate
-  Pragma: no-cache
+  Cache-Control: public, max-age=0, must-revalidate, stale-while-revalidate=86400
 
-# JSON data files - no-cache so catalogue & product data edits load instantly
+# JSON data files - fast cached catalog response with background revalidation
 /data/*.json
-  Cache-Control: no-cache, must-revalidate
-  Pragma: no-cache
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
 
 # Static JS and CSS assets - aggressive caching for minified production bundles
 /js/min/*.js

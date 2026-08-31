@@ -1,0 +1,51 @@
+# Apache / Hostinger / cPanel High Performance Server Configuration
+
+# 1. Enable GZIP & Brotli Compression for HTML, CSS, JS, JSON, SVG
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml application/x-javascript text/javascript
+</IfModule>
+
+# 2. Configure Far-Future Browser Caching (Expires Headers)
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Images (1 year)
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/ico "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # CSS & JavaScript (1 year for minified bundles)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+
+  # Data & Fonts (1 year)
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/json "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# 3. HTTP Header Optimizations
+<IfModule mod_headers.c>
+  # Enable Keep-Alive connection
+  Header set Connection keep-alive
+
+  # Static Assets Caching
+  <FilesMatch "\.(css|js|webp|png|jpg|jpeg|svg|ico|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # JSON Data Files
+  <FilesMatch "\.json$">
+    Header set Cache-Control "public, max-age=3600, stale-while-revalidate=86400"
+  </FilesMatch>
+
+  # HTML Pages
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate, stale-while-revalidate=86400"
+  </FilesMatch>
+</IfModule>
