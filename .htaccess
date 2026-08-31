@@ -1,15 +1,38 @@
-# Apache / Hostinger / cPanel High Performance Server Configuration
+# ==============================================================================
+# HOSTINGER / LITESPEED / APACHE HIGH-PERFORMANCE CONFIGURATION
+# Optimized for Hostinger Web Hosting — https://vividvistaindia.com/
+# ==============================================================================
 
-# 1. Enable GZIP & Brotli Compression for HTML, CSS, JS, JSON, SVG
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml application/x-javascript text/javascript
+# 1. Enable RewriteEngine & Hostinger Canonical HTTPS Non-WWW Redirects
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Redirect HTTP -> HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://vividvistaindia.com/$1 [R=301,L]
+
+  # Redirect www.vividvistaindia.com -> vividvistaindia.com
+  RewriteCond %{HTTP_HOST} ^www\.vividvistaindia\.com$ [NC]
+  RewriteRule ^(.*)$ https://vividvistaindia.com/$1 [R=301,L]
 </IfModule>
 
-# 2. Configure Far-Future Browser Caching (Expires Headers)
+# 2. Hostinger LiteSpeed Web Server Cache Rules
+<IfModule Litespeed>
+  CacheEnable public /
+  CacheLookup on
+</IfModule>
+
+# 3. GZIP & Brotli Compression for Hostinger
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/x-javascript text/javascript application/json image/svg+xml
+</IfModule>
+
+# 4. Browser Cache Expiration (Expires Headers)
 <IfModule mod_expires.c>
   ExpiresActive On
 
-  # Images (1 year)
+  # Images & Media (1 Year)
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/jpg "access plus 1 year"
@@ -18,23 +41,24 @@
   ExpiresByType image/ico "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
 
-  # CSS & JavaScript (1 year for minified bundles)
+  # CSS, JavaScript & Fonts (1 Year)
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType text/javascript "access plus 1 year"
-
-  # Data & Fonts (1 year)
   ExpiresByType font/woff2 "access plus 1 year"
+
+  # JSON Data Files (1 Hour + background revalidation)
   ExpiresByType application/json "access plus 1 hour"
+
+  # HTML Files (0 Seconds + instant revalidation)
   ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
 
-# 3. HTTP Header Optimizations
+# 5. HTTP Header Performance & Keep-Alive Optimizations
 <IfModule mod_headers.c>
-  # Enable Keep-Alive connection
   Header set Connection keep-alive
 
-  # Static Assets Caching
+  # Static Assets (Images, Minified JS/CSS, WebP, Woff2)
   <FilesMatch "\.(css|js|webp|png|jpg|jpeg|svg|ico|woff2)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
