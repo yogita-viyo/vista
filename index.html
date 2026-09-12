@@ -104,10 +104,7 @@
     <script src="/js/min/header.min.js?v=114"></script>
 
     <main x-data="catalog">
-      <!-- ============ HERO (Interactive Full-Bleed Luxury Carousel with Strict Tailwind CSS) ============ -->
-      <section
-        class="relative overflow-hidden w-full h-[65vh] sm:h-[80vh] md:h-[88vh] lg:h-[92vh] min-h-[480px] sm:min-h-[600px] bg-neutral-900 select-none flex flex-col justify-end"
-        x-data="{
+      <div x-data="{
           timer: null,
           isPlaying: true,
           touchStartX: 0,
@@ -164,8 +161,12 @@
               this.startTimer();
             }
           }
-        }"
-        x-init="startTimer()"
+        }" x-init="startTimer()">
+      <!-- ============ HERO (Interactive Full-Bleed Luxury Carousel with Strict Tailwind CSS) ============ -->
+      <section
+        class="relative overflow-hidden w-full h-[65vh] sm:h-[80vh] md:h-[88vh] lg:h-[92vh] min-h-[480px] sm:min-h-[600px] bg-neutral-900 select-none flex flex-col justify-end"
+        
+        
         @mouseenter="stopTimer()"
         @mouseleave="if(isPlaying) startTimer()"
         @touchstart="handleTouchStart($event)"
@@ -356,6 +357,7 @@
         </div>
       </div>
 
+      </div>
       <!-- ============ ABOUT US (Vivid High-Visibility Glassmorphism - Dual Light & Dark Mode - Strict Tailwind CSS) ============ -->
       <section class="relative bg-gradient-to-b from-[#eaf6e1] via-[#d5ecc4] to-[#eaf6e1] dark:from-[#0d1510] dark:via-[#16251b] dark:to-[#0d1510] py-12 lg:py-16 px-5 sm:px-8 overflow-hidden transition-colors duration-500">
         <!-- Vivid Multi-Color Backlight Blobs (Creates rich frosted refractions behind the glass lens) -->
