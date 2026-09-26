@@ -13,10 +13,10 @@ const SITE = {
   contact: {
     // Primary email — used anywhere only a single address fits (e.g. the
     // JSON-LD contact point, form error fallback text).
-    email: "info@vividvista.in",
+    email: "info@viyoindia.com",
     // Shown together in places with room for both (site footer, contact.html)
     // — emails[0] always matches `email` above.
-    emails: ["info@vividvista.in", "sales@vividvista.in"],
+    emails: ["info@viyoindia.com", "sales@viyoindia.com"],
     // Primary number — used for the WhatsApp link below and anywhere only a
     // single phone fits (e.g. JSON-LD contact point).
     phone: "+91 88669 10551",
